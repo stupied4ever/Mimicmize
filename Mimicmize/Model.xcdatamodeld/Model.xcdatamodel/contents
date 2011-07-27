@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="837" systemVersion="10K540" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Bundle" representedClassName="Bundle">
+        <attribute name="comprado" optional="YES" attributeType="Boolean"/>
+        <relationship name="cartas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta" inverseName="bundle" inverseEntity="Carta"/>
+        <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bundle_Localize" inverseName="bundle" inverseEntity="Bundle_Localize"/>
+    </entity>
+    <entity name="Bundle_Localize">
+        <attribute name="locale" optional="YES" attributeType="String"/>
+        <attribute name="nome" optional="YES" attributeType="String"/>
+        <relationship name="bundle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bundle" inverseName="localized_attributes" inverseEntity="Bundle"/>
+    </entity>
+    <entity name="Carta" representedClassName="Carta">
+        <attribute name="pontos_andar" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <relationship name="bundle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bundle" inverseName="cartas" inverseEntity="Bundle"/>
+        <relationship name="categorias" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria" inverseName="cartas" inverseEntity="Categoria"/>
+        <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta_Localize" inverseName="carta" inverseEntity="Carta_Localize"/>
+    </entity>
+    <entity name="Carta_Localize" representedClassName="Carta_Localize">
+        <attribute name="locale" optional="YES" attributeType="String"/>
+        <attribute name="mimica" optional="YES" attributeType="String"/>
+        <relationship name="carta" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Carta" inverseName="localized_attributes" inverseEntity="Carta"/>
+    </entity>
+    <entity name="Categoria" representedClassName="Categoria">
+        <relationship name="cartas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta" inverseName="categorias" inverseEntity="Carta"/>
+        <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria_Localize" inverseName="categoria" inverseEntity="Categoria_Localize"/>
+    </entity>
+    <entity name="Categoria_Localize">
+        <attribute name="locale" optional="YES" attributeType="String"/>
+        <attribute name="nome" optional="YES" attributeType="String"/>
+        <relationship name="categoria" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria" inverseName="localized_attributes" inverseEntity="Categoria"/>
+    </entity>
+    <entity name="Grupo" representedClassName="Grupo">
+        <attribute name="casa_tabuleiro" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="nome" optional="YES" attributeType="String"/>
+        <relationship name="jogo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Jogo" inverseName="grupo_atual" inverseEntity="Jogo"/>
+    </entity>
+    <entity name="Jogo" representedClassName="Jogo">
+        <attribute name="segundos_rodada" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <relationship name="grupo_atual" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Grupo" inverseName="jogo" inverseEntity="Grupo"/>
+    </entity>
+    <elements>
+        <element name="Bundle" positionX="225" positionY="162" width="128" height="90"/>
+        <element name="Bundle_Localize" positionX="214" positionY="27" width="128" height="75"/>
+        <element name="Carta" positionX="7" positionY="252" width="128" height="105"/>
+        <element name="Carta_Localize" positionX="9" positionY="396" width="128" height="90"/>
+        <element name="Categoria" positionX="225" positionY="267" width="128" height="75"/>
+        <element name="Categoria_Localize" positionX="232" positionY="387" width="128" height="90"/>
+        <element name="Grupo" positionX="403" positionY="171" width="128" height="90"/>
+        <element name="Jogo" positionX="412" positionY="378" width="128" height="75"/>
+    </elements>
+</model>

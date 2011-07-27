@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		73068E8E13DB01170002F841 /* SeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73068E8D13DB01170002F841 /* SeedManager.m */; };
+		7316BF7313D8DBBD00AF485B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7113D8DBBD00AF485B /* Model.xcdatamodeld */; };
+		7316BF7C13D8DE6900AF485B /* Grupo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7B13D8DE6900AF485B /* Grupo.m */; };
+		7316BF7F13D8DE6900AF485B /* Jogo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7E13D8DE6900AF485B /* Jogo.m */; };
+		7316BF8813D8DE9F00AF485B /* BundleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF8713D8DE9F00AF485B /* BundleModel.m */; };
+		7316BF8B13D8DEBF00AF485B /* CategoriaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF8A13D8DEBF00AF485B /* CategoriaModel.m */; };
+		7316BF8E13D8DEFF00AF485B /* JogoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF8D13D8DEFF00AF485B /* JogoModel.m */; };
+		7316BF9113D8DF1800AF485B /* GrupoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF9013D8DF1800AF485B /* GrupoModel.m */; };
+		7316BF9413D8DF4D00AF485B /* CartaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF9313D8DF4D00AF485B /* CartaModel.m */; };
+		7316BF9713D8DF7300AF485B /* Carta_LocalizeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF9613D8DF7300AF485B /* Carta_LocalizeModel.m */; };
+		7316BF9913D8DFD000AF485B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7316BF9813D8DFD000AF485B /* CoreData.framework */; };
+		7316BFA813D8E05400AF485B /* ActiveRecordHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF9C13D8E05400AF485B /* ActiveRecordHelpers.m */; };
+		7316BFA913D8E05400AF485B /* NSManagedObject+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF9F13D8E05400AF485B /* NSManagedObject+ActiveRecord.m */; };
+		7316BFAA13D8E05400AF485B /* NSManagedObjectContext+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA113D8E05400AF485B /* NSManagedObjectContext+ActiveRecord.m */; };
+		7316BFAB13D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA313D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.m */; };
+		7316BFAC13D8E05400AF485B /* NSPersistentStore+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA513D8E05400AF485B /* NSPersistentStore+ActiveRecord.m */; };
+		7316BFAD13D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */; };
+		7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174213DBF86E00CCC78C /* Bundle_Localize.m */; };
+		7392174713DBFC0A00CCC78C /* Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174613DBFC0A00CCC78C /* Bundle.m */; };
+		73D678EF13DBF5A6004EC747 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678EE13DBF5A6004EC747 /* Categoria.m */; };
+		73D678F213DBF5A6004EC747 /* Carta_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678F113DBF5A6004EC747 /* Carta_Localize.m */; };
+		73D678F813DBF5A6004EC747 /* Categoria_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678F713DBF5A6004EC747 /* Categoria_Localize.m */; };
+		73D678FB13DBF5A6004EC747 /* Carta.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678FA13DBF5A6004EC747 /* Carta.m */; };
+		73E33B4C13CF96DF004E86C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B4B13CF96DF004E86C4 /* UIKit.framework */; };
+		73E33B4E13CF96DF004E86C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B4D13CF96DF004E86C4 /* Foundation.framework */; };
+		73E33B5013CF96DF004E86C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B4F13CF96DF004E86C4 /* CoreGraphics.framework */; };
+		73E33B5613CF96DF004E86C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B5413CF96DF004E86C4 /* InfoPlist.strings */; };
+		73E33B5813CF96DF004E86C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E33B5713CF96DF004E86C4 /* main.m */; };
+		73E33B5C13CF96DF004E86C4 /* MimicmizeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E33B5B13CF96DF004E86C4 /* MimicmizeAppDelegate.m */; };
+		73E33B5E13CF96DF004E86C4 /* MimicmizeViewController.h in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B5D13CF96DF004E86C4 /* MimicmizeViewController.h */; };
+		73E33B6013CF96DF004E86C4 /* MimicmizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E33B5F13CF96DF004E86C4 /* MimicmizeViewController.m */; };
+		73E33B6313CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B6113CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib */; };
+		73E33B6613CF96DF004E86C4 /* MimicmizeViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B6413CF96DF004E86C4 /* MimicmizeViewController_iPad.xib */; };
+		73E33B6E13CF96E0004E86C4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B6D13CF96E0004E86C4 /* SenTestingKit.framework */; };
+		73E33B6F13CF96E0004E86C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B4B13CF96DF004E86C4 /* UIKit.framework */; };
+		73E33B7013CF96E0004E86C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B4D13CF96DF004E86C4 /* Foundation.framework */; };
+		73E33B7113CF96E0004E86C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B4F13CF96DF004E86C4 /* CoreGraphics.framework */; };
+		73E33B7913CF96E0004E86C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B7713CF96E0004E86C4 /* InfoPlist.strings */; };
+		73E33B7B13CF96E0004E86C4 /* MimicmizeTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B7A13CF96E0004E86C4 /* MimicmizeTests.h */; };
+		73E33B7D13CF96E0004E86C4 /* MimicmizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E33B7C13CF96E0004E86C4 /* MimicmizeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73E33B7213CF96E0004E86C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73E33B3E13CF96DF004E86C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73E33B4613CF96DF004E86C4;
+			remoteInfo = Mimicmize;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		73068E8C13DB01170002F841 /* SeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedManager.h; sourceTree = "<group>"; };
+		73068E8D13DB01170002F841 /* SeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedManager.m; sourceTree = "<group>"; };
+		7316BF7213D8DBBD00AF485B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7316BF7A13D8DE6900AF485B /* Grupo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grupo.h; sourceTree = "<group>"; };
+		7316BF7B13D8DE6900AF485B /* Grupo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grupo.m; sourceTree = "<group>"; };
+		7316BF7D13D8DE6900AF485B /* Jogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogo.h; sourceTree = "<group>"; };
+		7316BF7E13D8DE6900AF485B /* Jogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jogo.m; sourceTree = "<group>"; };
+		7316BF8613D8DE9F00AF485B /* BundleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleModel.h; sourceTree = "<group>"; };
+		7316BF8713D8DE9F00AF485B /* BundleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleModel.m; sourceTree = "<group>"; };
+		7316BF8913D8DEBF00AF485B /* CategoriaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriaModel.h; path = Mimicmize.xcodeproj/CategoriaModel.h; sourceTree = SOURCE_ROOT; };
+		7316BF8A13D8DEBF00AF485B /* CategoriaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriaModel.m; path = Mimicmize.xcodeproj/CategoriaModel.m; sourceTree = SOURCE_ROOT; };
+		7316BF8C13D8DEFF00AF485B /* JogoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JogoModel.h; path = Mimicmize.xcodeproj/JogoModel.h; sourceTree = SOURCE_ROOT; };
+		7316BF8D13D8DEFF00AF485B /* JogoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JogoModel.m; path = Mimicmize.xcodeproj/JogoModel.m; sourceTree = SOURCE_ROOT; };
+		7316BF8F13D8DF1800AF485B /* GrupoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GrupoModel.h; path = Mimicmize.xcodeproj/GrupoModel.h; sourceTree = SOURCE_ROOT; };
+		7316BF9013D8DF1800AF485B /* GrupoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GrupoModel.m; path = Mimicmize.xcodeproj/GrupoModel.m; sourceTree = SOURCE_ROOT; };
+		7316BF9213D8DF4D00AF485B /* CartaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartaModel.h; sourceTree = "<group>"; };
+		7316BF9313D8DF4D00AF485B /* CartaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartaModel.m; sourceTree = "<group>"; };
+		7316BF9513D8DF7300AF485B /* Carta_LocalizeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta_LocalizeModel.h; sourceTree = "<group>"; };
+		7316BF9613D8DF7300AF485B /* Carta_LocalizeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carta_LocalizeModel.m; sourceTree = "<group>"; };
+		7316BF9813D8DFD000AF485B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7316BF9B13D8E05400AF485B /* ActiveRecordHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveRecordHelpers.h; sourceTree = "<group>"; };
+		7316BF9C13D8E05400AF485B /* ActiveRecordHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveRecordHelpers.m; sourceTree = "<group>"; };
+		7316BF9D13D8E05400AF485B /* CoreData+ActiveRecordFetching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreData+ActiveRecordFetching.h"; sourceTree = "<group>"; };
+		7316BF9E13D8E05400AF485B /* NSManagedObject+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ActiveRecord.h"; sourceTree = "<group>"; };
+		7316BF9F13D8E05400AF485B /* NSManagedObject+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ActiveRecord.m"; sourceTree = "<group>"; };
+		7316BFA013D8E05400AF485B /* NSManagedObjectContext+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+ActiveRecord.h"; sourceTree = "<group>"; };
+		7316BFA113D8E05400AF485B /* NSManagedObjectContext+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+ActiveRecord.m"; sourceTree = "<group>"; };
+		7316BFA213D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectModel+ActiveRecord.h"; sourceTree = "<group>"; };
+		7316BFA313D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectModel+ActiveRecord.m"; sourceTree = "<group>"; };
+		7316BFA413D8E05400AF485B /* NSPersistentStore+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStore+ActiveRecord.h"; sourceTree = "<group>"; };
+		7316BFA513D8E05400AF485B /* NSPersistentStore+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStore+ActiveRecord.m"; sourceTree = "<group>"; };
+		7316BFA613D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+ActiveRecord.h"; sourceTree = "<group>"; };
+		7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+ActiveRecord.m"; sourceTree = "<group>"; };
+		7392174113DBF86E00CCC78C /* Bundle_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bundle_Localize.h; sourceTree = "<group>"; };
+		7392174213DBF86E00CCC78C /* Bundle_Localize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bundle_Localize.m; sourceTree = "<group>"; };
+		7392174513DBFC0A00CCC78C /* Bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bundle.h; sourceTree = "<group>"; };
+		7392174613DBFC0A00CCC78C /* Bundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bundle.m; sourceTree = "<group>"; };
+		73D678ED13DBF5A6004EC747 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
+		73D678EE13DBF5A6004EC747 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
+		73D678F013DBF5A6004EC747 /* Carta_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta_Localize.h; sourceTree = "<group>"; };
+		73D678F113DBF5A6004EC747 /* Carta_Localize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carta_Localize.m; sourceTree = "<group>"; };
+		73D678F613DBF5A6004EC747 /* Categoria_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria_Localize.h; sourceTree = "<group>"; };
+		73D678F713DBF5A6004EC747 /* Categoria_Localize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria_Localize.m; sourceTree = "<group>"; };
+		73D678F913DBF5A6004EC747 /* Carta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta.h; sourceTree = "<group>"; };
+		73D678FA13DBF5A6004EC747 /* Carta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carta.m; sourceTree = "<group>"; };
+		73E33B4713CF96DF004E86C4 /* Mimicmize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mimicmize.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E33B4B13CF96DF004E86C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		73E33B4D13CF96DF004E86C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		73E33B4F13CF96DF004E86C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		73E33B5313CF96DF004E86C4 /* Mimicmize-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mimicmize-Info.plist"; sourceTree = "<group>"; };
+		73E33B5513CF96DF004E86C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		73E33B5713CF96DF004E86C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		73E33B5913CF96DF004E86C4 /* Mimicmize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mimicmize-Prefix.pch"; sourceTree = "<group>"; };
+		73E33B5A13CF96DF004E86C4 /* MimicmizeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MimicmizeAppDelegate.h; sourceTree = "<group>"; };
+		73E33B5B13CF96DF004E86C4 /* MimicmizeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MimicmizeAppDelegate.m; sourceTree = "<group>"; };
+		73E33B5D13CF96DF004E86C4 /* MimicmizeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MimicmizeViewController.h; sourceTree = "<group>"; };
+		73E33B5F13CF96DF004E86C4 /* MimicmizeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MimicmizeViewController.m; sourceTree = "<group>"; };
+		73E33B6213CF96DF004E86C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MimicmizeViewController_iPhone.xib; sourceTree = "<group>"; };
+		73E33B6513CF96DF004E86C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MimicmizeViewController_iPad.xib; sourceTree = "<group>"; };
+		73E33B6C13CF96E0004E86C4 /* MimicmizeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MimicmizeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E33B6D13CF96E0004E86C4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		73E33B7613CF96E0004E86C4 /* MimicmizeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MimicmizeTests-Info.plist"; sourceTree = "<group>"; };
+		73E33B7813CF96E0004E86C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		73E33B7A13CF96E0004E86C4 /* MimicmizeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MimicmizeTests.h; sourceTree = "<group>"; };
+		73E33B7C13CF96E0004E86C4 /* MimicmizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MimicmizeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73E33B4413CF96DF004E86C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7316BF9913D8DFD000AF485B /* CoreData.framework in Frameworks */,
+				73E33B4C13CF96DF004E86C4 /* UIKit.framework in Frameworks */,
+				73E33B4E13CF96DF004E86C4 /* Foundation.framework in Frameworks */,
+				73E33B5013CF96DF004E86C4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73E33B6813CF96E0004E86C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E33B6E13CF96E0004E86C4 /* SenTestingKit.framework in Frameworks */,
+				73E33B6F13CF96E0004E86C4 /* UIKit.framework in Frameworks */,
+				73E33B7013CF96E0004E86C4 /* Foundation.framework in Frameworks */,
+				73E33B7113CF96E0004E86C4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		73068E8A13DB00FC0002F841 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				73068E8C13DB01170002F841 /* SeedManager.h */,
+				73068E8D13DB01170002F841 /* SeedManager.m */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
+		7316BF6F13D8DBAC00AF485B /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				7392174513DBFC0A00CCC78C /* Bundle.h */,
+				7392174613DBFC0A00CCC78C /* Bundle.m */,
+				7392174113DBF86E00CCC78C /* Bundle_Localize.h */,
+				7392174213DBF86E00CCC78C /* Bundle_Localize.m */,
+				73D678F913DBF5A6004EC747 /* Carta.h */,
+				73D678FA13DBF5A6004EC747 /* Carta.m */,
+				73D678F013DBF5A6004EC747 /* Carta_Localize.h */,
+				73D678F113DBF5A6004EC747 /* Carta_Localize.m */,
+				73D678ED13DBF5A6004EC747 /* Categoria.h */,
+				73D678EE13DBF5A6004EC747 /* Categoria.m */,
+				73D678F613DBF5A6004EC747 /* Categoria_Localize.h */,
+				73D678F713DBF5A6004EC747 /* Categoria_Localize.m */,
+				7316BF7A13D8DE6900AF485B /* Grupo.h */,
+				7316BF7B13D8DE6900AF485B /* Grupo.m */,
+				7316BF7D13D8DE6900AF485B /* Jogo.h */,
+				7316BF7E13D8DE6900AF485B /* Jogo.m */,
+				7316BF7113D8DBBD00AF485B /* Model.xcdatamodeld */,
+			);
+			name = coredata;
+			sourceTree = "<group>";
+		};
+		7316BF9A13D8E05400AF485B /* ActiveRecord */ = {
+			isa = PBXGroup;
+			children = (
+				7316BF9B13D8E05400AF485B /* ActiveRecordHelpers.h */,
+				7316BF9C13D8E05400AF485B /* ActiveRecordHelpers.m */,
+				7316BF9D13D8E05400AF485B /* CoreData+ActiveRecordFetching.h */,
+				7316BF9E13D8E05400AF485B /* NSManagedObject+ActiveRecord.h */,
+				7316BF9F13D8E05400AF485B /* NSManagedObject+ActiveRecord.m */,
+				7316BFA013D8E05400AF485B /* NSManagedObjectContext+ActiveRecord.h */,
+				7316BFA113D8E05400AF485B /* NSManagedObjectContext+ActiveRecord.m */,
+				7316BFA213D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.h */,
+				7316BFA313D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.m */,
+				7316BFA413D8E05400AF485B /* NSPersistentStore+ActiveRecord.h */,
+				7316BFA513D8E05400AF485B /* NSPersistentStore+ActiveRecord.m */,
+				7316BFA613D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.h */,
+				7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */,
+			);
+			name = ActiveRecord;
+			path = Mimicmize/Externals/ActiveRecord;
+			sourceTree = "<group>";
+		};
+		73E33B3C13CF96DF004E86C4 = {
+			isa = PBXGroup;
+			children = (
+				73E33B5113CF96DF004E86C4 /* Mimicmize */,
+				73E33B7413CF96E0004E86C4 /* MimicmizeTests */,
+				73E33B4A13CF96DF004E86C4 /* Frameworks */,
+				73E33B4813CF96DF004E86C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73E33B4813CF96DF004E86C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73E33B4713CF96DF004E86C4 /* Mimicmize.app */,
+				73E33B6C13CF96E0004E86C4 /* MimicmizeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73E33B4A13CF96DF004E86C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7316BF9A13D8E05400AF485B /* ActiveRecord */,
+				7316BF9813D8DFD000AF485B /* CoreData.framework */,
+				73E33B4B13CF96DF004E86C4 /* UIKit.framework */,
+				73E33B4D13CF96DF004E86C4 /* Foundation.framework */,
+				73E33B4F13CF96DF004E86C4 /* CoreGraphics.framework */,
+				73E33B6D13CF96E0004E86C4 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73E33B5113CF96DF004E86C4 /* Mimicmize */ = {
+			isa = PBXGroup;
+			children = (
+				73068E8A13DB00FC0002F841 /* helpers */,
+				73E33B8613CF96EE004E86C4 /* models */,
+				73E33B8913CF97A7004E86C4 /* iPhone */,
+				73E33B6413CF96DF004E86C4 /* MimicmizeViewController_iPad.xib */,
+				73E33B5A13CF96DF004E86C4 /* MimicmizeAppDelegate.h */,
+				73E33B5B13CF96DF004E86C4 /* MimicmizeAppDelegate.m */,
+				73E33B5213CF96DF004E86C4 /* Supporting Files */,
+			);
+			path = Mimicmize;
+			sourceTree = "<group>";
+		};
+		73E33B5213CF96DF004E86C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73E33B5313CF96DF004E86C4 /* Mimicmize-Info.plist */,
+				73E33B5413CF96DF004E86C4 /* InfoPlist.strings */,
+				73E33B5713CF96DF004E86C4 /* main.m */,
+				73E33B5913CF96DF004E86C4 /* Mimicmize-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73E33B7413CF96E0004E86C4 /* MimicmizeTests */ = {
+			isa = PBXGroup;
+			children = (
+				73E33B7A13CF96E0004E86C4 /* MimicmizeTests.h */,
+				73E33B7C13CF96E0004E86C4 /* MimicmizeTests.m */,
+				73E33B7513CF96E0004E86C4 /* Supporting Files */,
+			);
+			path = MimicmizeTests;
+			sourceTree = "<group>";
+		};
+		73E33B7513CF96E0004E86C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73E33B7613CF96E0004E86C4 /* MimicmizeTests-Info.plist */,
+				73E33B7713CF96E0004E86C4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73E33B8613CF96EE004E86C4 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7316BF6F13D8DBAC00AF485B /* coredata */,
+				7316BF8613D8DE9F00AF485B /* BundleModel.h */,
+				7316BF8713D8DE9F00AF485B /* BundleModel.m */,
+				7316BF9213D8DF4D00AF485B /* CartaModel.h */,
+				7316BF9313D8DF4D00AF485B /* CartaModel.m */,
+				7316BF9513D8DF7300AF485B /* Carta_LocalizeModel.h */,
+				7316BF9613D8DF7300AF485B /* Carta_LocalizeModel.m */,
+				7316BF8913D8DEBF00AF485B /* CategoriaModel.h */,
+				7316BF8A13D8DEBF00AF485B /* CategoriaModel.m */,
+				7316BF8F13D8DF1800AF485B /* GrupoModel.h */,
+				7316BF9013D8DF1800AF485B /* GrupoModel.m */,
+				7316BF8C13D8DEFF00AF485B /* JogoModel.h */,
+				7316BF8D13D8DEFF00AF485B /* JogoModel.m */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		73E33B8713CF96FA004E86C4 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				73E33B5D13CF96DF004E86C4 /* MimicmizeViewController.h */,
+				73E33B5F13CF96DF004E86C4 /* MimicmizeViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		73E33B8813CF9710004E86C4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				73E33B6113CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		73E33B8913CF97A7004E86C4 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				73E33B8713CF96FA004E86C4 /* controllers */,
+				73E33B8813CF9710004E86C4 /* views */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73E33B4613CF96DF004E86C4 /* Mimicmize */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73E33B8013CF96E0004E86C4 /* Build configuration list for PBXNativeTarget "Mimicmize" */;
+			buildPhases = (
+				73E33B4313CF96DF004E86C4 /* Sources */,
+				73E33B4413CF96DF004E86C4 /* Frameworks */,
+				73E33B4513CF96DF004E86C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mimicmize;
+			productName = Mimicmize;
+			productReference = 73E33B4713CF96DF004E86C4 /* Mimicmize.app */;
+			productType = "com.apple.product-type.application";
+		};
+		73E33B6B13CF96E0004E86C4 /* MimicmizeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73E33B8313CF96E0004E86C4 /* Build configuration list for PBXNativeTarget "MimicmizeTests" */;
+			buildPhases = (
+				73E33B6713CF96E0004E86C4 /* Sources */,
+				73E33B6813CF96E0004E86C4 /* Frameworks */,
+				73E33B6913CF96E0004E86C4 /* Resources */,
+				73E33B6A13CF96E0004E86C4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73E33B7313CF96E0004E86C4 /* PBXTargetDependency */,
+			);
+			name = MimicmizeTests;
+			productName = MimicmizeTests;
+			productReference = 73E33B6C13CF96E0004E86C4 /* MimicmizeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73E33B3E13CF96DF004E86C4 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 73E33B4113CF96DF004E86C4 /* Build configuration list for PBXProject "Mimicmize" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 73E33B3C13CF96DF004E86C4;
+			productRefGroup = 73E33B4813CF96DF004E86C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73E33B4613CF96DF004E86C4 /* Mimicmize */,
+				73E33B6B13CF96E0004E86C4 /* MimicmizeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73E33B4513CF96DF004E86C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E33B5613CF96DF004E86C4 /* InfoPlist.strings in Resources */,
+				73E33B5E13CF96DF004E86C4 /* MimicmizeViewController.h in Resources */,
+				73E33B6313CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib in Resources */,
+				73E33B6613CF96DF004E86C4 /* MimicmizeViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73E33B6913CF96E0004E86C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E33B7913CF96E0004E86C4 /* InfoPlist.strings in Resources */,
+				73E33B7B13CF96E0004E86C4 /* MimicmizeTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73E33B6A13CF96E0004E86C4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73E33B4313CF96DF004E86C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E33B5813CF96DF004E86C4 /* main.m in Sources */,
+				73E33B5C13CF96DF004E86C4 /* MimicmizeAppDelegate.m in Sources */,
+				73E33B6013CF96DF004E86C4 /* MimicmizeViewController.m in Sources */,
+				7316BF7313D8DBBD00AF485B /* Model.xcdatamodeld in Sources */,
+				7316BF7C13D8DE6900AF485B /* Grupo.m in Sources */,
+				7316BF7F13D8DE6900AF485B /* Jogo.m in Sources */,
+				7316BF8813D8DE9F00AF485B /* BundleModel.m in Sources */,
+				7316BF8B13D8DEBF00AF485B /* CategoriaModel.m in Sources */,
+				7316BF8E13D8DEFF00AF485B /* JogoModel.m in Sources */,
+				7316BF9113D8DF1800AF485B /* GrupoModel.m in Sources */,
+				7316BF9413D8DF4D00AF485B /* CartaModel.m in Sources */,
+				7316BF9713D8DF7300AF485B /* Carta_LocalizeModel.m in Sources */,
+				7316BFA813D8E05400AF485B /* ActiveRecordHelpers.m in Sources */,
+				7316BFA913D8E05400AF485B /* NSManagedObject+ActiveRecord.m in Sources */,
+				7316BFAA13D8E05400AF485B /* NSManagedObjectContext+ActiveRecord.m in Sources */,
+				7316BFAB13D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.m in Sources */,
+				7316BFAC13D8E05400AF485B /* NSPersistentStore+ActiveRecord.m in Sources */,
+				7316BFAD13D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */,
+				73068E8E13DB01170002F841 /* SeedManager.m in Sources */,
+				73D678EF13DBF5A6004EC747 /* Categoria.m in Sources */,
+				73D678F213DBF5A6004EC747 /* Carta_Localize.m in Sources */,
+				73D678F813DBF5A6004EC747 /* Categoria_Localize.m in Sources */,
+				73D678FB13DBF5A6004EC747 /* Carta.m in Sources */,
+				7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */,
+				7392174713DBFC0A00CCC78C /* Bundle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73E33B6713CF96E0004E86C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73E33B7D13CF96E0004E86C4 /* MimicmizeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73E33B7313CF96E0004E86C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73E33B4613CF96DF004E86C4 /* Mimicmize */;
+			targetProxy = 73E33B7213CF96E0004E86C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		73E33B5413CF96DF004E86C4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73E33B5513CF96DF004E86C4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		73E33B6113CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73E33B6213CF96DF004E86C4 /* en */,
+			);
+			name = MimicmizeViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		73E33B6413CF96DF004E86C4 /* MimicmizeViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73E33B6513CF96DF004E86C4 /* en */,
+			);
+			name = MimicmizeViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		73E33B7713CF96E0004E86C4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73E33B7813CF96E0004E86C4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73E33B7E13CF96E0004E86C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		73E33B7F13CF96E0004E86C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73E33B8113CF96E0004E86C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mimicmize/Mimicmize-Prefix.pch";
+				INFOPLIST_FILE = "Mimicmize/Mimicmize-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		73E33B8213CF96E0004E86C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mimicmize/Mimicmize-Prefix.pch";
+				INFOPLIST_FILE = "Mimicmize/Mimicmize-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		73E33B8413CF96E0004E86C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mimicmize.app/Mimicmize";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mimicmize/Mimicmize-Prefix.pch";
+				INFOPLIST_FILE = "MimicmizeTests/MimicmizeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		73E33B8513CF96E0004E86C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mimicmize.app/Mimicmize";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mimicmize/Mimicmize-Prefix.pch";
+				INFOPLIST_FILE = "MimicmizeTests/MimicmizeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73E33B4113CF96DF004E86C4 /* Build configuration list for PBXProject "Mimicmize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73E33B7E13CF96E0004E86C4 /* Debug */,
+				73E33B7F13CF96E0004E86C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73E33B8013CF96E0004E86C4 /* Build configuration list for PBXNativeTarget "Mimicmize" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73E33B8113CF96E0004E86C4 /* Debug */,
+				73E33B8213CF96E0004E86C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73E33B8313CF96E0004E86C4 /* Build configuration list for PBXNativeTarget "MimicmizeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73E33B8413CF96E0004E86C4 /* Debug */,
+				73E33B8513CF96E0004E86C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7316BF7113D8DBBD00AF485B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7316BF7213D8DBBD00AF485B /* Model.xcdatamodel */,
+			);
+			currentVersion = 7316BF7213D8DBBD00AF485B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 73E33B3E13CF96DF004E86C4 /* Project object */;
+}
