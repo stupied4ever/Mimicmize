@@ -47,6 +47,10 @@
 		73E33B7913CF96E0004E86C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B7713CF96E0004E86C4 /* InfoPlist.strings */; };
 		73E33B7B13CF96E0004E86C4 /* MimicmizeTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B7A13CF96E0004E86C4 /* MimicmizeTests.h */; };
 		73E33B7D13CF96E0004E86C4 /* MimicmizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E33B7C13CF96E0004E86C4 /* MimicmizeTests.m */; };
+		73E5789A13E540BE00A29F11 /* GameSetupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E5789913E540BE00A29F11 /* GameSetupView.xib */; };
+		73E5789E13E540E700A29F11 /* GameSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E5789D13E540E700A29F11 /* GameSetupViewController.m */; };
+		73F9C5F713E49B2C0057FC44 /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */; };
+		73F9C5FB13E49B760057FC44 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F9C5FA13E49B760057FC44 /* MainMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,12 @@
 		73E33B7813CF96E0004E86C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		73E33B7A13CF96E0004E86C4 /* MimicmizeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MimicmizeTests.h; sourceTree = "<group>"; };
 		73E33B7C13CF96E0004E86C4 /* MimicmizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MimicmizeTests.m; sourceTree = "<group>"; };
+		73E5789913E540BE00A29F11 /* GameSetupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameSetupView.xib; sourceTree = "<group>"; };
+		73E5789C13E540E700A29F11 /* GameSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSetupViewController.h; sourceTree = "<group>"; };
+		73E5789D13E540E700A29F11 /* GameSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSetupViewController.m; sourceTree = "<group>"; };
+		73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuView.xib; sourceTree = "<group>"; };
+		73F9C5F913E49B760057FC44 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		73F9C5FA13E49B760057FC44 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +318,10 @@
 			children = (
 				73E33B5D13CF96DF004E86C4 /* MimicmizeViewController.h */,
 				73E33B5F13CF96DF004E86C4 /* MimicmizeViewController.m */,
+				73F9C5F913E49B760057FC44 /* MainMenuViewController.h */,
+				73F9C5FA13E49B760057FC44 /* MainMenuViewController.m */,
+				73E5789C13E540E700A29F11 /* GameSetupViewController.h */,
+				73E5789D13E540E700A29F11 /* GameSetupViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -316,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				73E33B6113CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib */,
+				73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */,
+				73E5789913E540BE00A29F11 /* GameSetupView.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -400,6 +416,8 @@
 				73E33B5E13CF96DF004E86C4 /* MimicmizeViewController.h in Resources */,
 				73E33B6313CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib in Resources */,
 				73E33B6613CF96DF004E86C4 /* MimicmizeViewController_iPad.xib in Resources */,
+				73F9C5F713E49B2C0057FC44 /* MainMenuView.xib in Resources */,
+				73E5789A13E540BE00A29F11 /* GameSetupView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +478,8 @@
 				73D678FB13DBF5A6004EC747 /* Carta.m in Sources */,
 				7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */,
 				7392174713DBFC0A00CCC78C /* Bundle.m in Sources */,
+				73F9C5FB13E49B760057FC44 /* MainMenuViewController.m in Sources */,
+				73E5789E13E540E700A29F11 /* GameSetupViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "SeedManager.h"
 
-@class MimicmizeViewController;
+@class MainMenuViewController;
 
 @interface MimicmizeAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) MimicmizeViewController *viewController;
+@property (strong, nonatomic) MainMenuViewController *viewController;
 
 @end

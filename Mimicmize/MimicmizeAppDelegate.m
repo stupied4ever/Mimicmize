@@ -7,7 +7,7 @@
 //
 
 #import "MimicmizeAppDelegate.h"
-#import "MimicmizeViewController.h"
+#import "MainMenuViewController.h"
 
 @implementation MimicmizeAppDelegate
 
@@ -25,9 +25,11 @@
     // Override point for customization after application launch.
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-      self.viewController = [[MimicmizeViewController alloc] initWithNibName:@"MimicmizeViewController_iPhone" bundle:nil]; 
+    
+    self.viewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuView" bundle:nil];
+      ///self.viewController = [[MimicmizeViewController alloc] initWithNibName:@"MimicmizeViewController_iPhone" bundle:nil]; 
   } else {
-      self.viewController = [[MimicmizeViewController alloc] initWithNibName:@"MimicmizeViewController_iPad" bundle:nil]; 
+     //self.viewController = [[MimicmizeViewController alloc] initWithNibName:@"MimicmizeViewController_iPad" bundle:nil]; 
   }
   self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
