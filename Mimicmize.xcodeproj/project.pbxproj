@@ -389,6 +389,9 @@
 /* Begin PBXProject section */
 		73E33B3E13CF96DF004E86C4 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 73E33B4113CF96DF004E86C4 /* Build configuration list for PBXProject "Mimicmize" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;

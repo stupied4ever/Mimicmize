@@ -130,10 +130,20 @@ static NSUInteger defaultBatchSize = kActiveRecordDefaultBatchSize;
 		id attributeName;
 		va_list variadicArguments;
 		va_start(variadicArguments, attributesToSortBy);
-		while ((attributeName = va_arg(variadicArguments, id)) != nil)
+    
+    
+    void *x = va_arg(variadicArguments, void*);
+    id y = (__bridge id)x;
+    attributeName = y;
+    
+		while (y != nil)
 		{
 			NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:attributeName ascending:ascending];
 			[attributes addObject:sortDescriptor];
+      
+      void *x = va_arg(variadicArguments, void*);
+      id y = (__bridge id)x;
+      attributeName = y;
 		}
 		va_end(variadicArguments);
 

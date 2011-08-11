@@ -10,6 +10,7 @@
 #import "CartaModel.h"
 #import "CategoriaModel.h"
 #import "BundleModel.h"
+#import "Carta_Localize.h"
 
 @interface SeedManager : NSObject
 
