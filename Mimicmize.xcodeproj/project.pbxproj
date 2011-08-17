@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73068E8E13DB01170002F841 /* SeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73068E8D13DB01170002F841 /* SeedManager.m */; };
+		73102A6A13F9DDBD0049D703 /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73102A6913F9DDBD0049D703 /* AnimationHelper.m */; };
 		7316BF7313D8DBBD00AF485B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7113D8DBBD00AF485B /* Model.xcdatamodeld */; };
 		7316BF7C13D8DE6900AF485B /* Grupo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7B13D8DE6900AF485B /* Grupo.m */; };
 		7316BF7F13D8DE6900AF485B /* Jogo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7E13D8DE6900AF485B /* Jogo.m */; };
@@ -66,6 +67,8 @@
 /* Begin PBXFileReference section */
 		73068E8C13DB01170002F841 /* SeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedManager.h; sourceTree = "<group>"; };
 		73068E8D13DB01170002F841 /* SeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedManager.m; sourceTree = "<group>"; };
+		73102A6813F9DDBD0049D703 /* AnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
+		73102A6913F9DDBD0049D703 /* AnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationHelper.m; sourceTree = "<group>"; };
 		7316BF7213D8DBBD00AF485B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		7316BF7A13D8DE6900AF485B /* Grupo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grupo.h; sourceTree = "<group>"; };
 		7316BF7B13D8DE6900AF485B /* Grupo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grupo.m; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 			children = (
 				73068E8C13DB01170002F841 /* SeedManager.h */,
 				73068E8D13DB01170002F841 /* SeedManager.m */,
+				73102A6813F9DDBD0049D703 /* AnimationHelper.h */,
+				73102A6913F9DDBD0049D703 /* AnimationHelper.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 				7392174713DBFC0A00CCC78C /* Bundle.m in Sources */,
 				73F9C5FB13E49B760057FC44 /* MainMenuViewController.m in Sources */,
 				73E5789E13E540E700A29F11 /* GameSetupViewController.m in Sources */,
+				73102A6A13F9DDBD0049D703 /* AnimationHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

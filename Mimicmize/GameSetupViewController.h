@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AnimationHelper.h"
 
 @interface GameSetupViewController : UIViewController
 
@@ -14,8 +15,13 @@
 @property (nonatomic, strong) IBOutlet UIButton *btn_done;
 @property (nonatomic, strong) IBOutlet UIScrollView *scroll_groups;
 
+//view config
+@property (nonatomic, strong) IBOutlet UIView *view_groups;
+@property (nonatomic, strong) IBOutlet UIView *view_settings;
+
 @property (nonatomic) NSInteger total_groups;
 
+-(IBAction)back_to_groups:(id)sender;
 -(IBAction)add_other_group:(id)sender;
 -(IBAction)done:(id)sender;
 
