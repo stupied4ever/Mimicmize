@@ -72,7 +72,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Done &gt;&gt;</string>
+						<string key="IBUINormalTitle">Next &gt;&gt;</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="8846092">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -126,6 +126,7 @@
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="58582016"/>
+						<reference key="IBUIBackgroundColor" ref="8846092"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -182,7 +183,7 @@
 					<object class="IBUITextField" id="394132797">
 						<reference key="NSNextResponder" ref="909140577"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 49}, {97, 31}}</string>
+						<string key="NSFrame">{{20, 49}, {64, 31}}</string>
 						<reference key="NSSuperview" ref="909140577"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="494028334"/>
@@ -201,6 +202,9 @@
 						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
+							<int key="IBUIAutocorrectionType">1</int>
+							<int key="IBUIReturnKeyType">9</int>
+							<bool key="IBUIEnablesReturnKeyAutomatically">YES</bool>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="445322816"/>
@@ -370,15 +374,6 @@
 					<int key="connectionID">11</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">done:</string>
-						<reference key="source" ref="748755994"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">12</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view</string>
 						<reference key="source" ref="372490531"/>
@@ -410,6 +405,56 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">26</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">done:</string>
+						<reference key="source" ref="812769731"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">next:</string>
+						<reference key="source" ref="748755994"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">28</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="394132797"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">29</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">table_categorias</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="798958846"/>
+					</object>
+					<int key="connectionID">30</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="798958846"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">31</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">dataSource</string>
+						<reference key="source" ref="798958846"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">32</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -576,7 +621,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">26</int>
+			<int key="maxID">32</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -591,9 +636,11 @@
 							<string>add_other_group:</string>
 							<string>back_to_groups:</string>
 							<string>done:</string>
+							<string>next:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -606,6 +653,7 @@
 							<string>add_other_group:</string>
 							<string>back_to_groups:</string>
 							<string>done:</string>
+							<string>next:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -621,6 +669,10 @@
 								<string key="name">done:</string>
 								<string key="candidateClassName">id</string>
 							</object>
+							<object class="IBActionInfo">
+								<string key="name">next:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
@@ -630,6 +682,7 @@
 							<string>btn_add_group</string>
 							<string>btn_done</string>
 							<string>scroll_groups</string>
+							<string>table_categorias</string>
 							<string>view_groups</string>
 							<string>view_settings</string>
 						</object>
@@ -638,6 +691,7 @@
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIScrollView</string>
+							<string>UITableView</string>
 							<string>UIView</string>
 							<string>UIView</string>
 						</object>
@@ -649,6 +703,7 @@
 							<string>btn_add_group</string>
 							<string>btn_done</string>
 							<string>scroll_groups</string>
+							<string>table_categorias</string>
 							<string>view_groups</string>
 							<string>view_settings</string>
 						</object>
@@ -665,6 +720,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">scroll_groups</string>
 								<string key="candidateClassName">UIScrollView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">table_categorias</string>
+								<string key="candidateClassName">UITableView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">view_groups</string>

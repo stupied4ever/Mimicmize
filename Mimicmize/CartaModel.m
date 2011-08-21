@@ -18,4 +18,11 @@
   [self addLocalized_attributesObject:localized_attributes];
 }
 
+-(Carta_Localize *) get_localized_attributes {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"carta = %@ && locale = %@",self, locale];
+  return [Carta_Localize findFirstWithPredicate:predicate ];
+}
+
 @end

@@ -35,7 +35,7 @@
   [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationCurveEaseIn
    animations:^{ 
      CGRect frame = view.frame;
-     frame.origin.x = 340 + offset;
+     frame.origin.x = 40 + offset;
      view.frame = frame;
    } 
    completion:^(BOOL finished){

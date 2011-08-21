@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AnimationHelper.h"
+#import "CategoriaModel.h"
 
-@interface GameSetupViewController : UIViewController
+@interface GameSetupViewController : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIButton *btn_add_group;
 @property (nonatomic, strong) IBOutlet UIButton *btn_done;
@@ -18,12 +19,15 @@
 //view config
 @property (nonatomic, strong) IBOutlet UIView *view_groups;
 @property (nonatomic, strong) IBOutlet UIView *view_settings;
+@property (nonatomic, strong) IBOutlet UITableView *table_categorias;
 
 @property (nonatomic) NSInteger total_groups;
+@property (nonatomic, strong) NSArray *array_categorias;
 
 -(IBAction)back_to_groups:(id)sender;
 -(IBAction)add_other_group:(id)sender;
 -(IBAction)done:(id)sender;
+-(IBAction)next:(id)sender;
 
 -(void) create_new_txt_group;
 

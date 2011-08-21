@@ -16,6 +16,8 @@
 
 @synthesize view_settings = _view_settings;
 @synthesize view_groups = _view_groups;
+@synthesize table_categorias = _table_categorias;
+@synthesize array_categorias = _array_categorias;
 
 @synthesize total_groups = _total_groups;
 
@@ -34,10 +36,67 @@
 
 -(IBAction)done:(id)sender {
   
+  [self dismissModalViewControllerAnimated:YES];
+}
+
+-(IBAction)next:(id)sender {
+  
   [AnimationHelper make_bounce_effect_with_view:self.view_settings bouncing_away:self.view_groups offset:0];
 }
 
+#pragma mark - TableView
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+  return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+  return [self.array_categorias count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  static NSString *CellIdentifier = @"categoria_cell";
+  UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  
+  if (cell == nil){
+    
+    cell = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, self.table_categorias.frame.size.width, 44)];
+  } 
+  
+  // cell.imagem_post
+  Categoria *categoria = [self.array_categorias objectAtIndex:indexPath.row];
+  cell.textLabel.text = [categoria get_localized_attributes].nome;
+  
+  return cell;
+  
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  //cell.backgroundColor = ((ApplicationCell *)cell).useDarkBackground ? DARK_BACKGROUND : LIGHT_BACKGROUND;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  /*[tableView deselectRowAtIndexPath:indexPath animated:YES];
+  
+  Post *post = [self.array_post objectAtIndex:indexPath.row];
+  NewsDetalheController_iPhone *detalhe = [NewsDetalheController_iPhone newsDetalheWithPost:post];
+  self.hidesBottomBarWhenPushed = TRUE;
+  detalhe.navigationItem.rightBarButtonItem = self.navigationItem.rightBarButtonItem;
+  [self.navigationController pushViewController:detalhe animated:TRUE];*/
+}
+
 #pragma mark -
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  
+  [textField resignFirstResponder];
+  return NO;
+}
 
 -(UITextField *) create_txt_field {
   
@@ -45,7 +104,8 @@
   [self.scroll_groups setContentSize:CGSizeMake(320, y_atual + 40)];
   
   UITextField *txt_group = [[UITextField alloc] initWithFrame:CGRectMake(320, y_atual, 240, 32)];
-  txt_group.tag = 1000;
+  txt_group.tag = 1000 + self.total_groups;
+  txt_group.delegate = self;
   txt_group.backgroundColor = [UIColor greenColor];
   return txt_group;
 }
@@ -83,6 +143,7 @@
   CGRect frame = self.view_settings.frame;
   frame.origin.x = 320;
   self.view_settings.frame = frame;
+  self.array_categorias = [Categoria findAll];
 }
 
 - (void)viewDidUnload
@@ -94,6 +155,8 @@
   self.btn_done = nil;
   self.btn_add_group = nil;
   self.scroll_groups = nil;
+  self.table_categorias = nil;
+  self.array_categorias = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Categoria.h"
 #import "Categoria_Localize.h"
+#import "LocalizeHelper.h"
 
 @interface Categoria (CategoriaModel)
 
 -(void) add_locale_with_nome: (NSString *) nome andLocale : (NSString *) locale;
+-(Categoria_Localize *) get_localized_attributes;
 
 @end

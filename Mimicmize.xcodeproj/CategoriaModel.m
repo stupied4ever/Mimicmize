@@ -18,4 +18,11 @@
   [self addLocalized_attributesObject:localized_attributes];
 }
 
+-(Categoria_Localize *) get_localized_attributes {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"categoria = %@ && locale = %@",self, locale];
+  return [Categoria_Localize findFirstWithPredicate:predicate ];
+}
+
 @end

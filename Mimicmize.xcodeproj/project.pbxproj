@@ -27,6 +27,7 @@
 		7316BFAD13D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */; };
 		7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174213DBF86E00CCC78C /* Bundle_Localize.m */; };
 		7392174713DBFC0A00CCC78C /* Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174613DBFC0A00CCC78C /* Bundle.m */; };
+		73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */; };
 		73D678EF13DBF5A6004EC747 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678EE13DBF5A6004EC747 /* Categoria.m */; };
 		73D678F213DBF5A6004EC747 /* Carta_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678F113DBF5A6004EC747 /* Carta_Localize.m */; };
 		73D678F813DBF5A6004EC747 /* Categoria_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678F713DBF5A6004EC747 /* Categoria_Localize.m */; };
@@ -104,6 +105,8 @@
 		7392174213DBF86E00CCC78C /* Bundle_Localize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bundle_Localize.m; sourceTree = "<group>"; };
 		7392174513DBFC0A00CCC78C /* Bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bundle.h; sourceTree = "<group>"; };
 		7392174613DBFC0A00CCC78C /* Bundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bundle.m; sourceTree = "<group>"; };
+		73B8DDF014016FFD00F86DEA /* LocalizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeHelper.h; sourceTree = "<group>"; };
+		73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeHelper.m; sourceTree = "<group>"; };
 		73D678ED13DBF5A6004EC747 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
 		73D678EE13DBF5A6004EC747 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		73D678F013DBF5A6004EC747 /* Carta_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta_Localize.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				73068E8D13DB01170002F841 /* SeedManager.m */,
 				73102A6813F9DDBD0049D703 /* AnimationHelper.h */,
 				73102A6913F9DDBD0049D703 /* AnimationHelper.m */,
+				73B8DDF014016FFD00F86DEA /* LocalizeHelper.h */,
+				73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 				73F9C5FB13E49B760057FC44 /* MainMenuViewController.m in Sources */,
 				73E5789E13E540E700A29F11 /* GameSetupViewController.m in Sources */,
 				73102A6A13F9DDBD0049D703 /* AnimationHelper.m in Sources */,
+				73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

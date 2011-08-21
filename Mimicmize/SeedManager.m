@@ -39,16 +39,28 @@
 - (void) load_categorias {
   
   Categoria *dificil = [Categoria createEntity];
-  [dificil add_locale_with_nome:@"Dificil" andLocale:@"pt_BR"];
-  [dificil add_locale_with_nome:@"Hard" andLocale:@"en_US"];
+  [dificil add_locale_with_nome:@"Dificil" andLocale:pt_BR];
+  [dificil add_locale_with_nome:@"Hard" andLocale:en_US];
+  
+  Categoria *lugares = [Categoria createEntity];
+  [lugares add_locale_with_nome:@"Lugares" andLocale:pt_BR];
+  [lugares add_locale_with_nome:@"Places" andLocale:en_US];
+  
+  Categoria *objetos = [Categoria createEntity];
+  [objetos add_locale_with_nome:@"Objetos" andLocale:pt_BR];
+  [objetos add_locale_with_nome:@"Objects" andLocale:en_US];
+  
+  Categoria *pessoas = [Categoria createEntity];
+  [pessoas add_locale_with_nome:@"Pessoas" andLocale:pt_BR];
+  [pessoas add_locale_with_nome:@"People" andLocale:en_US];
 }
 
 - (void) load_bundles {
   
   Bundle *main_bundle = [Bundle createEntity];
   main_bundle.comprado = [NSNumber numberWithBool:YES];
-  [main_bundle add_locale_with_nome:@"Cartas principais" andLocale:@"pt_BR"];
-  [main_bundle add_locale_with_nome:@"Main cards" andLocale:@"en_US"];
+  [main_bundle add_locale_with_nome:@"Cartas principais" andLocale:pt_BR];
+  [main_bundle add_locale_with_nome:@"Main cards" andLocale:en_US];
 }
 
 - (void) load_cartas {
@@ -62,8 +74,8 @@
     nova_carta.pontos_andar = [NSNumber numberWithInt:(index % 6) + 1];
     [nova_carta addCategoriasObject:[Categoria findFirst]];
     nova_carta.bundle = [Bundle findFirst];
-    [nova_carta add_locale_with_mimica: [NSString stringWithFormat:@"mimica_%d",index] andLocale:@"pt_BR"];
-    [nova_carta add_locale_with_mimica: [NSString stringWithFormat:@"mimic__%d",index] andLocale:@"en_US"];
+    [nova_carta add_locale_with_mimica: [NSString stringWithFormat:@"mimica_%d",index] andLocale:pt_BR];
+    [nova_carta add_locale_with_mimica: [NSString stringWithFormat:@"mimic__%d",index] andLocale:en_US];
   }
 }
 

@@ -11,6 +11,7 @@
 #import "CategoriaModel.h"
 #import "BundleModel.h"
 #import "Carta_Localize.h"
+#import "LocalizeHelper.h"
 
 @interface SeedManager : NSObject
 
