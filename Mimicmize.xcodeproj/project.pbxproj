@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28D96743140DCBB100457130 /* NSMutableArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D96742140DCBB100457130 /* NSMutableArray+Helper.m */; };
 		73068E8E13DB01170002F841 /* SeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73068E8D13DB01170002F841 /* SeedManager.m */; };
 		73102A6A13F9DDBD0049D703 /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73102A6913F9DDBD0049D703 /* AnimationHelper.m */; };
 		7316BF7313D8DBBD00AF485B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7113D8DBBD00AF485B /* Model.xcdatamodeld */; };
@@ -68,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28D96741140DCBB100457130 /* NSMutableArray+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Helper.h"; sourceTree = "<group>"; };
+		28D96742140DCBB100457130 /* NSMutableArray+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Helper.m"; sourceTree = "<group>"; };
 		73068E8C13DB01170002F841 /* SeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedManager.h; sourceTree = "<group>"; };
 		73068E8D13DB01170002F841 /* SeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedManager.m; sourceTree = "<group>"; };
 		73102A6813F9DDBD0049D703 /* AnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationHelper.h; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 				73102A6913F9DDBD0049D703 /* AnimationHelper.m */,
 				73B8DDF014016FFD00F86DEA /* LocalizeHelper.h */,
 				73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */,
+				28D96741140DCBB100457130 /* NSMutableArray+Helper.h */,
+				28D96742140DCBB100457130 /* NSMutableArray+Helper.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				73102A6A13F9DDBD0049D703 /* AnimationHelper.m in Sources */,
 				73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */,
 				737F569F140F1BE800D5DB80 /* CardsCategoryCellController.m in Sources */,
+				28D96743140DCBB100457130 /* NSMutableArray+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
