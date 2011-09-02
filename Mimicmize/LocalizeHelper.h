@@ -13,5 +13,7 @@
 @interface LocalizeHelper : NSObject
 
 +(NSString *) get_local_language;
++(NSString *) get_seconds_string;
++(NSString *) convert_value_to_minutes : (float)value;
 
 @end

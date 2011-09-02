@@ -13,15 +13,51 @@
 @synthesize btn_done = _btn_done;
 @synthesize btn_add_group = _btn_add_group;
 @synthesize scroll_groups = _scroll_groups;
+@synthesize timer_slider = _timer_slider;
+@synthesize lbl_turn_timeout = _lbl_turn_timeout;
+@synthesize btn_select_all = _btn_select_all;
 
 @synthesize view_settings = _view_settings;
 @synthesize view_groups = _view_groups;
 @synthesize table_categorias = _table_categorias;
 @synthesize array_categorias = _array_categorias;
+@synthesize array_categorias_selecionadas = _array_categorias_selecionadas;
 
 @synthesize total_groups = _total_groups;
 
+@synthesize table_cell_nib = _table_cell_nib;
+@synthesize table_cell_temp = _table_cell_temp;
+
 #pragma mark - Events
+
+-(void) change_button_name {
+  self.btn_select_all.selected = NO;
+  if ([self.array_categorias_selecionadas count] == [self.array_categorias count]) {
+    [self.btn_select_all setTitle:@"Disable All" forState:UIControlStateNormal];
+    
+  }
+  else if ( [self.array_categorias_selecionadas count] == 0 ) {
+    [self.btn_select_all setTitle:@"Enable All" forState:UIControlStateNormal];
+  }
+}
+
+-(IBAction)select_unselect_all:(id)sender {
+  
+  if ([self.array_categorias_selecionadas count] == [self.array_categorias count]) {
+    self.array_categorias_selecionadas = [[NSMutableArray alloc] init];
+  }
+  else {
+    self.array_categorias_selecionadas = [[NSMutableArray alloc] initWithArray:self.array_categorias];
+  }
+  
+  [self.table_categorias reloadData];
+  [self change_button_name];
+}
+
+-(IBAction)change_turn_timeout:(id)sender {
+  
+  self.lbl_turn_timeout.text = [LocalizeHelper convert_value_to_minutes : self.timer_slider.value];
+}
 
 -(IBAction)back_to_groups:(id)sender {
   
@@ -59,19 +95,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   static NSString *CellIdentifier = @"categoria_cell";
-  UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  CardsCategoryCellController *cell = (CardsCategoryCellController *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
   if (cell == nil){
     
-    cell = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, self.table_categorias.frame.size.width, 44)];
+    [self.table_cell_nib instantiateWithOwner:self options:nil];
+    cell = self.table_cell_temp;
+    self.table_cell_temp = nil;
   } 
   
   // cell.imagem_post
   Categoria *categoria = [self.array_categorias objectAtIndex:indexPath.row];
-  cell.textLabel.text = [categoria get_localized_attributes].nome;
-  
+  [cell set_categoria: categoria];
+  if ([self.array_categorias_selecionadas containsObject:cell.categoria]) {
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+  }
+  else {
+    cell.accessoryType = UITableViewCellAccessoryNone;
+  }
   return cell;
-  
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,20 +123,34 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  /*[tableView deselectRowAtIndexPath:indexPath animated:YES];
   
-  Post *post = [self.array_post objectAtIndex:indexPath.row];
-  NewsDetalheController_iPhone *detalhe = [NewsDetalheController_iPhone newsDetalheWithPost:post];
-  self.hidesBottomBarWhenPushed = TRUE;
-  detalhe.navigationItem.rightBarButtonItem = self.navigationItem.rightBarButtonItem;
-  [self.navigationController pushViewController:detalhe animated:TRUE];*/
+  CardsCategoryCellController *cell = (CardsCategoryCellController*)[tableView cellForRowAtIndexPath:indexPath];
+  if ([self.array_categorias_selecionadas containsObject:cell.categoria]) {
+    //remove
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    [self.array_categorias_selecionadas removeObject:cell.categoria];
+  }
+  else {
+    //add
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    [self.array_categorias_selecionadas addObject:cell.categoria];
+  }
+  [self change_button_name];
 }
 
 #pragma mark -
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
   
-  [textField resignFirstResponder];
+  
+  UITextField *next_field = (UITextField *)[self.view_groups viewWithTag:textField.tag+1];
+  
+  if (next_field == nil) {
+    [textField resignFirstResponder];
+  }
+  else {
+    [next_field becomeFirstResponder];
+  }
   return NO;
 }
 
@@ -137,13 +193,37 @@
 
 - (void)viewDidLoad
 {
+  
+  self.array_categorias = [Categoria find_all_ordered];
+  self.array_categorias_selecionadas = [[NSMutableArray alloc] initWithArray:self.array_categorias];
+  
   [super viewDidLoad];
   [self.view addSubview:self.view_groups];
   [self.view addSubview:self.view_settings];
   CGRect frame = self.view_settings.frame;
   frame.origin.x = 320;
   self.view_settings.frame = frame;
-  self.array_categorias = [Categoria findAll];
+  self.table_cell_nib = [UINib nibWithNibName:@"CardsCategoryCell" bundle:nil];
+  [self change_button_name];
+  
+  
+}
+
+-(void) set_focus_on_first_txt {
+  
+  UITextField *txt_field = (UITextField *)[self.scroll_groups viewWithTag:1001];
+  if (txt_field == nil) {
+    return;
+  }
+  
+  [txt_field becomeFirstResponder];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+  
+  [self performSelector:@selector(create_new_txt_group) withObject:nil afterDelay:.3];
+  [self performSelector:@selector(create_new_txt_group) withObject:nil afterDelay:.5];
+  [self performSelector:@selector(set_focus_on_first_txt) withObject:nil afterDelay:.6];
 }
 
 - (void)viewDidUnload
@@ -157,6 +237,12 @@
   self.scroll_groups = nil;
   self.table_categorias = nil;
   self.array_categorias = nil;
+  self.array_categorias_selecionadas = nil;
+  self.timer_slider = nil;
+  self.lbl_turn_timeout = nil;
+  self.table_cell_nib = nil;
+  self.table_cell_temp = nil;
+  self.btn_select_all = nil;
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

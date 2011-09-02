@@ -16,4 +16,6 @@
 -(void) add_locale_with_nome: (NSString *) nome andLocale : (NSString *) locale;
 -(Categoria_Localize *) get_localized_attributes;
 
++(NSArray *) find_all_ordered;
+
 @end

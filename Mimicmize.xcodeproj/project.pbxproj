@@ -25,6 +25,8 @@
 		7316BFAB13D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA313D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.m */; };
 		7316BFAC13D8E05400AF485B /* NSPersistentStore+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA513D8E05400AF485B /* NSPersistentStore+ActiveRecord.m */; };
 		7316BFAD13D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */; };
+		737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */; };
+		737F569F140F1BE800D5DB80 /* CardsCategoryCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */; };
 		7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174213DBF86E00CCC78C /* Bundle_Localize.m */; };
 		7392174713DBFC0A00CCC78C /* Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174613DBFC0A00CCC78C /* Bundle.m */; };
 		73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */; };
@@ -101,6 +103,9 @@
 		7316BFA513D8E05400AF485B /* NSPersistentStore+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStore+ActiveRecord.m"; sourceTree = "<group>"; };
 		7316BFA613D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+ActiveRecord.h"; sourceTree = "<group>"; };
 		7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+ActiveRecord.m"; sourceTree = "<group>"; };
+		737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsCategoryCell.xib; sourceTree = "<group>"; };
+		737F569D140F1BE700D5DB80 /* CardsCategoryCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsCategoryCellController.h; sourceTree = "<group>"; };
+		737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsCategoryCellController.m; sourceTree = "<group>"; };
 		7392174113DBF86E00CCC78C /* Bundle_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bundle_Localize.h; sourceTree = "<group>"; };
 		7392174213DBF86E00CCC78C /* Bundle_Localize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bundle_Localize.m; sourceTree = "<group>"; };
 		7392174513DBFC0A00CCC78C /* Bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bundle.h; sourceTree = "<group>"; };
@@ -332,6 +337,8 @@
 				73F9C5FA13E49B760057FC44 /* MainMenuViewController.m */,
 				73E5789C13E540E700A29F11 /* GameSetupViewController.h */,
 				73E5789D13E540E700A29F11 /* GameSetupViewController.m */,
+				737F569D140F1BE700D5DB80 /* CardsCategoryCellController.h */,
+				737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -342,6 +349,7 @@
 				73E33B6113CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib */,
 				73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */,
 				73E5789913E540BE00A29F11 /* GameSetupView.xib */,
+				737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -431,6 +439,7 @@
 				73E33B6613CF96DF004E86C4 /* MimicmizeViewController_iPad.xib in Resources */,
 				73F9C5F713E49B2C0057FC44 /* MainMenuView.xib in Resources */,
 				73E5789A13E540BE00A29F11 /* GameSetupView.xib in Resources */,
+				737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +504,7 @@
 				73E5789E13E540E700A29F11 /* GameSetupViewController.m in Sources */,
 				73102A6A13F9DDBD0049D703 /* AnimationHelper.m in Sources */,
 				73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */,
+				737F569F140F1BE800D5DB80 /* CardsCategoryCellController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
