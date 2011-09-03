@@ -25,6 +25,8 @@
 		7316BFAB13D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA313D8E05400AF485B /* NSManagedObjectModel+ActiveRecord.m */; };
 		7316BFAC13D8E05400AF485B /* NSPersistentStore+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA513D8E05400AF485B /* NSPersistentStore+ActiveRecord.m */; };
 		7316BFAD13D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */; };
+		731EAD9C1411B5510042810D /* BoardPlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 731EAD9B1411B5510042810D /* BoardPlaceView.xib */; };
+		731EAD9F1411B5720042810D /* BoardPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731EAD9E1411B5720042810D /* BoardPlaceViewController.m */; };
 		737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */; };
 		737F569F140F1BE800D5DB80 /* CardsCategoryCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */; };
 		7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174213DBF86E00CCC78C /* Bundle_Localize.m */; };
@@ -104,6 +106,9 @@
 		7316BFA513D8E05400AF485B /* NSPersistentStore+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStore+ActiveRecord.m"; sourceTree = "<group>"; };
 		7316BFA613D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+ActiveRecord.h"; sourceTree = "<group>"; };
 		7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+ActiveRecord.m"; sourceTree = "<group>"; };
+		731EAD9B1411B5510042810D /* BoardPlaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardPlaceView.xib; sourceTree = "<group>"; };
+		731EAD9D1411B5720042810D /* BoardPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardPlaceViewController.h; sourceTree = "<group>"; };
+		731EAD9E1411B5720042810D /* BoardPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardPlaceViewController.m; sourceTree = "<group>"; };
 		737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsCategoryCell.xib; sourceTree = "<group>"; };
 		737F569D140F1BE700D5DB80 /* CardsCategoryCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsCategoryCellController.h; sourceTree = "<group>"; };
 		737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsCategoryCellController.m; sourceTree = "<group>"; };
@@ -344,6 +349,8 @@
 				73E5789D13E540E700A29F11 /* GameSetupViewController.m */,
 				737F569D140F1BE700D5DB80 /* CardsCategoryCellController.h */,
 				737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */,
+				731EAD9D1411B5720042810D /* BoardPlaceViewController.h */,
+				731EAD9E1411B5720042810D /* BoardPlaceViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -355,6 +362,7 @@
 				73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */,
 				73E5789913E540BE00A29F11 /* GameSetupView.xib */,
 				737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */,
+				731EAD9B1411B5510042810D /* BoardPlaceView.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -445,6 +453,7 @@
 				73F9C5F713E49B2C0057FC44 /* MainMenuView.xib in Resources */,
 				73E5789A13E540BE00A29F11 /* GameSetupView.xib in Resources */,
 				737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */,
+				731EAD9C1411B5510042810D /* BoardPlaceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +520,7 @@
 				28D96743140DCBB100457130 /* NSMutableArray+Helper.m in Sources */,
 				73DC8F6B1411A07C00A1CDD8 /* Categoria.m in Sources */,
 				73DC8F6E1411A07D00A1CDD8 /* Jogo.m in Sources */,
+				731EAD9F1411B5720042810D /* BoardPlaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
