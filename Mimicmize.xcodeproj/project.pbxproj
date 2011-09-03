@@ -12,7 +12,6 @@
 		73102A6A13F9DDBD0049D703 /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73102A6913F9DDBD0049D703 /* AnimationHelper.m */; };
 		7316BF7313D8DBBD00AF485B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7113D8DBBD00AF485B /* Model.xcdatamodeld */; };
 		7316BF7C13D8DE6900AF485B /* Grupo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7B13D8DE6900AF485B /* Grupo.m */; };
-		7316BF7F13D8DE6900AF485B /* Jogo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF7E13D8DE6900AF485B /* Jogo.m */; };
 		7316BF8813D8DE9F00AF485B /* BundleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF8713D8DE9F00AF485B /* BundleModel.m */; };
 		7316BF8B13D8DEBF00AF485B /* CategoriaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF8A13D8DEBF00AF485B /* CategoriaModel.m */; };
 		7316BF8E13D8DEFF00AF485B /* JogoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BF8D13D8DEFF00AF485B /* JogoModel.m */; };
@@ -31,10 +30,11 @@
 		7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174213DBF86E00CCC78C /* Bundle_Localize.m */; };
 		7392174713DBFC0A00CCC78C /* Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174613DBFC0A00CCC78C /* Bundle.m */; };
 		73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */; };
-		73D678EF13DBF5A6004EC747 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678EE13DBF5A6004EC747 /* Categoria.m */; };
 		73D678F213DBF5A6004EC747 /* Carta_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678F113DBF5A6004EC747 /* Carta_Localize.m */; };
 		73D678F813DBF5A6004EC747 /* Categoria_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678F713DBF5A6004EC747 /* Categoria_Localize.m */; };
 		73D678FB13DBF5A6004EC747 /* Carta.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678FA13DBF5A6004EC747 /* Carta.m */; };
+		73DC8F6B1411A07C00A1CDD8 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DC8F6A1411A07C00A1CDD8 /* Categoria.m */; };
+		73DC8F6E1411A07D00A1CDD8 /* Jogo.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DC8F6D1411A07D00A1CDD8 /* Jogo.m */; };
 		73E33B4C13CF96DF004E86C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B4B13CF96DF004E86C4 /* UIKit.framework */; };
 		73E33B4E13CF96DF004E86C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B4D13CF96DF004E86C4 /* Foundation.framework */; };
 		73E33B5013CF96DF004E86C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E33B4F13CF96DF004E86C4 /* CoreGraphics.framework */; };
@@ -78,8 +78,6 @@
 		7316BF7213D8DBBD00AF485B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		7316BF7A13D8DE6900AF485B /* Grupo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grupo.h; sourceTree = "<group>"; };
 		7316BF7B13D8DE6900AF485B /* Grupo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Grupo.m; sourceTree = "<group>"; };
-		7316BF7D13D8DE6900AF485B /* Jogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogo.h; sourceTree = "<group>"; };
-		7316BF7E13D8DE6900AF485B /* Jogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jogo.m; sourceTree = "<group>"; };
 		7316BF8613D8DE9F00AF485B /* BundleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleModel.h; sourceTree = "<group>"; };
 		7316BF8713D8DE9F00AF485B /* BundleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleModel.m; sourceTree = "<group>"; };
 		7316BF8913D8DEBF00AF485B /* CategoriaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriaModel.h; path = Mimicmize.xcodeproj/CategoriaModel.h; sourceTree = SOURCE_ROOT; };
@@ -115,14 +113,16 @@
 		7392174613DBFC0A00CCC78C /* Bundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bundle.m; sourceTree = "<group>"; };
 		73B8DDF014016FFD00F86DEA /* LocalizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeHelper.h; sourceTree = "<group>"; };
 		73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeHelper.m; sourceTree = "<group>"; };
-		73D678ED13DBF5A6004EC747 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
-		73D678EE13DBF5A6004EC747 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		73D678F013DBF5A6004EC747 /* Carta_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta_Localize.h; sourceTree = "<group>"; };
 		73D678F113DBF5A6004EC747 /* Carta_Localize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carta_Localize.m; sourceTree = "<group>"; };
 		73D678F613DBF5A6004EC747 /* Categoria_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria_Localize.h; sourceTree = "<group>"; };
 		73D678F713DBF5A6004EC747 /* Categoria_Localize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria_Localize.m; sourceTree = "<group>"; };
 		73D678F913DBF5A6004EC747 /* Carta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta.h; sourceTree = "<group>"; };
 		73D678FA13DBF5A6004EC747 /* Carta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carta.m; sourceTree = "<group>"; };
+		73DC8F691411A07C00A1CDD8 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
+		73DC8F6A1411A07C00A1CDD8 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
+		73DC8F6C1411A07D00A1CDD8 /* Jogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jogo.h; sourceTree = "<group>"; };
+		73DC8F6D1411A07D00A1CDD8 /* Jogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Jogo.m; sourceTree = "<group>"; };
 		73E33B4713CF96DF004E86C4 /* Mimicmize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mimicmize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73E33B4B13CF96DF004E86C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		73E33B4D13CF96DF004E86C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,6 +195,10 @@
 		7316BF6F13D8DBAC00AF485B /* coredata */ = {
 			isa = PBXGroup;
 			children = (
+				73DC8F6C1411A07D00A1CDD8 /* Jogo.h */,
+				73DC8F6D1411A07D00A1CDD8 /* Jogo.m */,
+				73DC8F691411A07C00A1CDD8 /* Categoria.h */,
+				73DC8F6A1411A07C00A1CDD8 /* Categoria.m */,
 				7392174513DBFC0A00CCC78C /* Bundle.h */,
 				7392174613DBFC0A00CCC78C /* Bundle.m */,
 				7392174113DBF86E00CCC78C /* Bundle_Localize.h */,
@@ -203,14 +207,10 @@
 				73D678FA13DBF5A6004EC747 /* Carta.m */,
 				73D678F013DBF5A6004EC747 /* Carta_Localize.h */,
 				73D678F113DBF5A6004EC747 /* Carta_Localize.m */,
-				73D678ED13DBF5A6004EC747 /* Categoria.h */,
-				73D678EE13DBF5A6004EC747 /* Categoria.m */,
 				73D678F613DBF5A6004EC747 /* Categoria_Localize.h */,
 				73D678F713DBF5A6004EC747 /* Categoria_Localize.m */,
 				7316BF7A13D8DE6900AF485B /* Grupo.h */,
 				7316BF7B13D8DE6900AF485B /* Grupo.m */,
-				7316BF7D13D8DE6900AF485B /* Jogo.h */,
-				7316BF7E13D8DE6900AF485B /* Jogo.m */,
 				7316BF7113D8DBBD00AF485B /* Model.xcdatamodeld */,
 			);
 			name = coredata;
@@ -485,7 +485,6 @@
 				73E33B6013CF96DF004E86C4 /* MimicmizeViewController.m in Sources */,
 				7316BF7313D8DBBD00AF485B /* Model.xcdatamodeld in Sources */,
 				7316BF7C13D8DE6900AF485B /* Grupo.m in Sources */,
-				7316BF7F13D8DE6900AF485B /* Jogo.m in Sources */,
 				7316BF8813D8DE9F00AF485B /* BundleModel.m in Sources */,
 				7316BF8B13D8DEBF00AF485B /* CategoriaModel.m in Sources */,
 				7316BF8E13D8DEFF00AF485B /* JogoModel.m in Sources */,
@@ -499,7 +498,6 @@
 				7316BFAC13D8E05400AF485B /* NSPersistentStore+ActiveRecord.m in Sources */,
 				7316BFAD13D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */,
 				73068E8E13DB01170002F841 /* SeedManager.m in Sources */,
-				73D678EF13DBF5A6004EC747 /* Categoria.m in Sources */,
 				73D678F213DBF5A6004EC747 /* Carta_Localize.m in Sources */,
 				73D678F813DBF5A6004EC747 /* Categoria_Localize.m in Sources */,
 				73D678FB13DBF5A6004EC747 /* Carta.m in Sources */,
@@ -511,6 +509,8 @@
 				73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */,
 				737F569F140F1BE800D5DB80 /* CardsCategoryCellController.m in Sources */,
 				28D96743140DCBB100457130 /* NSMutableArray+Helper.m in Sources */,
+				73DC8F6B1411A07C00A1CDD8 /* Categoria.m in Sources */,
+				73DC8F6E1411A07D00A1CDD8 /* Jogo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

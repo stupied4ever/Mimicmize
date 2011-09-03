@@ -36,4 +36,12 @@
   return categorias;
 }
 
++(void) remover_categorias_do_jogo {
+  
+  NSArray *array_categorias = [Categoria findAll];
+  for (Categoria *categoria in array_categorias) {
+    categoria.jogo_atual = nil;
+  }
+}
+
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="837" systemVersion="10K540" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="864" systemVersion="11A511" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Bundle" representedClassName="Bundle">
         <attribute name="comprado" optional="YES" attributeType="Boolean"/>
         <relationship name="cartas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta" inverseName="bundle" inverseEntity="Carta"/>
@@ -23,6 +23,7 @@
     </entity>
     <entity name="Categoria" representedClassName="Categoria">
         <relationship name="cartas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta" inverseName="categorias" inverseEntity="Carta"/>
+        <relationship name="jogo_atual" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Jogo" inverseName="categorias_escolhidas" inverseEntity="Jogo"/>
         <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria_Localize" inverseName="categoria" inverseEntity="Categoria_Localize"/>
     </entity>
     <entity name="Categoria_Localize">
@@ -37,16 +38,17 @@
     </entity>
     <entity name="Jogo" representedClassName="Jogo">
         <attribute name="segundos_rodada" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <relationship name="categorias_escolhidas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria" inverseName="jogo_atual" inverseEntity="Categoria"/>
         <relationship name="grupo_atual" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Grupo" inverseName="jogo" inverseEntity="Grupo"/>
     </entity>
     <elements>
-        <element name="Bundle" positionX="225" positionY="162" width="128" height="90"/>
-        <element name="Bundle_Localize" positionX="214" positionY="27" width="128" height="75"/>
+        <element name="Bundle" positionX="9" positionY="81" width="128" height="90"/>
+        <element name="Bundle_Localize" positionX="-2" positionY="-54" width="128" height="75"/>
         <element name="Carta" positionX="7" positionY="252" width="128" height="105"/>
         <element name="Carta_Localize" positionX="9" positionY="396" width="128" height="90"/>
-        <element name="Categoria" positionX="225" positionY="267" width="128" height="75"/>
+        <element name="Categoria" positionX="225" positionY="267" width="128" height="90"/>
         <element name="Categoria_Localize" positionX="232" positionY="387" width="128" height="90"/>
-        <element name="Grupo" positionX="403" positionY="171" width="128" height="90"/>
-        <element name="Jogo" positionX="412" positionY="378" width="128" height="75"/>
+        <element name="Grupo" positionX="394" positionY="387" width="128" height="90"/>
+        <element name="Jogo" positionX="414" positionY="261" width="128" height="90"/>
     </elements>
 </model>

@@ -10,6 +10,8 @@
 #import "AnimationHelper.h"
 #import "CategoriaModel.h"
 #import "CardsCategoryCellController.h"
+#import "JogoModel.h"
+#import "GrupoModel.h"
 
 @interface GameSetupViewController : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -42,5 +44,6 @@
 -(IBAction)select_unselect_all:(id)sender;
 
 -(void) create_new_txt_group;
+-(void) save_settings_to_coredata;
 
 @end

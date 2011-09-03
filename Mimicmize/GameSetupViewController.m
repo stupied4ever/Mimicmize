@@ -37,7 +37,7 @@
     
   }
   else if ( [self.array_categorias_selecionadas count] == 0 ) {
-    [self.btn_select_all setTitle:@"Enable All" forState:UIControlStateNormal];
+    [self.btn_select_all setTitle:@"Enable All" forState:UIControlStateNormal]  ;
   }
 }
 
@@ -72,6 +72,7 @@
 
 -(IBAction)done:(id)sender {
   
+  [self save_settings_to_coredata];
   [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -223,12 +224,36 @@
   
   [self performSelector:@selector(create_new_txt_group) withObject:nil afterDelay:.3];
   [self performSelector:@selector(create_new_txt_group) withObject:nil afterDelay:.5];
-  [self performSelector:@selector(set_focus_on_first_txt) withObject:nil afterDelay:.6];
+  [self performSelector:@selector(set_focus_on_first_txt) withObject:nil afterDelay:.65];
+}
+
+-(void) save_settings_to_coredata {
+  
+  [Grupo truncateAll];
+  [Jogo truncateAll];
+  [Categoria remover_categorias_do_jogo];
+  
+  NSInteger index_txt = 1001;
+  for (; ; index_txt++) {
+    UITextField *txt_field = (UITextField *)[self.view_groups viewWithTag:index_txt];
+    if (txt_field == nil) {
+      break;
+    }
+    
+    Grupo *new_group = [Grupo createEntity];
+    new_group.nome = txt_field.text;
+    new_group.casa_tabuleiro = [NSNumber numberWithInt:0];
+  }
+  
+  Jogo *new_game = [Jogo createEntity];
+  new_game.segundos_rodada = [NSNumber numberWithFloat:self.timer_slider.value];
+  new_game.categorias_escolhidas = [NSSet setWithArray:self.array_categorias_selecionadas];
+  new_game.grupo_atual = [[Grupo findAll] objectAtIndex:rand()%self.total_groups];
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
+  [super viewDidUnload];
   
   self.view_groups = nil;
   self.view_settings = nil;
@@ -243,8 +268,6 @@
   self.table_cell_nib = nil;
   self.table_cell_temp = nil;
   self.btn_select_all = nil;
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

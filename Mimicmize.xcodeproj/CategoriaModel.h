@@ -17,5 +17,6 @@
 -(Categoria_Localize *) get_localized_attributes;
 
 +(NSArray *) find_all_ordered;
++(void) remover_categorias_do_jogo;
 
 @end
