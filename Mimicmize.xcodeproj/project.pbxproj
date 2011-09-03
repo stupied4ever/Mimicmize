@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283547091411BE8A007D1E61 /* PlayTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283547081411BE8A007D1E61 /* PlayTimeView.xib */; };
+		2835470D1411BE9E007D1E61 /* PlayTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2835470C1411BE9E007D1E61 /* PlayTimeViewController.m */; };
+		283547101411D4EC007D1E61 /* SoundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2835470F1411D4EC007D1E61 /* SoundHelper.m */; };
+		283547121411D832007D1E61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283547111411D832007D1E61 /* AVFoundation.framework */; };
 		28D96743140DCBB100457130 /* NSMutableArray+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D96742140DCBB100457130 /* NSMutableArray+Helper.m */; };
 		73068E8E13DB01170002F841 /* SeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 73068E8D13DB01170002F841 /* SeedManager.m */; };
 		73102A6A13F9DDBD0049D703 /* AnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73102A6913F9DDBD0049D703 /* AnimationHelper.m */; };
@@ -69,6 +73,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		283547081411BE8A007D1E61 /* PlayTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayTimeView.xib; sourceTree = "<group>"; };
+		2835470B1411BE9E007D1E61 /* PlayTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayTimeViewController.h; sourceTree = "<group>"; };
+		2835470C1411BE9E007D1E61 /* PlayTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayTimeViewController.m; sourceTree = "<group>"; };
+		2835470E1411D4EC007D1E61 /* SoundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundHelper.h; sourceTree = "<group>"; };
+		2835470F1411D4EC007D1E61 /* SoundHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundHelper.m; sourceTree = "<group>"; };
+		283547111411D832007D1E61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		28D96741140DCBB100457130 /* NSMutableArray+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Helper.h"; sourceTree = "<group>"; };
 		28D96742140DCBB100457130 /* NSMutableArray+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Helper.m"; sourceTree = "<group>"; };
 		73068E8C13DB01170002F841 /* SeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedManager.h; sourceTree = "<group>"; };
@@ -156,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283547121411D832007D1E61 /* AVFoundation.framework in Frameworks */,
 				7316BF9913D8DFD000AF485B /* CoreData.framework in Frameworks */,
 				73E33B4C13CF96DF004E86C4 /* UIKit.framework in Frameworks */,
 				73E33B4E13CF96DF004E86C4 /* Foundation.framework in Frameworks */,
@@ -188,6 +199,8 @@
 				73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */,
 				28D96741140DCBB100457130 /* NSMutableArray+Helper.h */,
 				28D96742140DCBB100457130 /* NSMutableArray+Helper.m */,
+				2835470E1411D4EC007D1E61 /* SoundHelper.h */,
+				2835470F1411D4EC007D1E61 /* SoundHelper.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -259,6 +272,7 @@
 		73E33B4A13CF96DF004E86C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				283547111411D832007D1E61 /* AVFoundation.framework */,
 				7316BF9A13D8E05400AF485B /* ActiveRecord */,
 				7316BF9813D8DFD000AF485B /* CoreData.framework */,
 				73E33B4B13CF96DF004E86C4 /* UIKit.framework */,
@@ -344,6 +358,8 @@
 				73E5789D13E540E700A29F11 /* GameSetupViewController.m */,
 				737F569D140F1BE700D5DB80 /* CardsCategoryCellController.h */,
 				737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */,
+				2835470B1411BE9E007D1E61 /* PlayTimeViewController.h */,
+				2835470C1411BE9E007D1E61 /* PlayTimeViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -355,6 +371,7 @@
 				73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */,
 				73E5789913E540BE00A29F11 /* GameSetupView.xib */,
 				737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */,
+				283547081411BE8A007D1E61 /* PlayTimeView.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -445,6 +462,7 @@
 				73F9C5F713E49B2C0057FC44 /* MainMenuView.xib in Resources */,
 				73E5789A13E540BE00A29F11 /* GameSetupView.xib in Resources */,
 				737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */,
+				283547091411BE8A007D1E61 /* PlayTimeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +529,8 @@
 				28D96743140DCBB100457130 /* NSMutableArray+Helper.m in Sources */,
 				73DC8F6B1411A07C00A1CDD8 /* Categoria.m in Sources */,
 				73DC8F6E1411A07D00A1CDD8 /* Jogo.m in Sources */,
+				2835470D1411BE9E007D1E61 /* PlayTimeViewController.m in Sources */,
+				283547101411D4EC007D1E61 /* SoundHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
