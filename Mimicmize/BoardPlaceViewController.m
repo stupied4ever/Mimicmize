@@ -32,6 +32,14 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+- (UIView *) get_view_opcoes {
+  
+  UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 220, 190)];
+  view.backgroundColor = [UIColor greenColor];
+  
+  return view;
+}
+
 #pragma mark - Events
 
 -(IBAction)select_card:(id)sender {
@@ -41,6 +49,7 @@
   CGRect frame_carta02 = CGRectMake(-80, 480, 100, 120);
   CGRect frame_carta03 = CGRectMake(150, 480, 100, 120);
   CGRect frame_carta04 = CGRectMake(345, 335, 100, 120);
+  [btn_selected addSubview:[self get_view_opcoes]];
   [UIView animateWithDuration:.7 animations:^{
     
     if (self.carta_01 != btn_selected) {
@@ -70,6 +79,7 @@
     frame.size.width = 220;
     frame.size.height = 190;
     btn_selected.frame = frame;
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:btn_selected cache:NO];
     
   }];
 }
@@ -85,10 +95,10 @@
 -(void) animate_cards {
   
   CGRect center_frame = CGRectMake(110, 400, 100, 120);
-  CGRect frame_carta01 = CGRectMake(10, 335, 100, 120);
-  CGRect frame_carta02 = CGRectMake(80, 320, 100, 120);
-  CGRect frame_carta03 = CGRectMake(150, 320, 100, 120);
-  CGRect frame_carta04 = CGRectMake(210, 335, 100, 120);
+  CGRect frame_carta01 = CGRectMake(5, 340, 100, 120);
+  CGRect frame_carta02 = CGRectMake(75, 320, 100, 120);
+  CGRect frame_carta03 = CGRectMake(145, 320, 100, 120);
+  CGRect frame_carta04 = CGRectMake(215, 340, 100, 120);
   self.carta_01.frame = center_frame;
   self.carta_02.frame = center_frame;
   self.carta_03.frame = center_frame;
