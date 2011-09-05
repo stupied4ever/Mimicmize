@@ -51,7 +51,6 @@
   self.board_place_controller = [[BoardPlaceViewController alloc] initWithNibName:@"BoardPlaceView" bundle:nil];
 }
 
-
 - (void) viewDidAppear:(BOOL)animated {
   
   NSArray *array_grupos = [Grupo findAll];
@@ -61,8 +60,11 @@
     comecar_partida = comecar_partida && [grupo.casa_tabuleiro intValue] == 0;
   }
   
-  [self presentModalViewController:self.board_place_controller animated:NO];
-  
+  //if (comecar_partida) {
+  if (true) {
+    //self.view = self.board_place_controller.view;
+    [self presentModalViewController:self.board_place_controller animated:NO];
+  }
 }
 
 - (void)viewDidUnload

@@ -14,6 +14,12 @@
 @synthesize carta_02 = _carta_02;
 @synthesize carta_03 = _carta_03;
 @synthesize carta_04 = _carta_04;
+@synthesize cards_choice_controller = _cards_choice_controller;
+
+@synthesize img_1 = _img_1;
+@synthesize img_2 = _img_2;
+@synthesize img_3 = _img_3;
+@synthesize img_go = _img_go;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,12 +38,71 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+-(void) prepare_layout_for_animation {
+  UILabel *lbl_number = [[UILabel alloc] initWithFrame:CGRectMake(40, 20, 100, 70)];
+  
+  self.img_1.backgroundColor = [UIColor redColor];
+  
+  lbl_number = [[UILabel alloc] initWithFrame:CGRectMake(40, 20, 100, 70)];
+  lbl_number.text = @"1";
+  [self.img_1 addSubview:lbl_number];
+  
+  self.img_2.backgroundColor = [UIColor greenColor];
+  lbl_number = [[UILabel alloc] initWithFrame:CGRectMake(40, 20, 100, 70)];
+  lbl_number.text = @"2";
+  [self.img_2 addSubview:lbl_number];
+  
+  self.img_3.backgroundColor = [UIColor blueColor];
+  lbl_number = [[UILabel alloc] initWithFrame:CGRectMake(40, 20, 100, 70)];
+  lbl_number.text = @"3";
+  [self.img_3 addSubview:lbl_number];
+  
+  self.img_go.backgroundColor = [UIColor yellowColor];
+  lbl_number = [[UILabel alloc] initWithFrame:CGRectMake(40, 20, 100, 70)];
+  lbl_number.text = @"GO";
+  [self.img_go addSubview:lbl_number];
+}
+
+-(void) prepare_animations_to_change {
+  
+  [UIView animateWithDuration:1 animations:^{
+    self.img_2.alpha = 1;
+    self.img_3.alpha = 0;
+  }completion:^(BOOL finished) {
+    [UIView animateWithDuration:1 animations:^{
+      self.img_1.alpha = 1;
+      self.img_2.alpha = 0;
+    }completion:^(BOOL finished) {
+      [UIView animateWithDuration:1 animations:^{
+        self.img_go.alpha = 1;
+        self.img_1.alpha = 0;
+      }];
+    }];
+  }];
+}
+
+-(void) card_selected {
+  
+  [self prepare_layout_for_animation];
+  
+  UIButton *btn_selected = (UIButton *)[self.view viewWithTag:12345];
+  [UIView animateWithDuration:.3 animations:^{
+    btn_selected.alpha = 0;
+    self.img_3.alpha = 1;
+  }completion:^(BOOL finished) {
+    [self prepare_animations_to_change];
+  }];
+}
+
 - (UIView *) get_view_opcoes {
   
-  UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 220, 190)];
-  view.backgroundColor = [UIColor greenColor];
-  
-  return view;
+  self.cards_choice_controller = [[CardsChoiceViewController alloc] initWithNibName:@"CardChoiceView" bundle:nil];
+  self.cards_choice_controller.delegate = self;
+  UIView *return_view = self.cards_choice_controller.view;
+  [self.cards_choice_controller set_carta:[Baralho pick_card] na_posicao:1];
+  [self.cards_choice_controller set_carta:[Baralho pick_card] na_posicao:2];
+  [self.cards_choice_controller set_carta:[Baralho pick_card] na_posicao:3];
+  return return_view;
 }
 
 #pragma mark - Events
@@ -79,6 +144,7 @@
     frame.size.width = 220;
     frame.size.height = 190;
     btn_selected.frame = frame;
+    btn_selected.tag = 12345;
     [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:btn_selected cache:NO];
     
   }];
@@ -124,9 +190,17 @@
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+  [super viewDidUnload];
+  self.carta_01 = nil;
+  self.carta_02 = nil;
+  self.carta_03 = nil;
+  self.carta_04 = nil;
+  self.cards_choice_controller = nil;
+  
+  self.img_1 = nil;
+  self.img_2 = nil;
+  self.img_3 = nil;
+  self.img_go = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
