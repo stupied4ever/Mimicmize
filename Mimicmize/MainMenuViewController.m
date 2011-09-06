@@ -60,8 +60,8 @@
     comecar_partida = comecar_partida && [grupo.casa_tabuleiro intValue] == 0;
   }
   
-  //if (comecar_partida) {
-  if (true) {
+  if (comecar_partida) {
+  //if (true) {
     //self.view = self.board_place_controller.view;
     [self presentModalViewController:self.board_place_controller animated:NO];
   }

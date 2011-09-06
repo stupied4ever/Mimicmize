@@ -373,12 +373,12 @@
 				73E5789D13E540E700A29F11 /* GameSetupViewController.m */,
 				737F569D140F1BE700D5DB80 /* CardsCategoryCellController.h */,
 				737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */,
-				2835470B1411BE9E007D1E61 /* PlayTimeViewController.h */,
-				2835470C1411BE9E007D1E61 /* PlayTimeViewController.m */,
 				731EAD9D1411B5720042810D /* BoardPlaceViewController.h */,
 				731EAD9E1411B5720042810D /* BoardPlaceViewController.m */,
 				73405B021413B0A300072664 /* CardsChoiceViewController.h */,
 				73405B031413B0A300072664 /* CardsChoiceViewController.m */,
+				2835470B1411BE9E007D1E61 /* PlayTimeViewController.h */,
+				2835470C1411BE9E007D1E61 /* PlayTimeViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -390,9 +390,9 @@
 				73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */,
 				73E5789913E540BE00A29F11 /* GameSetupView.xib */,
 				737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */,
-				283547081411BE8A007D1E61 /* PlayTimeView.xib */,
 				731EAD9B1411B5510042810D /* BoardPlaceView.xib */,
 				73405AFF1413AFA300072664 /* CardChoiceView.xib */,
+				283547081411BE8A007D1E61 /* PlayTimeView.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";

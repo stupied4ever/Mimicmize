@@ -76,6 +76,14 @@
       [UIView animateWithDuration:1 animations:^{
         self.img_go.alpha = 1;
         self.img_1.alpha = 0;
+      }completion:^(BOOL finished) {
+        self.img_go.alpha = 0;
+        PlayTimeViewController *play_controller = [[PlayTimeViewController alloc] initWithNibName:@"PlayTimeView" bundle:nil];
+        [self presentModalViewController:play_controller animated:NO];
+        
+        [UIView transitionFromView:self.view toView:play_controller.view duration:.4 options:UIViewAnimationOptionTransitionCurlDown completion:^(BOOL finished) {
+          
+        }]; 
       }];
     }];
   }];
@@ -87,6 +95,7 @@
   
   UIButton *btn_selected = (UIButton *)[self.view viewWithTag:12345];
   [UIView animateWithDuration:.3 animations:^{
+    btn_selected.tag = 0;
     btn_selected.alpha = 0;
     self.img_3.alpha = 1;
   }completion:^(BOOL finished) {
@@ -152,6 +161,30 @@
 
 #pragma mark - View lifecycle
 
+- (void)center_all_cards {
+  CGRect center_frame = CGRectMake(110, 400, 100, 120);
+  self.carta_01.frame = center_frame;
+  self.carta_02.frame = center_frame;
+  self.carta_03.frame = center_frame;
+  self.carta_04.frame = center_frame;
+  self.carta_01.transform = CGAffineTransformMakeRotation(0);
+  self.carta_02.transform = CGAffineTransformMakeRotation(0);
+  self.carta_03.transform = CGAffineTransformMakeRotation(0);
+  self.carta_04.transform = CGAffineTransformMakeRotation(0);
+}
+
+- (void)rearrange_view {
+  
+  [self center_all_cards];
+  [self.cards_choice_controller.view removeFromSuperview];
+  self.cards_choice_controller = nil;
+  self.carta_01.alpha = 1;
+  self.carta_02.alpha = 1;
+  self.carta_03.alpha = 1;
+  self.carta_04.alpha = 1;
+  
+}
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
@@ -160,15 +193,10 @@
 
 -(void) animate_cards {
   
-  CGRect center_frame = CGRectMake(110, 400, 100, 120);
   CGRect frame_carta01 = CGRectMake(5, 340, 100, 120);
   CGRect frame_carta02 = CGRectMake(75, 320, 100, 120);
   CGRect frame_carta03 = CGRectMake(145, 320, 100, 120);
   CGRect frame_carta04 = CGRectMake(215, 340, 100, 120);
-  self.carta_01.frame = center_frame;
-  self.carta_02.frame = center_frame;
-  self.carta_03.frame = center_frame;
-  self.carta_04.frame = center_frame;
   [UIView animateWithDuration:.7 animations:^{
     
     self.carta_01.frame = frame_carta01;
@@ -184,6 +212,7 @@
 
 -(void) viewDidAppear:(BOOL)animated {
   
+  [self rearrange_view];
   [self animate_cards];
 }
 

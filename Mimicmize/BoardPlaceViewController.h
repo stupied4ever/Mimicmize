@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CardsChoiceViewController.h"
 #import "Baralho.h"
+#import "PlayTimeViewController.h"
 
 @interface BoardPlaceViewController : UIViewController<CardsChoiceDelegate>
 

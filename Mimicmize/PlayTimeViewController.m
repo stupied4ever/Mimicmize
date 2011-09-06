@@ -63,7 +63,7 @@
 
 -(void)load_with_data{
   self.current_game = [Jogo findFirst];
-  play_time_seconds = [self.current_game.segundos_rodada floatValue];
+  play_time_seconds = 3.0;//[self.current_game.segundos_rodada floatValue];
   NSLog(@"Play time seconds on load:%f",play_time_seconds);
   [self.lbl_seconds setText:[LocalizeHelper convert_value_to_minutes:play_time_seconds]];
   
