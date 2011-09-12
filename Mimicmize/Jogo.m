@@ -14,6 +14,7 @@
 @implementation Jogo
 
 @dynamic segundos_rodada;
+@dynamic indice_grupo;
 @dynamic grupo_atual;
 @dynamic categorias_escolhidas;
 

@@ -214,6 +214,7 @@
   
   [self rearrange_view];
   [self animate_cards];
+  [[Jogo findFirst] next_grupo];
 }
 
 

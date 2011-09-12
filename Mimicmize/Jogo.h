@@ -14,6 +14,7 @@
 @interface Jogo : NSManagedObject
 
 @property (nonatomic, retain) NSNumber * segundos_rodada;
+@property (nonatomic, retain) NSNumber * indice_grupo;
 @property (nonatomic, retain) Grupo *grupo_atual;
 @property (nonatomic, retain) NSSet *categorias_escolhidas;
 @end

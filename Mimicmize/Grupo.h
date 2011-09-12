@@ -15,6 +15,7 @@
 }
 @property (nonatomic, retain) NSString * nome;
 @property (nonatomic, retain) NSNumber * casa_tabuleiro;
+@property (nonatomic, retain) NSNumber * ordem;
 @property (nonatomic, retain) NSManagedObject *jogo;
 
 @end

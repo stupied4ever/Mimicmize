@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "Jogo.h"
+#import "Grupo.h"
 
 @interface Jogo (JogoModel)
+
+-(Grupo *) next_grupo;
 
 @end

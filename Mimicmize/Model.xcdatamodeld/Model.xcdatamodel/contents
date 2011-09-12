@@ -34,9 +34,11 @@
     <entity name="Grupo" representedClassName="Grupo">
         <attribute name="casa_tabuleiro" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
         <attribute name="nome" optional="YES" attributeType="String"/>
+        <attribute name="ordem" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
         <relationship name="jogo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Jogo" inverseName="grupo_atual" inverseEntity="Jogo"/>
     </entity>
     <entity name="Jogo" representedClassName="Jogo">
+        <attribute name="indice_grupo" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
         <attribute name="segundos_rodada" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
         <relationship name="categorias_escolhidas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria" inverseName="jogo_atual" inverseEntity="Categoria"/>
         <relationship name="grupo_atual" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Grupo" inverseName="jogo" inverseEntity="Grupo"/>
@@ -49,6 +51,6 @@
         <element name="Categoria" positionX="225" positionY="267" width="128" height="90"/>
         <element name="Categoria_Localize" positionX="232" positionY="387" width="128" height="90"/>
         <element name="Grupo" positionX="394" positionY="387" width="128" height="90"/>
-        <element name="Jogo" positionX="414" positionY="261" width="128" height="90"/>
+        <element name="Jogo" positionX="414" positionY="261" width="128" height="105"/>
     </elements>
 </model>

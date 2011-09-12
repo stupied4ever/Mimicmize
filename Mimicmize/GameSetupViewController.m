@@ -227,6 +227,16 @@
   [self performSelector:@selector(set_focus_on_first_txt) withObject:nil afterDelay:.65];
 }
 
+-(void) set_order_to_all_groups{
+  
+  NSArray *array_grupos = [Grupo findAll];
+  NSInteger index =0;
+  for (Grupo *grupo in array_grupos) {
+    grupo.ordem = [NSNumber numberWithInt:index];
+    index++;
+  }
+}
+
 -(void) save_settings_to_coredata {
   
   [Grupo truncateAll];
@@ -248,7 +258,8 @@
   Jogo *new_game = [Jogo createEntity];
   new_game.segundos_rodada = [NSNumber numberWithFloat:self.timer_slider.value];
   new_game.categorias_escolhidas = [NSSet setWithArray:self.array_categorias_selecionadas];
-  new_game.grupo_atual = [[Grupo findAll] objectAtIndex:rand()%self.total_groups];
+  new_game.indice_grupo = [NSNumber numberWithInt:-1];
+  [self set_order_to_all_groups];
 }
 
 - (void)viewDidUnload

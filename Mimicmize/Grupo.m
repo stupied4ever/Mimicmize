@@ -12,6 +12,7 @@
 @implementation Grupo
 @dynamic nome;
 @dynamic casa_tabuleiro;
+@dynamic ordem;
 @dynamic jogo;
 
 @end
