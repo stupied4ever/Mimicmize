@@ -14,8 +14,8 @@
 +(AVAudioPlayer *)play_single_wrong_buzz_with_delegate:(id<AVAudioPlayerDelegate>)delegate;
 +(AVAudioPlayer *)play_single_wrong_buzz;
 
-+(AVAudioPlayer *)play_sound_from_path:(NSString *)path with_delegate:(id<AVAudioPlayerDelegate>)delegate;
-+(AVAudioPlayer *)play_sound_from_path:(NSString *)path;
++(AVAudioPlayer *)play_sound_named:(NSString *)file_name with_delegate:(id<AVAudioPlayerDelegate>)delegate;
++(AVAudioPlayer *)play_sound_named:(NSString *)file_name;
 
 
 @end

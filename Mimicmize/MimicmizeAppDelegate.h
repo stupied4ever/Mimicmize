@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SeedManager.h"
+#import "SoundHelper.h"
 
 @class MainMenuViewController;
 
-@interface MimicmizeAppDelegate : UIResponder <UIApplicationDelegate>
+@interface MimicmizeAppDelegate : UIResponder <UIApplicationDelegate,AVAudioPlayerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

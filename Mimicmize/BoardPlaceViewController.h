@@ -10,6 +10,7 @@
 #import "CardsChoiceViewController.h"
 #import "Baralho.h"
 #import "PlayTimeViewController.h"
+#import "SoundHelper.h"
 
 @interface BoardPlaceViewController : UIViewController<CardsChoiceDelegate>
 

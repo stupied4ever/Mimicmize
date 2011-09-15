@@ -214,6 +214,7 @@
   
   [self rearrange_view];
   [self animate_cards];
+  [SoundHelper play_sound_named:@"shufflecards1"];
   [[Jogo findFirst] next_grupo];
 }
 
