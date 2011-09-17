@@ -11,6 +11,7 @@
 #import "Baralho.h"
 #import "PlayTimeViewController.h"
 #import "CardsAnimationHelper.h"
+#import "SoundHelper.h"
 
 @interface BoardPlaceViewController : UIViewController<CardsChoiceDelegate>
 

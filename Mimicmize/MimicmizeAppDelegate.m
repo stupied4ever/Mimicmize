@@ -14,9 +14,16 @@
 @synthesize window = _window;
 @synthesize viewController = _viewController;
 
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error{
+ [SoundHelper play_sound_named:@"shufflecards1"]; 
+}
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
+  NSLog(@"%i",flag);
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  
+ [SoundHelper play_sound_named:@"shufflecards1" with_delegate:self]; 
   //Start activerecord
   [ActiveRecordHelpers setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Mimicmize.sqlite"];
   SeedManager *seed_manager = [[SeedManager alloc] init];

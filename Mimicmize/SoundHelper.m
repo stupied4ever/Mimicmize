@@ -13,8 +13,7 @@
 +(AVAudioPlayer *)play_single_wrong_buzz_with_delegate:(id<AVAudioPlayerDelegate>)delegate{
   AVAudioPlayer *sound_player = nil;
 
-  NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
-  resourcePath = [resourcePath stringByAppendingString:@"filepath/filename.extension"];
+  NSString *resourcePath = [[NSBundle mainBundle] pathForResource:@"beep5" ofType:@".mp3"];
   NSLog(@"Path to play: %@", resourcePath);
   NSError* err;
 
@@ -22,6 +21,7 @@
 
   if( !err ){
     sound_player.delegate = delegate;
+    [sound_player setVolume: 1.0];
     [sound_player play];
   }
   else
@@ -34,11 +34,11 @@
  return [SoundHelper play_single_wrong_buzz_with_delegate:nil];
 }
 
-+(AVAudioPlayer *)play_sound_from_path:(NSString *)path with_delegate:(id<AVAudioPlayerDelegate>)delegate{
++(AVAudioPlayer *)play_sound_named:(NSString *)file_name with_delegate:(id<AVAudioPlayerDelegate>)delegate{
   AVAudioPlayer *sound_player = nil;
   
-  NSString* resourcePath = [[NSBundle mainBundle] resourcePath];
-  resourcePath = [resourcePath stringByAppendingString:path];
+  
+  NSString *resourcePath = [[NSBundle mainBundle] pathForResource:file_name ofType:@"wav"];
   NSLog(@"Path to play: %@", resourcePath);
   NSError* err;
   
@@ -46,6 +46,8 @@
   
   if( !err ){
     sound_player.delegate = delegate;
+    [sound_player setVolume: 1.0];
+    //[sound_player prepareToPlay];
     [sound_player play];
   }
   else
@@ -54,8 +56,8 @@
   return sound_player;
 }
 
-+(AVAudioPlayer *)play_sound_from_path:(NSString *)path{
-  return [SoundHelper play_sound_from_path:path with_delegate:nil];
++(AVAudioPlayer *)play_sound_named:(NSString *)file_name{
+  return [SoundHelper play_sound_named:file_name with_delegate:nil];
 }
 
 @end
