@@ -104,6 +104,10 @@
 		73405B001413AFA300072664 /* CardChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73405AFF1413AFA300072664 /* CardChoiceView.xib */; };
 		73405B041413B0A300072664 /* CardsChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73405B031413B0A300072664 /* CardsChoiceViewController.m */; };
 		73405B071413B40700072664 /* Baralho.m in Sources */ = {isa = PBXBuildFile; fileRef = 73405B061413B40700072664 /* Baralho.m */; };
+		736AE3A5142180A200D8E964 /* BoardMoveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736AE3A4142180A200D8E964 /* BoardMoveView.xib */; };
+		736AE3A9142180E300D8E964 /* BoardMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736AE3A8142180E300D8E964 /* BoardMoveViewController.m */; };
+		736AE3AC1421819000D8E964 /* BoardMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 736AE3AB1421819000D8E964 /* BoardMoveView.m */; };
+		7376943C142527C900742620 /* CardsAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7376943B142527C900742620 /* CardsAnimationHelper.m */; };
 		737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */; };
 		737F569F140F1BE800D5DB80 /* CardsCategoryCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */; };
 		7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174213DBF86E00CCC78C /* Bundle_Localize.m */; };
@@ -335,6 +339,13 @@
 		73405B031413B0A300072664 /* CardsChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsChoiceViewController.m; sourceTree = "<group>"; };
 		73405B051413B40700072664 /* Baralho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baralho.h; sourceTree = "<group>"; };
 		73405B061413B40700072664 /* Baralho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baralho.m; sourceTree = "<group>"; };
+		736AE3A4142180A200D8E964 /* BoardMoveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardMoveView.xib; sourceTree = "<group>"; };
+		736AE3A7142180E300D8E964 /* BoardMoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardMoveViewController.h; sourceTree = "<group>"; };
+		736AE3A8142180E300D8E964 /* BoardMoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardMoveViewController.m; sourceTree = "<group>"; };
+		736AE3AA1421819000D8E964 /* BoardMoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardMoveView.h; sourceTree = "<group>"; };
+		736AE3AB1421819000D8E964 /* BoardMoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardMoveView.m; sourceTree = "<group>"; };
+		7376943A142527C900742620 /* CardsAnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsAnimationHelper.h; sourceTree = "<group>"; };
+		7376943B142527C900742620 /* CardsAnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsAnimationHelper.m; sourceTree = "<group>"; };
 		737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsCategoryCell.xib; sourceTree = "<group>"; };
 		737F569D140F1BE700D5DB80 /* CardsCategoryCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsCategoryCellController.h; sourceTree = "<group>"; };
 		737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsCategoryCellController.m; sourceTree = "<group>"; };
@@ -788,6 +799,8 @@
 				28D96742140DCBB100457130 /* NSMutableArray+Helper.m */,
 				2835470E1411D4EC007D1E61 /* SoundHelper.h */,
 				2835470F1411D4EC007D1E61 /* SoundHelper.m */,
+				7376943A142527C900742620 /* CardsAnimationHelper.h */,
+				7376943B142527C900742620 /* CardsAnimationHelper.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -957,6 +970,8 @@
 				73405B031413B0A300072664 /* CardsChoiceViewController.m */,
 				2835470B1411BE9E007D1E61 /* PlayTimeViewController.h */,
 				2835470C1411BE9E007D1E61 /* PlayTimeViewController.m */,
+				736AE3A7142180E300D8E964 /* BoardMoveViewController.h */,
+				736AE3A8142180E300D8E964 /* BoardMoveViewController.m */,
 				28ABFA7F14205B7700C0E71D /* FinishGameViewController.h */,
 				28ABFA8014205B7700C0E71D /* FinishGameViewController.m */,
 			);
@@ -973,6 +988,9 @@
 				731EAD9B1411B5510042810D /* BoardPlaceView.xib */,
 				73405AFF1413AFA300072664 /* CardChoiceView.xib */,
 				283547081411BE8A007D1E61 /* PlayTimeView.xib */,
+				736AE3A4142180A200D8E964 /* BoardMoveView.xib */,
+				736AE3AA1421819000D8E964 /* BoardMoveView.h */,
+				736AE3AB1421819000D8E964 /* BoardMoveView.m */,
 				28ABFA7D14205B4300C0E71D /* FinishGameView.xib */,
 			);
 			name = views;
@@ -1072,6 +1090,7 @@
 				28ABFA4C1420580A00C0E71D /* Localizable.strings in Resources */,
 				28ABFA531420580A00C0E71D /* FBConnect.bundle in Resources */,
 				28ABFA7E14205B4300C0E71D /* FinishGameView.xib in Resources */,
+				736AE3A5142180A200D8E964 /* BoardMoveView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1206,6 +1225,9 @@
 				28ABFA6F1420580A00C0E71D /* SHKShareMenu.m in Sources */,
 				28ABFA701420580A00C0E71D /* SHKViewControllerWrapper.m in Sources */,
 				28ABFA8114205B7700C0E71D /* FinishGameViewController.m in Sources */,
+				736AE3A9142180E300D8E964 /* BoardMoveViewController.m in Sources */,
+				736AE3AC1421819000D8E964 /* BoardMoveView.m in Sources */,
+				7376943C142527C900742620 /* CardsAnimationHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

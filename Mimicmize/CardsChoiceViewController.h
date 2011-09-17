@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CartaModel.h"
+#import "Baralho.h"
 
 @protocol CardsChoiceDelegate
 

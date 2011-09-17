@@ -26,11 +26,11 @@
 
 #pragma mark - Game logic
 - (IBAction)correct_mimic:(id)sender {
-  //self.current_game.grupo_atual.ganhou_rodade = YES; como faço algo parecido com isso?
-  //[self.navigationController pushViewController:self.next_viewcontroller animated:YES];
-  //ou
-  //precisamos remover a view de play time, melhor forma?
-  [self presentModalViewController:self.next_viewcontroller animated:YES];
+  
+  self.next_viewcontroller = [[BoardMoveViewController alloc] initWithNibName:@"BoardMoveView" bundle:nil];
+  
+  play_time_seconds = 10;
+  [self presentModalViewController:self.next_viewcontroller animated:NO];
 }
 
 -(void)time_out{
@@ -39,7 +39,7 @@
   //[self.navigationController popViewControllerAnimated:YES];
   //ou
   //precisamos voltar pra view inicial do jogo, melhor forma? previous view?
-  [self dismissModalViewControllerAnimated:YES];
+  [self dismissModalViewControllerAnimated:NO];
 }
 
 -(void)decrease_player_time{    
@@ -90,8 +90,6 @@
     [self setLbl_seconds:nil];
     [self setBtn_correct:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -102,10 +100,7 @@
 
 - (void)didReceiveMemoryWarning
 {
-  // Releases the view if it doesn't have a superview.
   [super didReceiveMemoryWarning];
-  
-  // Release any cached data, images, etc that aren't in use.
 }
 
 @end

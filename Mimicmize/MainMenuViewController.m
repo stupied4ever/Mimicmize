@@ -21,6 +21,9 @@
   
   GameSetupViewController *setup_controller = [[GameSetupViewController alloc] initWithNibName:@"GameSetupView" bundle:nil];
   [self presentModalViewController:setup_controller animated:YES];
+  
+  //BoardMoveViewController *next_viewcontroller = [[BoardMoveViewController alloc] initWithNibName:@"BoardMoveView" bundle:nil];
+  //[self presentModalViewController:next_viewcontroller animated:NO];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -65,6 +68,7 @@
     //self.view = self.board_place_controller.view;
     [self presentModalViewController:self.board_place_controller animated:NO];
   }
+  
 }
 
 - (void)viewDidUnload

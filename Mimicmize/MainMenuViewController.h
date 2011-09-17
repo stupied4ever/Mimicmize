@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GameSetupViewController.h"
 #import "BoardPlaceViewController.h"
+#import "BoardMoveViewController.h"
 
 @interface MainMenuViewController : UIViewController
 

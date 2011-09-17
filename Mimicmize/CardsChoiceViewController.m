@@ -72,6 +72,10 @@
 {
     [super viewDidLoad];
   
+  [self set_carta:[Baralho pick_card] na_posicao:1];
+  [self set_carta:[Baralho pick_card] na_posicao:2];
+  [self set_carta:[Baralho pick_card] na_posicao:3];
+  
 }
 
 - (void)viewDidUnload

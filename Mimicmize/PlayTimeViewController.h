@@ -11,6 +11,7 @@
 #import "JogoModel.h"
 #import "GrupoModel.h"
 #import "SoundHelper.h"
+#import "BoardMoveViewController.h"
 
 @interface PlayTimeViewController : UIViewController {
   UILabel *lbl_group;
