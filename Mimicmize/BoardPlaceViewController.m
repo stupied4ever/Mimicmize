@@ -87,7 +87,7 @@
   
   [self rearrange_view];
   [self.animation show_cards];
-  [SoundHelper play_sound_named:@"shufflecards1"];
+  [[SoundHelper sharedInstance]playSoundWithName:@"shufflecards1"];
   [[Jogo findFirst] next_grupo];
 }
 

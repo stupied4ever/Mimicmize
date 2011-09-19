@@ -37,8 +37,7 @@
 }
 
 -(void)time_out{
-  
-  //[SoundHelper play_single_wrong_buzz]; quando tiver o som precisamos testar
+  [[SoundHelper sharedInstance]playWrongBuzz];
   [self dismissModalViewControllerAnimated:NO];
 }
 

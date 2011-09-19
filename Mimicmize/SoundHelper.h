@@ -9,13 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface SoundHelper : NSObject
+@interface SoundHelper : NSObject <AVAudioPlayerDelegate>
 
-+(AVAudioPlayer *)play_single_wrong_buzz_with_delegate:(id<AVAudioPlayerDelegate>)delegate;
-+(AVAudioPlayer *)play_single_wrong_buzz;
+@property (nonatomic,strong) NSMutableDictionary *sound_players;
 
-+(AVAudioPlayer *)play_sound_named:(NSString *)file_name with_delegate:(id<AVAudioPlayerDelegate>)delegate;
-+(AVAudioPlayer *)play_sound_named:(NSString *)file_name;
-
++(SoundHelper *)sharedInstance;
+-(void)playWrongBuzz;
+-(void)playSoundWithName:(NSString *)audio_file;
 
 @end

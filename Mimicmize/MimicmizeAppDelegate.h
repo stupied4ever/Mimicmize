@@ -12,7 +12,7 @@
 
 @class MainMenuViewController;
 
-@interface MimicmizeAppDelegate : UIResponder <UIApplicationDelegate,AVAudioPlayerDelegate>
+@interface MimicmizeAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
