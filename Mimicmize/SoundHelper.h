@@ -14,6 +14,8 @@
 @property (nonatomic,strong) NSMutableDictionary *sound_players;
 
 +(SoundHelper *)sharedInstance;
+-(void)removePlayer:(NSString *)audio_file;
+-(void)removeAllPlayers;
 -(void)playWrongBuzz;
 -(void)playSoundWithName:(NSString *)audio_file;
 

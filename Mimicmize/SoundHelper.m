@@ -48,22 +48,30 @@ static SoundHelper *_shared_instance;
   return [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:resourcePath] error:&err];
 }
 
--(AVAudioPlayer *)retrievePlayerFromDictionary:(NSString *)audio_file{
+-(AVAudioPlayer *)retrievePlayer:(NSString *)audio_file{
   return [self.sound_players objectForKey:audio_file];
 }
 
--(void)insertPlayerIntoDictionary:(AVAudioPlayer *)player withAudio:(NSString *)audio_file{
+-(void)insertPlayer:(AVAudioPlayer *)player withAudio:(NSString *)audio_file{
   [self.sound_players setValue:player forKey:audio_file];
 }
 
+-(void)removePlayer:(NSString *)audio_file{
+  [self.sound_players removeObjectForKey:audio_file];
+}
+
+-(void)removeAllPlayers{
+  [self.sound_players removeAllObjects];
+}
+
 -(void)playSoundWithName:(NSString *)audio_file{
-  AVAudioPlayer *sound_player = [self retrievePlayerFromDictionary:audio_file];
+  AVAudioPlayer *sound_player = [self retrievePlayer:audio_file];
   NSError* err;
   if (!sound_player)
     sound_player = [self createPlayerWithAudio:audio_file andError:err];
   
   if( !err ){
-    [self insertPlayerIntoDictionary:sound_player withAudio:audio_file];    
+    [self insertPlayer:sound_player withAudio:audio_file];    
     sound_player.delegate = self;
     [sound_player setVolume: 1.0];
     [sound_player play];
