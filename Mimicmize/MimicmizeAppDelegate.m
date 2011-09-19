@@ -23,7 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
- [SoundHelper play_sound_named:@"shufflecards1" with_delegate:self]; 
+  //[SoundHelper play_sound_named:@"shufflecards1" with_delegate:self]; 
   //Start activerecord
   [ActiveRecordHelpers setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Mimicmize.sqlite"];
   SeedManager *seed_manager = [[SeedManager alloc] init];

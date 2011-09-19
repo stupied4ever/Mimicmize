@@ -14,9 +14,11 @@
 @interface Baralho : NSObject
 
 @property (nonatomic, strong) NSMutableArray *array_cards;
+@property (nonatomic, strong) NSArray *array_categorias;
 
 +(Baralho *) get_instance;
 +(Carta *) pick_card;
 -(Carta *) pick_card;
++(void) set_categorias : (NSArray *) array_categorias;
 
 @end

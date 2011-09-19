@@ -12,6 +12,7 @@
 #import "CardsCategoryCellController.h"
 #import "JogoModel.h"
 #import "GrupoModel.h"
+#import "Baralho.h"
 
 @interface GameSetupViewController : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
