@@ -37,7 +37,7 @@
 }
 
 -(void)time_out{
-  [[SoundHelper sharedInstance]playWrongBuzz];
+  //[[SoundHelper sharedInstance]playWrongBuzz];
   [self dismissModalViewControllerAnimated:NO];
 }
 
