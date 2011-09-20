@@ -18,5 +18,7 @@
 -(void)removeAllPlayers;
 -(void)playWrongBuzz;
 -(void)playSoundWithName:(NSString *)audio_file;
+-(void)stopSoundWithName:(NSString *)audio_file;
+-(void)stopAll;
 
 @end

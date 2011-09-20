@@ -84,5 +84,18 @@ static SoundHelper *_shared_instance;
   [self playSoundWithName:@"beep5"];
 }
 
+-(void)stopSoundWithName:(NSString *)audio_file{  
+  AVAudioPlayer *sound_player = [self retrievePlayer:audio_file];
+  [sound_player stop];
+  [sound_player setCurrentTime:0];
+}
+
+-(void)stopAll{
+  for (AVAudioPlayer *sound_player in self.sound_players) {
+    [sound_player stop];
+    [sound_player setCurrentTime:0];
+  }
+}
+
 
 @end
