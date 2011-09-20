@@ -78,7 +78,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self.btn_correct setTitle:NSLocalizedString(@"Correct", @"correct message") forState:UIControlStateNormal];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
