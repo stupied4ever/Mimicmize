@@ -14,15 +14,6 @@
 @synthesize img_checked = _img_checked;
 @synthesize categoria = _categoria;
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
 -(void) set_categoria : (Categoria *)categoria {
   
   self.categoria = categoria;
@@ -31,7 +22,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
-  //[super setSelected:selected animated:animated];
+  [super setSelected:selected animated:animated];
   // Configure the view for the selected state
 }
 

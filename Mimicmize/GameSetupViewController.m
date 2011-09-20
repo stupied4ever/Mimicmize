@@ -33,21 +33,21 @@
 -(void) change_button_name {
   self.btn_select_all.selected = NO;
   if ([self.array_categorias_selecionadas count] == [self.array_categorias count]) {
-    [self.btn_select_all setTitle:@"Disable All" forState:UIControlStateNormal];
+    [self.btn_select_all setTitle:NSLocalizedString(@"Disable All", @"buttons") forState:UIControlStateNormal];
     
   }
   else if ( [self.array_categorias_selecionadas count] == 0 ) {
-    [self.btn_select_all setTitle:@"Enable All" forState:UIControlStateNormal]  ;
+    [self.btn_select_all setTitle:NSLocalizedString(@"Enable All", @"buttons") forState:UIControlStateNormal]  ;
   }
 }
 
 -(IBAction)select_unselect_all:(id)sender {
   
-  if ([self.array_categorias_selecionadas count] == [self.array_categorias count]) {
-    self.array_categorias_selecionadas = [[NSMutableArray alloc] init];
+  if ([self.btn_select_all.titleLabel.text isEqualToString:NSLocalizedString(@"Enable All", @"buttons")]) {
+     self.array_categorias_selecionadas = [[NSMutableArray alloc] initWithArray:self.array_categorias];
   }
   else {
-    self.array_categorias_selecionadas = [[NSMutableArray alloc] initWithArray:self.array_categorias];
+    self.array_categorias_selecionadas = [[NSMutableArray alloc] init];
   }
   
   [self.table_categorias reloadData];
@@ -105,7 +105,6 @@
     self.table_cell_temp = nil;
   } 
   
-  // cell.imagem_post
   Categoria *categoria = [self.array_categorias objectAtIndex:indexPath.row];
   [cell set_categoria: categoria];
   if ([self.array_categorias_selecionadas containsObject:cell.categoria]) {
@@ -206,8 +205,6 @@
   self.view_settings.frame = frame;
   self.table_cell_nib = [UINib nibWithNibName:@"CardsCategoryCell" bundle:nil];
   [self change_button_name];
-  
-  
 }
 
 -(void) set_focus_on_first_txt {
@@ -239,6 +236,7 @@
 
 -(void) save_settings_to_coredata {
   
+  [Baralho set_categorias:self.array_categorias_selecionadas];
   [Grupo truncateAll];
   [Jogo truncateAll];
   [Categoria remover_categorias_do_jogo];

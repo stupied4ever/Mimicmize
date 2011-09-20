@@ -16,7 +16,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
   //Start activerecord
+  [SoundHelper sharedInstance];
   [ActiveRecordHelpers setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Mimicmize.sqlite"];
   SeedManager *seed_manager = [[SeedManager alloc] init];
   [seed_manager load_all_fixtures];

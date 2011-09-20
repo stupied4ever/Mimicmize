@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		283547091411BE8A007D1E61 /* PlayTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283547081411BE8A007D1E61 /* PlayTimeView.xib */; };
 		2835470D1411BE9E007D1E61 /* PlayTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2835470C1411BE9E007D1E61 /* PlayTimeViewController.m */; };
 		283547101411D4EC007D1E61 /* SoundHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2835470F1411D4EC007D1E61 /* SoundHelper.m */; };
 		283547121411D832007D1E61 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283547111411D832007D1E61 /* AVFoundation.framework */; };
@@ -106,9 +105,12 @@
 		7316BFAD13D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */; };
 		731EAD9C1411B5510042810D /* BoardPlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 731EAD9B1411B5510042810D /* BoardPlaceView.xib */; };
 		731EAD9F1411B5720042810D /* BoardPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731EAD9E1411B5720042810D /* BoardPlaceViewController.m */; };
-		73405B001413AFA300072664 /* CardChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73405AFF1413AFA300072664 /* CardChoiceView.xib */; };
 		73405B041413B0A300072664 /* CardsChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73405B031413B0A300072664 /* CardsChoiceViewController.m */; };
 		73405B071413B40700072664 /* Baralho.m in Sources */ = {isa = PBXBuildFile; fileRef = 73405B061413B40700072664 /* Baralho.m */; };
+		735C6D60142808FE00577B95 /* CardChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735C6D62142808FE00577B95 /* CardChoiceView.xib */; };
+		735C6D6514280A7800577B95 /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735C6D6714280A7800577B95 /* MainMenuView.xib */; };
+		735C6D6914280AAB00577B95 /* GameSetupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735C6D6B14280AAB00577B95 /* GameSetupView.xib */; };
+		735C6D6D14280B6E00577B95 /* PlayTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735C6D6F14280B6E00577B95 /* PlayTimeView.xib */; };
 		736AE3A5142180A200D8E964 /* BoardMoveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736AE3A4142180A200D8E964 /* BoardMoveView.xib */; };
 		736AE3A9142180E300D8E964 /* BoardMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736AE3A8142180E300D8E964 /* BoardMoveViewController.m */; };
 		736AE3AC1421819000D8E964 /* BoardMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 736AE3AB1421819000D8E964 /* BoardMoveView.m */; };
@@ -140,9 +142,7 @@
 		73E33B7913CF96E0004E86C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B7713CF96E0004E86C4 /* InfoPlist.strings */; };
 		73E33B7B13CF96E0004E86C4 /* MimicmizeTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 73E33B7A13CF96E0004E86C4 /* MimicmizeTests.h */; };
 		73E33B7D13CF96E0004E86C4 /* MimicmizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E33B7C13CF96E0004E86C4 /* MimicmizeTests.m */; };
-		73E5789A13E540BE00A29F11 /* GameSetupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73E5789913E540BE00A29F11 /* GameSetupView.xib */; };
 		73E5789E13E540E700A29F11 /* GameSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E5789D13E540E700A29F11 /* GameSetupViewController.m */; };
-		73F9C5F713E49B2C0057FC44 /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */; };
 		73F9C5FB13E49B760057FC44 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F9C5FA13E49B760057FC44 /* MainMenuViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -157,7 +157,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		283547081411BE8A007D1E61 /* PlayTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayTimeView.xib; sourceTree = "<group>"; };
 		2835470B1411BE9E007D1E61 /* PlayTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayTimeViewController.h; sourceTree = "<group>"; };
 		2835470C1411BE9E007D1E61 /* PlayTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayTimeViewController.m; sourceTree = "<group>"; };
 		2835470E1411D4EC007D1E61 /* SoundHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundHelper.h; sourceTree = "<group>"; };
@@ -344,11 +343,18 @@
 		731EAD9B1411B5510042810D /* BoardPlaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardPlaceView.xib; sourceTree = "<group>"; };
 		731EAD9D1411B5720042810D /* BoardPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardPlaceViewController.h; sourceTree = "<group>"; };
 		731EAD9E1411B5720042810D /* BoardPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardPlaceViewController.m; sourceTree = "<group>"; };
-		73405AFF1413AFA300072664 /* CardChoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardChoiceView.xib; sourceTree = "<group>"; };
 		73405B021413B0A300072664 /* CardsChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsChoiceViewController.h; sourceTree = "<group>"; };
 		73405B031413B0A300072664 /* CardsChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsChoiceViewController.m; sourceTree = "<group>"; };
 		73405B051413B40700072664 /* Baralho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baralho.h; sourceTree = "<group>"; };
 		73405B061413B40700072664 /* Baralho.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baralho.m; sourceTree = "<group>"; };
+		735C6D61142808FE00577B95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CardChoiceView.xib; sourceTree = "<group>"; };
+		735C6D641428091800577B95 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt; path = pt.lproj/CardChoiceView.xib; sourceTree = "<group>"; };
+		735C6D6614280A7800577B95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenuView.xib; sourceTree = "<group>"; };
+		735C6D6814280A8D00577B95 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt; path = pt.lproj/MainMenuView.xib; sourceTree = "<group>"; };
+		735C6D6A14280AAB00577B95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GameSetupView.xib; sourceTree = "<group>"; };
+		735C6D6C14280AC100577B95 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt; path = pt.lproj/GameSetupView.xib; sourceTree = "<group>"; };
+		735C6D6E14280B6E00577B95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PlayTimeView.xib; sourceTree = "<group>"; };
+		735C6D7014280B7900577B95 /* pt */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = pt; path = pt.lproj/PlayTimeView.xib; sourceTree = "<group>"; };
 		736AE3A4142180A200D8E964 /* BoardMoveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardMoveView.xib; sourceTree = "<group>"; };
 		736AE3A7142180E300D8E964 /* BoardMoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardMoveViewController.h; sourceTree = "<group>"; };
 		736AE3A8142180E300D8E964 /* BoardMoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardMoveViewController.m; sourceTree = "<group>"; };
@@ -395,10 +401,8 @@
 		73E33B7813CF96E0004E86C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		73E33B7A13CF96E0004E86C4 /* MimicmizeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MimicmizeTests.h; sourceTree = "<group>"; };
 		73E33B7C13CF96E0004E86C4 /* MimicmizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MimicmizeTests.m; sourceTree = "<group>"; };
-		73E5789913E540BE00A29F11 /* GameSetupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameSetupView.xib; sourceTree = "<group>"; };
 		73E5789C13E540E700A29F11 /* GameSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSetupViewController.h; sourceTree = "<group>"; };
 		73E5789D13E540E700A29F11 /* GameSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSetupViewController.m; sourceTree = "<group>"; };
-		73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuView.xib; sourceTree = "<group>"; };
 		73F9C5F913E49B760057FC44 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		73F9C5FA13E49B760057FC44 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1021,12 +1025,12 @@
 			isa = PBXGroup;
 			children = (
 				73E33B6113CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib */,
-				73F9C5F613E49B2C0057FC44 /* MainMenuView.xib */,
-				73E5789913E540BE00A29F11 /* GameSetupView.xib */,
+				735C6D6714280A7800577B95 /* MainMenuView.xib */,
+				735C6D6B14280AAB00577B95 /* GameSetupView.xib */,
 				737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */,
 				731EAD9B1411B5510042810D /* BoardPlaceView.xib */,
-				73405AFF1413AFA300072664 /* CardChoiceView.xib */,
-				283547081411BE8A007D1E61 /* PlayTimeView.xib */,
+				735C6D62142808FE00577B95 /* CardChoiceView.xib */,
+				735C6D6F14280B6E00577B95 /* PlayTimeView.xib */,
 				736AE3A4142180A200D8E964 /* BoardMoveView.xib */,
 				736AE3AA1421819000D8E964 /* BoardMoveView.h */,
 				736AE3AB1421819000D8E964 /* BoardMoveView.m */,
@@ -1098,6 +1102,7 @@
 			knownRegions = (
 				en,
 				de,
+				pt,
 			);
 			mainGroup = 73E33B3C13CF96DF004E86C4;
 			productRefGroup = 73E33B4813CF96DF004E86C4 /* Products */;
@@ -1119,12 +1124,12 @@
 				73E33B5E13CF96DF004E86C4 /* MimicmizeViewController.h in Resources */,
 				73E33B6313CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib in Resources */,
 				73E33B6613CF96DF004E86C4 /* MimicmizeViewController_iPad.xib in Resources */,
-				73F9C5F713E49B2C0057FC44 /* MainMenuView.xib in Resources */,
-				73E5789A13E540BE00A29F11 /* GameSetupView.xib in Resources */,
+				735C6D6514280A7800577B95 /* MainMenuView.xib in Resources */,
+				735C6D6914280AAB00577B95 /* GameSetupView.xib in Resources */,
 				737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */,
-				283547091411BE8A007D1E61 /* PlayTimeView.xib in Resources */,
+				735C6D6D14280B6E00577B95 /* PlayTimeView.xib in Resources */,
 				731EAD9C1411B5510042810D /* BoardPlaceView.xib in Resources */,
-				73405B001413AFA300072664 /* CardChoiceView.xib in Resources */,
+				735C6D60142808FE00577B95 /* CardChoiceView.xib in Resources */,
 				28ABFA471420580A00C0E71D /* SHKSharers.plist in Resources */,
 				28ABFA4C1420580A00C0E71D /* Localizable.strings in Resources */,
 				28ABFA531420580A00C0E71D /* FBConnect.bundle in Resources */,
@@ -1301,6 +1306,42 @@
 				28ABF9D41420580A00C0E71D /* en */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		735C6D62142808FE00577B95 /* CardChoiceView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				735C6D61142808FE00577B95 /* en */,
+				735C6D641428091800577B95 /* pt */,
+			);
+			name = CardChoiceView.xib;
+			sourceTree = "<group>";
+		};
+		735C6D6714280A7800577B95 /* MainMenuView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				735C6D6614280A7800577B95 /* en */,
+				735C6D6814280A8D00577B95 /* pt */,
+			);
+			name = MainMenuView.xib;
+			sourceTree = "<group>";
+		};
+		735C6D6B14280AAB00577B95 /* GameSetupView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				735C6D6A14280AAB00577B95 /* en */,
+				735C6D6C14280AC100577B95 /* pt */,
+			);
+			name = GameSetupView.xib;
+			sourceTree = "<group>";
+		};
+		735C6D6F14280B6E00577B95 /* PlayTimeView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				735C6D6E14280B6E00577B95 /* en */,
+				735C6D7014280B7900577B95 /* pt */,
+			);
+			name = PlayTimeView.xib;
 			sourceTree = "<group>";
 		};
 		73E33B5413CF96DF004E86C4 /* InfoPlist.strings */ = {
