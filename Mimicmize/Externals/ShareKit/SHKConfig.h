@@ -14,8 +14,8 @@
 // App Description
 // These values are used by any service that shows 'shared from XYZ'
 
-#define SHKMyAppName			@"Oi Moda"
-#define SHKMyAppURL				@"http://oimoda.com.br/"
+#define SHKMyAppName			@"Mimicmize"
+#define SHKMyAppURL				@"http://ruppystudios.com.br/"
 
 
 
@@ -71,13 +71,13 @@
  */
 #define SHKTwitterConsumerKey		@"lA8F3mKb9mTw0RziA0DYQ"
 #define SHKTwitterSecret			@"oVQukQlUMKdKDVTveMsyQbqq3veh3qrQnngG0LO2iQ"
-#define SHKTwitterCallbackUrl		@"http://oimoda.com.br" // You need to set this if using OAuth, see note above (xAuth users can skip it)
+#define SHKTwitterCallbackUrl		@"http://ruppystudios.com.br" // You need to set this if using OAuth, see note above (xAuth users can skip it)
 #define SHKTwitterUseXAuth			0 // To use xAuth, set to 1
 #define SHKTwitterUsername			@"" // Enter your app's twitter account if you'd like to ask the user to follow it when logging in. (Only for xAuth)
 
 // Bit.ly (for shortening URLs on Twitter) - http://bit.ly/account/register - after signup: http://bit.ly/a/your_api_key
-#define SHKBitLyLogin				@"parsecdigital"
-#define SHKBitLyKey					@"R_d56934c2fd0f3ab27c180aa6a955e3fa"
+#define SHKBitLyLogin				@"ruppystudios"
+#define SHKBitLyKey					@"R_b874cead0e7c136cf86ea5921810ec54"
 
 // ShareMenu Ordering
 #define SHKShareMenuAlphabeticalOrder 1 // Setting this to 1 will show list in Alphabetical Order, setting to 0 will follow the order in SHKShares.plist
