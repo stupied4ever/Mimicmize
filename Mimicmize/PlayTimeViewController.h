@@ -13,12 +13,14 @@
 #import "SoundHelper.h"
 #import "BoardMoveViewController.h"
 
+@class BoardPlaceViewController;
 @interface PlayTimeViewController : UIViewController {
   UILabel *lbl_group;
   UILabel *lbl_seconds;
   UIButton *btn_correct;
   
   CGFloat play_time_seconds;
+  BoardPlaceViewController *delegate;
 }
 
 @property (nonatomic, strong) IBOutlet UILabel *lbl_group;
@@ -27,6 +29,8 @@
 
 @property (nonatomic, strong) Jogo *current_game;
 @property (nonatomic, strong) UIViewController *next_viewcontroller;
+
+-(void) set_delegate : (BoardPlaceViewController *)delegate;
 
 - (IBAction)correct_mimic:(id)sender;
 @end

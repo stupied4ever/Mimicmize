@@ -8,6 +8,7 @@
 
 #import "PlayTimeViewController.h"
 #import "FinishGameViewController.h"
+#import "BoardPlaceViewController.h"
 
 @implementation PlayTimeViewController
 @synthesize lbl_group;
@@ -16,6 +17,10 @@
 @synthesize current_game=_current_game;
 @synthesize next_viewcontroller=_next_viewcontroller;
 
+-(void) set_delegate : (BoardPlaceViewController *)p_delegate {
+  
+  delegate = p_delegate;
+}
 
 -(void)show_player_time_in_minutes:(NSInteger)seconds{
   NSInteger minutes = (seconds/60)%60;
@@ -29,16 +34,14 @@
 - (IBAction)correct_mimic:(id)sender {
   
   self.current_game.grupo_atual.acertou = [NSNumber numberWithBool:YES];
-  self.next_viewcontroller = [[BoardMoveViewController alloc] initWithNibName:@"BoardMoveView" bundle:nil];
-  
-  play_time_seconds = 10;
-  [self presentModalViewController:self.next_viewcontroller animated:NO];
-  
+  [self dismissModalViewControllerAnimated:NO];
+  [delegate correct_mimic];
 }
 
 -(void)time_out{
   //[[SoundHelper sharedInstance]playWrongBuzz];
   [self dismissModalViewControllerAnimated:NO];
+  [delegate next_group];
 }
 
 -(void)decrease_player_time{
@@ -48,8 +51,10 @@
     play_time_seconds = play_time_seconds-1;  
     [self show_player_time_in_minutes:play_time_seconds];
   }
-  else
+  else {
     [self time_out];
+    return;
+  }
   [self performSelector:@selector(decrease_player_time) 
              withObject:nil 
              afterDelay:1];

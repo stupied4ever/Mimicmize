@@ -35,6 +35,7 @@
   [self prepare_layout_for_animation];
   [self.animation show_3_2_1_go:^ {
     PlayTimeViewController *play_controller = [[PlayTimeViewController alloc] initWithNibName:@"PlayTimeView" bundle:nil];
+    [play_controller set_delegate:self];
     [self presentModalViewController:play_controller animated:NO];
   }];
 }
@@ -55,7 +56,12 @@
   [self.animation show_selected_card:btn_selected];
 }
 
-#pragma mark - View lifecycle
+-(void) correct_mimic {
+  
+  BoardMoveViewController *board_move_controller = [[BoardMoveViewController alloc] initWithNibName:@"BoardMoveView" bundle:nil];
+  [board_move_controller set_delegate:self];
+  [self presentModalViewController:board_move_controller animated:NO];
+}
 
 - (void)rearrange_view {
   
@@ -67,6 +73,16 @@
   self.carta_03.alpha = 1;
   self.carta_04.alpha = 1;
 }
+
+-(void) next_group {
+  
+  [self rearrange_view];
+  [self.animation show_cards];
+  [[SoundHelper sharedInstance]playSoundWithName:@"shufflecards1"];
+  [[Jogo findFirst] next_grupo];
+}
+
+#pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
@@ -81,14 +97,7 @@
   self.animation.img_2 = self.img_2;
   self.animation.img_3 = self.img_3;
   self.animation.img_go = self.img_go;
-}
-
--(void) viewDidAppear:(BOOL)animated {
-  
-  [self rearrange_view];
-  [self.animation show_cards];
-  //[[SoundHelper sharedInstance]playSoundWithName:@"shufflecards1"];
-  [[Jogo findFirst] next_grupo];
+  [self next_group];
 }
 
 - (void)viewDidUnload

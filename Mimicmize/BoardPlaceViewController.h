@@ -28,6 +28,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *img_go;
 
 -(IBAction)select_card:(id)sender;
-
+-(void) correct_mimic;
+-(void) next_group;
 
 @end

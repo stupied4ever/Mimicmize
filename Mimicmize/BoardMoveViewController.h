@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "BoardMoveView.h"
 
-@interface BoardMoveViewController : UIViewController
+@class BoardPlaceViewController;
+@interface BoardMoveViewController : UIViewController {
+  
+  BoardPlaceViewController *delegate;
+}
+
+-(void) set_delegate : (BoardPlaceViewController *)p_delegate;
 
 @end
