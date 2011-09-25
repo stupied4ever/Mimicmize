@@ -13,7 +13,13 @@
 #import "Carta_Localize.h"
 #import "LocalizeHelper.h"
 
-@interface SeedManager : NSObject
+@interface SeedManager : NSObject {
+  
+  Categoria *dificil;
+  Categoria *lugares;
+  Categoria *objetos;
+  Categoria *pessoas;
+}
 
 - (void) load_all_fixtures;
 - (void) load_categorias;

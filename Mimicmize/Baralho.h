@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Carta.h"
 #import "NSMutableArray+Helper.h"
+#import "CategoriaModel.h"
 
 //Single tone
 @interface Baralho : NSObject

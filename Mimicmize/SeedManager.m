@@ -38,19 +38,19 @@
 
 - (void) load_categorias {
   
-  Categoria *dificil = [Categoria createEntity];
+  dificil = [Categoria createEntity];
   [dificil add_locale_with_nome:@"Dificil" andLocale:pt_BR];
   [dificil add_locale_with_nome:@"Hard" andLocale:en_US];
   
-  Categoria *lugares = [Categoria createEntity];
+  lugares = [Categoria createEntity];
   [lugares add_locale_with_nome:@"Lugares" andLocale:pt_BR];
   [lugares add_locale_with_nome:@"Places" andLocale:en_US];
   
-  Categoria *objetos = [Categoria createEntity];
+  objetos = [Categoria createEntity];
   [objetos add_locale_with_nome:@"Objetos" andLocale:pt_BR];
   [objetos add_locale_with_nome:@"Objects" andLocale:en_US];
   
-  Categoria *pessoas = [Categoria createEntity];
+  pessoas = [Categoria createEntity];
   [pessoas add_locale_with_nome:@"Pessoas" andLocale:pt_BR];
   [pessoas add_locale_with_nome:@"People" andLocale:en_US];
 }
@@ -66,16 +66,31 @@
 - (void) load_cartas {
   
   NSInteger index = 0;
-  NSInteger total_cartas = 30;
+  NSInteger total_cartas = 16;
+  Categoria *categoria;
   
   for (index=0; index < total_cartas; index++) {
     
     Carta *nova_carta = [Carta createEntity];
     nova_carta.pontos_andar = [NSNumber numberWithInt:(index % 6) + 1];
-    [nova_carta addCategoriasObject:[Categoria findFirst]];
+    
+    if (index < 4) {
+      categoria = dificil;
+    }
+    else if (index < 8) {
+      categoria = lugares;
+    }
+    else if (index < 12) {
+      categoria = objetos;
+    }
+    else if (index < 16) {
+      categoria = pessoas;
+    }
+    
+    [nova_carta addCategoriasObject: categoria ];
     nova_carta.bundle = [Bundle findFirst];
-    [nova_carta add_locale_with_mimica: [NSString stringWithFormat:@"mimica_%d",index] andLocale:pt_BR];
-    [nova_carta add_locale_with_mimica: [NSString stringWithFormat:@"mimic__%d",index] andLocale:en_US];
+    [nova_carta add_locale_with_mimica: [NSString stringWithFormat:@"mimica_%@_%d",[categoria get_localized_attributes].nome, index] andLocale:pt_BR];
+    [nova_carta add_locale_with_mimica: [NSString stringWithFormat:@"mimic_%@_%d",[categoria get_localized_attributes].nome,index] andLocale:en_US];
   }
 }
 

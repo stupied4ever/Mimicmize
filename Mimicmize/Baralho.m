@@ -18,9 +18,18 @@ static Baralho *baralho_singletone;
 -(void) shuffle_cards {
   
   //TOOD: carregar somente cartas das categorias selecionadas
-  NSArray *array_de_cartas = [Carta findAll];
+  self.array_cards = [NSMutableArray array];// = [Carta findAll];
   
-  self.array_cards = [NSMutableArray arrayWithArray: array_de_cartas];
+  for (Categoria *categoria in self.array_categorias) {
+    
+    for (Carta *carta in categoria.cartas) {
+      
+      if (! [self.array_cards containsObject:carta]) {
+        [self.array_cards addObject:carta];
+      }
+    }
+  }
+  
   [self.array_cards shuffle];
 }
 
