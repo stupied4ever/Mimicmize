@@ -117,6 +117,10 @@
 		7376943C142527C900742620 /* CardsAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7376943B142527C900742620 /* CardsAnimationHelper.m */; };
 		737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */; };
 		737F569F140F1BE800D5DB80 /* CardsCategoryCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */; };
+		737FC88B1431310E004D5577 /* tela_inicial.png in Resources */ = {isa = PBXBuildFile; fileRef = 737FC8891431310E004D5577 /* tela_inicial.png */; };
+		737FC88C1431310E004D5577 /* tela_inicial@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 737FC88A1431310E004D5577 /* tela_inicial@2x.png */; };
+		737FC89014313239004D5577 /* jogarBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 737FC88E14313239004D5577 /* jogarBtn.png */; };
+		737FC89114313239004D5577 /* jogarBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 737FC88F14313239004D5577 /* jogarBtn@2x.png */; };
 		7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174213DBF86E00CCC78C /* Bundle_Localize.m */; };
 		7392174713DBFC0A00CCC78C /* Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174613DBFC0A00CCC78C /* Bundle.m */; };
 		73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */; };
@@ -365,6 +369,10 @@
 		737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsCategoryCell.xib; sourceTree = "<group>"; };
 		737F569D140F1BE700D5DB80 /* CardsCategoryCellController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsCategoryCellController.h; sourceTree = "<group>"; };
 		737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsCategoryCellController.m; sourceTree = "<group>"; };
+		737FC8891431310E004D5577 /* tela_inicial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tela_inicial.png; sourceTree = "<group>"; };
+		737FC88A1431310E004D5577 /* tela_inicial@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tela_inicial@2x.png"; sourceTree = "<group>"; };
+		737FC88E14313239004D5577 /* jogarBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jogarBtn.png; sourceTree = "<group>"; };
+		737FC88F14313239004D5577 /* jogarBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jogarBtn@2x.png"; sourceTree = "<group>"; };
 		7392174113DBF86E00CCC78C /* Bundle_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bundle_Localize.h; sourceTree = "<group>"; };
 		7392174213DBF86E00CCC78C /* Bundle_Localize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bundle_Localize.m; sourceTree = "<group>"; };
 		7392174513DBFC0A00CCC78C /* Bundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bundle.h; sourceTree = "<group>"; };
@@ -812,6 +820,10 @@
 		28C14C8A1421A49200C07261 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				737FC88E14313239004D5577 /* jogarBtn.png */,
+				737FC88F14313239004D5577 /* jogarBtn@2x.png */,
+				737FC8891431310E004D5577 /* tela_inicial.png */,
+				737FC88A1431310E004D5577 /* tela_inicial@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -1140,6 +1152,10 @@
 				28C14C921421A49200C07261 /* shufflecards1.mp3 in Resources */,
 				28C14C931421A49200C07261 /* shufflecards2.mp3 in Resources */,
 				28C14C991421AF2100C07261 /* shufflecards1.wav in Resources */,
+				737FC88B1431310E004D5577 /* tela_inicial.png in Resources */,
+				737FC88C1431310E004D5577 /* tela_inicial@2x.png in Resources */,
+				737FC89014313239004D5577 /* jogarBtn.png in Resources */,
+				737FC89114313239004D5577 /* jogarBtn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
