@@ -66,7 +66,7 @@
 - (void) load_cartas {
   
   NSInteger index = 0;
-  NSInteger total_cartas = 16;
+  NSInteger total_cartas = 320;
   Categoria *categoria;
   
   for (index=0; index < total_cartas; index++) {
@@ -74,16 +74,16 @@
     Carta *nova_carta = [Carta createEntity];
     nova_carta.pontos_andar = [NSNumber numberWithInt:(index % 6) + 1];
     
-    if (index < 4) {
+    if (index < 80) {
       categoria = dificil;
     }
-    else if (index < 8) {
+    else if (index < 160) {
       categoria = lugares;
     }
-    else if (index < 12) {
+    else if (index < 240) {
       categoria = objetos;
     }
-    else if (index < 16) {
+    else if (index < 320) {
       categoria = pessoas;
     }
     

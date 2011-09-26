@@ -17,6 +17,7 @@
 @interface GameSetupViewController : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIButton *btn_add_group;
+@property (nonatomic, strong) IBOutlet UIButton *btn_remove_group;
 @property (nonatomic, strong) IBOutlet UIButton *btn_done;
 @property (nonatomic, strong) IBOutlet UIScrollView *scroll_groups;
 
@@ -39,12 +40,14 @@
 
 -(IBAction)back_to_groups:(id)sender;
 -(IBAction)add_other_group:(id)sender;
+-(IBAction)remove_last_group:(id)sender;
 -(IBAction)done:(id)sender;
 -(IBAction)next:(id)sender;
 -(IBAction)change_turn_timeout:(id)sender;
 -(IBAction)select_unselect_all:(id)sender;
 
 -(void) create_new_txt_group;
+-(void) remove_last_txt_field;
 -(void) save_settings_to_coredata;
 
 @end

@@ -12,6 +12,7 @@
 
 @synthesize btn_done = _btn_done;
 @synthesize btn_add_group = _btn_add_group;
+@synthesize btn_remove_group = _btn_remove_group;
 @synthesize scroll_groups = _scroll_groups;
 @synthesize timer_slider = _timer_slider;
 @synthesize lbl_turn_timeout = _lbl_turn_timeout;
@@ -27,6 +28,43 @@
 
 @synthesize table_cell_nib = _table_cell_nib;
 @synthesize table_cell_temp = _table_cell_temp;
+
+-(void) calculate_show_buttons {
+  
+  [UIView animateWithDuration:.3 animations:^{
+    
+    if (self.total_groups == 2) {
+      CGRect frame = self.btn_add_group.frame;
+      frame.origin.x  = 20;
+      frame.size.width = 165;
+      self.btn_add_group.frame = frame;
+      self.btn_remove_group.alpha =0;
+    }
+    else if (self.total_groups == 4) {
+      CGRect frame = self.btn_remove_group.frame;
+      frame.origin.x  = 20;
+      frame.size.width = 165;
+      self.btn_remove_group.frame = frame;
+      self.btn_add_group.alpha =0;
+    }
+    
+    else {
+      
+      CGRect frame_add = self.btn_add_group.frame;
+      frame_add.origin.x  = 20;
+      frame_add.size.width = 79;
+      self.btn_add_group.frame = frame_add;
+      
+      CGRect frame_remove = self.btn_remove_group.frame;
+      frame_remove.origin.x  = 106;
+      frame_remove.size.width = 79;
+      self.btn_remove_group.frame = frame_remove;
+      self.btn_remove_group.alpha = 1;
+      self.btn_add_group.alpha = 1;
+    }
+  }];
+  
+}
 
 #pragma mark - Events
 
@@ -68,6 +106,17 @@
 -(IBAction)add_other_group:(id)sender {
   
   [self create_new_txt_group];
+}
+
+-(IBAction)remove_last_group:(id)sender{
+  
+  if (self.total_groups <= 2) {
+    return;
+  }
+  
+  [self remove_last_txt_field];
+  self.total_groups--;
+  [self calculate_show_buttons];
 }
 
 -(IBAction)done:(id)sender {
@@ -155,6 +204,20 @@
   return NO;
 }
 
+-(void) remove_last_txt_field {
+  
+  UITextField *txt_field = (UITextField *)[self.view_groups viewWithTag:1000+self.total_groups];
+  [UIView animateWithDuration:.3 animations:^{
+    
+    CGRect frame = txt_field.frame;
+    frame.origin.x = -320;
+    txt_field.frame = frame;
+  } completion:^(BOOL finished) {
+    
+    [txt_field removeFromSuperview];
+  }];
+}
+
 -(UITextField *) create_txt_field {
   
   NSInteger y_atual = 10 + (40 * self.total_groups++);
@@ -164,6 +227,7 @@
   txt_group.tag = 1000 + self.total_groups;
   txt_group.delegate = self;
   txt_group.backgroundColor = [UIColor greenColor];
+  
   return txt_group;
 }
 
@@ -172,6 +236,7 @@
   UITextField *txt_group = [self create_txt_field];
   [self.scroll_groups addSubview:txt_group];
   [AnimationHelper make_bounce_effect_with_view:txt_group offset:20];
+  [self calculate_show_buttons];
 }
 
 #pragma mark - View lifecycle
@@ -206,6 +271,9 @@
   self.view_settings.frame = frame;
   self.table_cell_nib = [UINib nibWithNibName:@"CardsCategoryCell" bundle:nil];
   [self change_button_name];
+  
+  //frame = self.btn_remove_group.frame;
+  //frame.origin.x =
 }
 
 -(void) set_focus_on_first_txt {
@@ -269,6 +337,7 @@
   self.view_settings = nil;
   self.btn_done = nil;
   self.btn_add_group = nil;
+  self.btn_remove_group = nil;
   self.scroll_groups = nil;
   self.table_categorias = nil;
   self.array_categorias = nil;
