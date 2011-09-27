@@ -48,10 +48,9 @@
 							<object class="IBUILabel" id="182305861">
 								<reference key="NSNextResponder" ref="530239510"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{56, 11}, {209, 21}}</string>
+								<string key="NSFrame">{{13, 11}, {209, 21}}</string>
 								<reference key="NSSuperview" ref="530239510"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:312</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -279,9 +278,13 @@
 							<string>change_turn_timeout:</string>
 							<string>done:</string>
 							<string>next:</string>
+							<string>remove_last_group:</string>
+							<string>select_unselect_all:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -298,6 +301,8 @@
 							<string>change_turn_timeout:</string>
 							<string>done:</string>
 							<string>next:</string>
+							<string>remove_last_group:</string>
+							<string>select_unselect_all:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -321,6 +326,14 @@
 								<string key="name">next:</string>
 								<string key="candidateClassName">id</string>
 							</object>
+							<object class="IBActionInfo">
+								<string key="name">remove_last_group:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">select_unselect_all:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
@@ -329,6 +342,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>btn_add_group</string>
 							<string>btn_done</string>
+							<string>btn_remove_group</string>
+							<string>btn_select_all</string>
 							<string>lbl_turn_timeout</string>
 							<string>scroll_groups</string>
 							<string>table_categorias</string>
@@ -340,6 +355,8 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIButton</string>
+							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UILabel</string>
@@ -358,6 +375,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>btn_add_group</string>
 							<string>btn_done</string>
+							<string>btn_remove_group</string>
+							<string>btn_select_all</string>
 							<string>lbl_turn_timeout</string>
 							<string>scroll_groups</string>
 							<string>table_categorias</string>
@@ -375,6 +394,14 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">btn_done</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">btn_remove_group</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">btn_select_all</string>
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">

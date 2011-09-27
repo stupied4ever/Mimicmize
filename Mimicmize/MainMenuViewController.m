@@ -12,6 +12,7 @@
 
 @synthesize btn_new_game = _btn_new_game;
 @synthesize btn_options = _btn_options;
+@synthesize img_mimicmize = _img_mimicmize;
 
 @synthesize board_place_controller = _board_place_controller;
 
@@ -20,7 +21,18 @@
 -(IBAction)new_game:(id)sender {
   
   GameSetupViewController *setup_controller = [[GameSetupViewController alloc] initWithNibName:@"GameSetupView" bundle:nil];
-  [self presentModalViewController:setup_controller animated:YES];
+  
+  [UIView animateWithDuration:.3 animations:^{
+    self.btn_new_game.alpha = 0;
+  }];
+  
+  [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationCurveEaseIn animations:^{
+    CGRect frame = self.img_mimicmize.frame;
+    frame.origin.x+=320;
+    self.img_mimicmize.frame = frame;
+  } completion:^(BOOL finished) {
+    [self presentModalViewController:setup_controller animated: NO];
+  }];
   
   //BoardMoveViewController *next_viewcontroller = [[BoardMoveViewController alloc] initWithNibName:@"BoardMoveView" bundle:nil];
   //[self presentModalViewController:next_viewcontroller animated:NO];
@@ -56,6 +68,7 @@
   [super viewDidUnload];
   self.btn_new_game = nil;
   self.btn_options = nil;
+  self.img_mimicmize = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

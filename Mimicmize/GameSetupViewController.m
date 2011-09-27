@@ -235,7 +235,7 @@
   
   UITextField *txt_group = [self create_txt_field];
   [self.scroll_groups addSubview:txt_group];
-  [AnimationHelper make_bounce_effect_with_view:txt_group offset:20];
+  [AnimationHelper make_bounce_effect_with_view:txt_group offset:40];
   [self calculate_show_buttons];
 }
 
