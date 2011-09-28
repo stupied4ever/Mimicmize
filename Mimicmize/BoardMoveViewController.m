@@ -14,6 +14,7 @@
 -(void) dismiss {
   
   [self dismissModalViewControllerAnimated:NO];
+  [delegate walk_group];
   [delegate next_group];
 }
 

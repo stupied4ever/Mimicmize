@@ -12,7 +12,7 @@
 
 @protocol CardsChoiceDelegate
 
--(void) card_selected;
+-(void) card_selected : (Carta *) card;
 
 @end
 

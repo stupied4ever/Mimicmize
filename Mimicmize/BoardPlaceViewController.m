@@ -22,6 +22,8 @@
 @synthesize img_3 = _img_3;
 @synthesize img_go = _img_go;
 
+@synthesize carta_selecionada = _carta_selecionada;
+
 -(void) prepare_layout_for_animation {
   
   self.img_1.backgroundColor = [UIColor redColor];
@@ -30,8 +32,9 @@
   self.img_go.backgroundColor = [UIColor yellowColor];
 }
 
--(void) card_selected {
+-(void) card_selected : (Carta *) card {
   
+  self.carta_selecionada = card;
   [self prepare_layout_for_animation];
   [self.animation show_3_2_1_go:^ {
     PlayTimeViewController *play_controller = [[PlayTimeViewController alloc] initWithNibName:@"PlayTimeView" bundle:nil];
@@ -76,10 +79,26 @@
 
 -(void) next_group {
   
+  Jogo *jogo_atual = [Jogo findFirst];
+  if ([jogo_atual.grupo_atual.casa_tabuleiro intValue] > 3) {
+    FinishGameViewController *finish_controller = [[FinishGameViewController alloc] initWithNibName:@"FinishGameView" bundle:nil];
+    [self presentModalViewController:finish_controller animated:NO];
+    return;
+  }
+  
   [self rearrange_view];
   [self.animation show_cards];
   [[SoundHelper sharedInstance]playSoundWithName:@"shufflecards1"];
-  [[Jogo findFirst] next_grupo];
+  [jogo_atual next_grupo];
+}
+
+-(void) walk_group {
+  
+  Jogo *jogo_atual = [Jogo findFirst];
+  
+  NSInteger total_casas_andar = [self.carta_selecionada.pontos_andar intValue];
+  NSInteger casa_atual = [jogo_atual.grupo_atual.casa_tabuleiro intValue];
+  jogo_atual.grupo_atual.casa_tabuleiro = [NSNumber numberWithInt: total_casas_andar + casa_atual];
 }
 
 #pragma mark - View lifecycle
@@ -114,6 +133,8 @@
   self.img_2 = nil;
   self.img_3 = nil;
   self.img_go = nil;
+  
+  self.carta_selecionada = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

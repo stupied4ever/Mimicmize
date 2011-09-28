@@ -12,6 +12,7 @@
 #import "PlayTimeViewController.h"
 #import "CardsAnimationHelper.h"
 #import "SoundHelper.h"
+#import "FinishGameViewController.h"
 
 @interface BoardPlaceViewController : UIViewController<CardsChoiceDelegate>
 
@@ -27,8 +28,11 @@
 @property (nonatomic, strong) IBOutlet UIImageView *img_1;
 @property (nonatomic, strong) IBOutlet UIImageView *img_go;
 
+@property (nonatomic, strong) Carta* carta_selecionada;
+
 -(IBAction)select_card:(id)sender;
 -(void) correct_mimic;
+-(void) walk_group;
 -(void) next_group;
 
 @end

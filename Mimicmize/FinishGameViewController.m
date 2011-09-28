@@ -26,7 +26,7 @@
     index++;    
   }
   current_game.indice_grupo = [NSNumber numberWithInt:-1];
-  [[NSManagedObjectContext defaultContext] save];//problema no save
+  //[[NSManagedObjectContext defaultContext] save];//problema no save
 }
 
 #pragma mark - IBActions
