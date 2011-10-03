@@ -34,23 +34,23 @@
   [UIView animateWithDuration:.3 animations:^{
     
     if (self.total_groups == 2) {
-      CGRect frame = self.btn_add_group.frame;
+      /*CGRect frame = self.btn_add_group.frame;
       frame.origin.x  = 20;
       frame.size.width = 165;
-      self.btn_add_group.frame = frame;
+      self.btn_add_group.frame = frame;*/
       self.btn_remove_group.alpha =0;
     }
     else if (self.total_groups == 4) {
-      CGRect frame = self.btn_remove_group.frame;
+      /*CGRect frame = self.btn_remove_group.frame;
       frame.origin.x  = 20;
       frame.size.width = 165;
-      self.btn_remove_group.frame = frame;
+      self.btn_remove_group.frame = frame;*/
       self.btn_add_group.alpha =0;
     }
     
     else {
       
-      CGRect frame_add = self.btn_add_group.frame;
+      /*CGRect frame_add = self.btn_add_group.frame;
       frame_add.origin.x  = 20;
       frame_add.size.width = 79;
       self.btn_add_group.frame = frame_add;
@@ -58,7 +58,7 @@
       CGRect frame_remove = self.btn_remove_group.frame;
       frame_remove.origin.x  = 106;
       frame_remove.size.width = 79;
-      self.btn_remove_group.frame = frame_remove;
+      self.btn_remove_group.frame = frame_remove;*/
       self.btn_remove_group.alpha = 1;
       self.btn_add_group.alpha = 1;
     }
@@ -218,15 +218,37 @@
   }];
 }
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+  
+  if (textField.tag == 1004) {
+    [self.scroll_groups setContentOffset:CGPointMake(0, 42) animated:YES];
+  }
+  
+  if (textField.tag - 1000 == self.total_groups) {
+    textField.returnKeyType = UIReturnKeyDone;
+  }
+  else {
+    textField.returnKeyType = UIReturnKeyNext;
+  }
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+  
+  if (textField.tag == 1004) {
+    [self.scroll_groups setContentOffset:CGPointMake(0, 0) animated:YES];
+  }
+}
+
 -(UITextField *) create_txt_field {
   
   NSInteger y_atual = 10 + (40 * self.total_groups++);
   [self.scroll_groups setContentSize:CGSizeMake(320, y_atual + 40)];
   
   UITextField *txt_group = [[UITextField alloc] initWithFrame:CGRectMake(320, y_atual, 240, 32)];
+  txt_group.background = [UIImage imageNamed:@"caixaTxt.png"];
   txt_group.tag = 1000 + self.total_groups;
   txt_group.delegate = self;
-  txt_group.backgroundColor = [UIColor greenColor];
+  txt_group.returnKeyType = UIReturnKeyNext;
   
   return txt_group;
 }

@@ -105,6 +105,16 @@
 		7316BFAD13D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */; };
 		731EAD9C1411B5510042810D /* BoardPlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 731EAD9B1411B5510042810D /* BoardPlaceView.xib */; };
 		731EAD9F1411B5720042810D /* BoardPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731EAD9E1411B5720042810D /* BoardPlaceViewController.m */; };
+		734016F81438126E00430D20 /* caixaTxt.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016EE1438126E00430D20 /* caixaTxt.png */; };
+		734016F91438126E00430D20 /* caixaTxt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016EF1438126E00430D20 /* caixaTxt@2x.png */; };
+		734016FA1438126E00430D20 /* grupo.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016F01438126E00430D20 /* grupo.png */; };
+		734016FB1438126E00430D20 /* grupo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016F11438126E00430D20 /* grupo@2x.png */; };
+		734016FC1438126E00430D20 /* maisGrupo.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016F21438126E00430D20 /* maisGrupo.png */; };
+		734016FD1438126E00430D20 /* maisGrupo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016F31438126E00430D20 /* maisGrupo@2x.png */; };
+		734016FE1438126E00430D20 /* menosGrupo.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016F41438126E00430D20 /* menosGrupo.png */; };
+		734016FF1438126E00430D20 /* menosGrupo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016F51438126E00430D20 /* menosGrupo@2x.png */; };
+		734017001438126E00430D20 /* proximo.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016F61438126E00430D20 /* proximo.png */; };
+		734017011438126E00430D20 /* proximo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016F71438126E00430D20 /* proximo@2x.png */; };
 		73405B041413B0A300072664 /* CardsChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73405B031413B0A300072664 /* CardsChoiceViewController.m */; };
 		73405B071413B40700072664 /* Baralho.m in Sources */ = {isa = PBXBuildFile; fileRef = 73405B061413B40700072664 /* Baralho.m */; };
 		735C6D60142808FE00577B95 /* CardChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 735C6D62142808FE00577B95 /* CardChoiceView.xib */; };
@@ -351,6 +361,16 @@
 		731EAD9B1411B5510042810D /* BoardPlaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardPlaceView.xib; sourceTree = "<group>"; };
 		731EAD9D1411B5720042810D /* BoardPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardPlaceViewController.h; sourceTree = "<group>"; };
 		731EAD9E1411B5720042810D /* BoardPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardPlaceViewController.m; sourceTree = "<group>"; };
+		734016EE1438126E00430D20 /* caixaTxt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caixaTxt.png; sourceTree = "<group>"; };
+		734016EF1438126E00430D20 /* caixaTxt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "caixaTxt@2x.png"; sourceTree = "<group>"; };
+		734016F01438126E00430D20 /* grupo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grupo.png; sourceTree = "<group>"; };
+		734016F11438126E00430D20 /* grupo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grupo@2x.png"; sourceTree = "<group>"; };
+		734016F21438126E00430D20 /* maisGrupo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maisGrupo.png; sourceTree = "<group>"; };
+		734016F31438126E00430D20 /* maisGrupo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "maisGrupo@2x.png"; sourceTree = "<group>"; };
+		734016F41438126E00430D20 /* menosGrupo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menosGrupo.png; sourceTree = "<group>"; };
+		734016F51438126E00430D20 /* menosGrupo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menosGrupo@2x.png"; sourceTree = "<group>"; };
+		734016F61438126E00430D20 /* proximo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proximo.png; sourceTree = "<group>"; };
+		734016F71438126E00430D20 /* proximo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proximo@2x.png"; sourceTree = "<group>"; };
 		73405B021413B0A300072664 /* CardsChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsChoiceViewController.h; sourceTree = "<group>"; };
 		73405B031413B0A300072664 /* CardsChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsChoiceViewController.m; sourceTree = "<group>"; };
 		73405B051413B40700072664 /* Baralho.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baralho.h; sourceTree = "<group>"; };
@@ -828,6 +848,16 @@
 		28C14C8A1421A49200C07261 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				734016EE1438126E00430D20 /* caixaTxt.png */,
+				734016EF1438126E00430D20 /* caixaTxt@2x.png */,
+				734016F01438126E00430D20 /* grupo.png */,
+				734016F11438126E00430D20 /* grupo@2x.png */,
+				734016F21438126E00430D20 /* maisGrupo.png */,
+				734016F31438126E00430D20 /* maisGrupo@2x.png */,
+				734016F41438126E00430D20 /* menosGrupo.png */,
+				734016F51438126E00430D20 /* menosGrupo@2x.png */,
+				734016F61438126E00430D20 /* proximo.png */,
+				734016F71438126E00430D20 /* proximo@2x.png */,
 				737FC8921431481B004D5577 /* mimicmizeTitulo.png */,
 				737FC8931431481B004D5577 /* mimicmizeTitulo@2x.png */,
 				737FC8941431481B004D5577 /* tela_inicialFundo.png */,
@@ -1172,6 +1202,16 @@
 				737FC8971431481B004D5577 /* mimicmizeTitulo@2x.png in Resources */,
 				737FC8981431481B004D5577 /* tela_inicialFundo.png in Resources */,
 				737FC8991431481B004D5577 /* tela_inicialFundo@2x.png in Resources */,
+				734016F81438126E00430D20 /* caixaTxt.png in Resources */,
+				734016F91438126E00430D20 /* caixaTxt@2x.png in Resources */,
+				734016FA1438126E00430D20 /* grupo.png in Resources */,
+				734016FB1438126E00430D20 /* grupo@2x.png in Resources */,
+				734016FC1438126E00430D20 /* maisGrupo.png in Resources */,
+				734016FD1438126E00430D20 /* maisGrupo@2x.png in Resources */,
+				734016FE1438126E00430D20 /* menosGrupo.png in Resources */,
+				734016FF1438126E00430D20 /* menosGrupo@2x.png in Resources */,
+				734017001438126E00430D20 /* proximo.png in Resources */,
+				734017011438126E00430D20 /* proximo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
