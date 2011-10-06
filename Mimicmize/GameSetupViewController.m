@@ -69,19 +69,20 @@
 #pragma mark - Events
 
 -(void) change_button_name {
-  self.btn_select_all.selected = NO;
+  
   if ([self.array_categorias_selecionadas count] == [self.array_categorias count]) {
-    [self.btn_select_all setTitle:NSLocalizedString(@"Disable All", @"buttons") forState:UIControlStateNormal];
+    self.btn_select_all.selected = YES;
     
   }
   else if ( [self.array_categorias_selecionadas count] == 0 ) {
-    [self.btn_select_all setTitle:NSLocalizedString(@"Enable All", @"buttons") forState:UIControlStateNormal]  ;
+    self.btn_select_all.selected = NO;
   }
 }
 
 -(IBAction)select_unselect_all:(id)sender {
   
-  if ([self.btn_select_all.titleLabel.text isEqualToString:NSLocalizedString(@"Enable All", @"buttons")]) {
+  self.btn_select_all.selected = !self.btn_select_all.selected;
+  if (self.btn_select_all.selected) {
      self.array_categorias_selecionadas = [[NSMutableArray alloc] initWithArray:self.array_categorias];
   }
   else {
@@ -220,22 +221,41 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
   
-  if (textField.tag == 1004) {
-    [self.scroll_groups setContentOffset:CGPointMake(0, 42) animated:YES];
-  }
-  
   if (textField.tag - 1000 == self.total_groups) {
     textField.returnKeyType = UIReturnKeyDone;
   }
   else {
     textField.returnKeyType = UIReturnKeyNext;
   }
+  
+  if (textField.tag == 1004) {
+    [self.scroll_groups setContentOffset:CGPointMake(0, 46) animated:YES];
+  }
+  else {
+    [self.scroll_groups setContentOffset:CGPointMake(0, 0) animated:YES];
+  }
+  
+  if (self.total_groups == 4) {
+    self.scroll_groups.contentInset = UIEdgeInsetsMake(0, 0, 46, 0);
+    self.scroll_groups.scrollIndicatorInsets  = UIEdgeInsetsMake(0, 0, 50, 0);
+  }
+  else {
+    self.scroll_groups.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.scroll_groups.scrollIndicatorInsets  = UIEdgeInsetsMake(0, 0, 0, 0);
+  }
+}
+
+-(void)set_scroll_to_normal {
+  
+  self.scroll_groups.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+  self.scroll_groups.scrollIndicatorInsets  = UIEdgeInsetsMake(0, 0, 0, 0);
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField {
   
   if (textField.tag == 1004) {
     [self.scroll_groups setContentOffset:CGPointMake(0, 0) animated:YES];
+    [self performSelector:@selector(set_scroll_to_normal) withObject:nil afterDelay:.5];
   }
 }
 
@@ -286,6 +306,7 @@
   self.array_categorias_selecionadas = [[NSMutableArray alloc] initWithArray:self.array_categorias];
   
   [super viewDidLoad];
+  self.btn_select_all.selected = YES;
   [self.view addSubview:self.view_groups];
   [self.view addSubview:self.view_settings];
   CGRect frame = self.view_settings.frame;
@@ -294,8 +315,9 @@
   self.table_cell_nib = [UINib nibWithNibName:@"CardsCategoryCell" bundle:nil];
   [self change_button_name];
   
-  //frame = self.btn_remove_group.frame;
-  //frame.origin.x =
+  [self.timer_slider setMaximumTrackImage:[UIImage imageNamed:@"barraCheia.png"] forState:UIControlStateNormal];
+  [self.timer_slider setMinimumTrackImage:[UIImage imageNamed:@"barraVazia.png"] forState:UIControlStateNormal];
+  self.lbl_turn_timeout.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
 }
 
 -(void) set_focus_on_first_txt {
@@ -326,6 +348,10 @@
 }
 
 -(void) save_settings_to_coredata {
+  
+  if ( [self.array_categorias_selecionadas count] == 0) {
+    self.array_categorias_selecionadas = [NSMutableArray arrayWithArray: [Categoria find_all_ordered]];
+  }
   
   [Baralho set_categorias:self.array_categorias_selecionadas];
   [Grupo truncateAll];

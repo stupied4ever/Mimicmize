@@ -18,6 +18,7 @@
   
   self.categoria = categoria;
   self.lbl_category_name.text = [self.categoria get_localized_attributes].nome;
+  self.lbl_category_name.font = [UIFont fontWithName:@"Helsinki" size:24];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

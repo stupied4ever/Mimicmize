@@ -41,5 +41,10 @@
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackOpaque</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>helsinki.ttf</string>
+		<string>FontleroyBrown.ttf</string>
+	</array>
 </dict>
 </plist>
