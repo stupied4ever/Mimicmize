@@ -12,7 +12,14 @@
 
 +(NSString *) get_local_language {
   
-  return pt_BR;
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  NSArray *languages = [defaults objectForKey:@"AppleLanguages"];
+  NSString *currentLanguage = [languages objectAtIndex:0];
+  
+  if ([currentLanguage isEqualToString:@"pt"]) {
+    return pt_BR;
+  }
+  return en_US;
 }
 
 +(NSString *) get_seconds_string {
