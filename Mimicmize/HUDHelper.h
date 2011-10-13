@@ -30,5 +30,6 @@
 +(void) set_up_in_window : (UIWindow *) window;
 +(void) set_delegate : (UIViewController<PausableUI> *) delegate;
 
+-(void) btn_pause_click : (id) sender;
 
 @end
