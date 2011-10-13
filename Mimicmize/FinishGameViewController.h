@@ -12,8 +12,9 @@
 #import "JogoModel.h"
 #import "MainMenuViewController.h"
 #import "BoardPlaceViewController.h"
+#import "HUDHelper.h"
 
-@interface FinishGameViewController : UIViewController {
+@interface FinishGameViewController : UIViewController<PausableUI> {
   UIImageView *img_view_background;
   UILabel *lbl_winner_group;
   UILabel *lbl_won;

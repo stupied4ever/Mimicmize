@@ -94,4 +94,12 @@
   }
 }
 
++ (void) print_all_fonts {
+  
+  NSArray *fonts = [UIFont familyNames];
+  for (NSString *font in fonts) {
+    NSLog(@"%@",font);
+  }
+}
+
 @end

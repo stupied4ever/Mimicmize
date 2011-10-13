@@ -13,8 +13,9 @@
 #import "CardsAnimationHelper.h"
 #import "SoundHelper.h"
 #import "FinishGameViewController.h"
+#import "HUDHelper.h"
 
-@interface BoardPlaceViewController : UIViewController<CardsChoiceDelegate>
+@interface BoardPlaceViewController : UIViewController<CardsChoiceDelegate, PausableUI>
 
 @property (nonatomic, strong) IBOutlet UIButton *carta_01;
 @property (nonatomic, strong) IBOutlet UIButton *carta_02;
@@ -28,11 +29,15 @@
 @property (nonatomic, strong) IBOutlet UIImageView *img_1;
 @property (nonatomic, strong) IBOutlet UIImageView *img_go;
 
+@property (nonatomic, strong) IBOutlet UIViewController *pushed_controller;
+
 @property (nonatomic, strong) Carta* carta_selecionada;
 
 -(IBAction)select_card:(id)sender;
 -(void) correct_mimic;
 -(void) walk_group;
 -(void) next_group;
+
+-(void) dismiss_controllers;
 
 @end

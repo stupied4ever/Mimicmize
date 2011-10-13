@@ -56,9 +56,8 @@
   }
   
   if (comecar_partida) {
-  //if (true) {
-    //self.view = self.board_place_controller.view;
     [self presentModalViewController:self.board_place_controller animated:NO];
+    [self.board_place_controller next_group];
   }
   
 }

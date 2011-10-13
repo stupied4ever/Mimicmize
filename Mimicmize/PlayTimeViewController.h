@@ -12,9 +12,10 @@
 #import "GrupoModel.h"
 #import "SoundHelper.h"
 #import "BoardMoveViewController.h"
+#import "HUDHelper.h"
 
 @class BoardPlaceViewController;
-@interface PlayTimeViewController : UIViewController {
+@interface PlayTimeViewController : UIViewController<PausableUI> {
   UILabel *lbl_group;
   UILabel *lbl_seconds;
   UIButton *btn_correct;
@@ -32,5 +33,8 @@
 
 -(void) set_delegate : (BoardPlaceViewController *)delegate;
 
+-(void)decrease_player_time;
+
 - (IBAction)correct_mimic:(id)sender;
+
 @end

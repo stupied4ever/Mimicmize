@@ -60,7 +60,22 @@
   [SHKTwitter shareItem:share_item];
 }
 
+#pragma mark - Pausable Protocol
+
+-(void) pause {
+  
+}
+
+-(void) resume {
+  
+}
+
 #pragma mark - View lifecycle
+
+-(void) viewDidAppear:(BOOL)animated {
+  
+  [HUDHelper set_delegate:self];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

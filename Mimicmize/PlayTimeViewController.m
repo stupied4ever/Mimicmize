@@ -30,6 +30,21 @@
     [self.lbl_seconds setText:[NSString stringWithFormat:@"%02d%@", seconds%60,[LocalizeHelper get_seconds_string]]];
 }
 
+#pragma mark - Pause Delegate
+
+-(void) pause {
+  
+  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(decrease_player_time) object:nil];
+}
+
+-(void) resume {
+  
+  play_time_seconds++;
+  [self performSelector:@selector(decrease_player_time) 
+             withObject:nil 
+             afterDelay:1];
+}
+
 #pragma mark - Game logic
 - (IBAction)correct_mimic:(id)sender {
   
@@ -83,14 +98,16 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-}
-
--(void)viewDidAppear:(BOOL)animated{
   [self load_with_data];
   
   [self performSelector:@selector(decrease_player_time) 
              withObject:nil 
              afterDelay:1];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+  
+ [HUDHelper set_delegate:self]; 
 }
 
 - (void)viewDidUnload

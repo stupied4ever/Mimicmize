@@ -138,6 +138,10 @@
 		7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174213DBF86E00CCC78C /* Bundle_Localize.m */; };
 		7392174713DBFC0A00CCC78C /* Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174613DBFC0A00CCC78C /* Bundle.m */; };
 		73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */; };
+		73C792F21445EFAF00B5C5F1 /* btn_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C792F11445EFAF00B5C5F1 /* btn_pause.png */; };
+		73C792F61445F10800B5C5F1 /* HUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C792F51445F10800B5C5F1 /* HUDHelper.m */; };
+		73C792F81446123E00B5C5F1 /* MenuShortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C792F71446123E00B5C5F1 /* MenuShortView.xib */; };
+		73C792FB1446135D00B5C5F1 /* MenuShortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C792FA1446135D00B5C5F1 /* MenuShortViewController.m */; };
 		73D678F213DBF5A6004EC747 /* Carta_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678F113DBF5A6004EC747 /* Carta_Localize.m */; };
 		73D678F813DBF5A6004EC747 /* Categoria_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678F713DBF5A6004EC747 /* Categoria_Localize.m */; };
 		73D678FB13DBF5A6004EC747 /* Carta.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D678FA13DBF5A6004EC747 /* Carta.m */; };
@@ -424,6 +428,12 @@
 		7392174613DBFC0A00CCC78C /* Bundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bundle.m; sourceTree = "<group>"; };
 		73B8DDF014016FFD00F86DEA /* LocalizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeHelper.h; sourceTree = "<group>"; };
 		73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeHelper.m; sourceTree = "<group>"; };
+		73C792F11445EFAF00B5C5F1 /* btn_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_pause.png; sourceTree = "<group>"; };
+		73C792F41445F10800B5C5F1 /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
+		73C792F51445F10800B5C5F1 /* HUDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDHelper.m; sourceTree = "<group>"; };
+		73C792F71446123E00B5C5F1 /* MenuShortView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuShortView.xib; sourceTree = "<group>"; };
+		73C792F91446135D00B5C5F1 /* MenuShortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuShortViewController.h; sourceTree = "<group>"; };
+		73C792FA1446135D00B5C5F1 /* MenuShortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuShortViewController.m; sourceTree = "<group>"; };
 		73D678F013DBF5A6004EC747 /* Carta_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Carta_Localize.h; sourceTree = "<group>"; };
 		73D678F113DBF5A6004EC747 /* Carta_Localize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Carta_Localize.m; sourceTree = "<group>"; };
 		73D678F613DBF5A6004EC747 /* Categoria_Localize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria_Localize.h; sourceTree = "<group>"; };
@@ -883,6 +893,7 @@
 		28C14C8A1421A49200C07261 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				73C792F11445EFAF00B5C5F1 /* btn_pause.png */,
 				73F7C961143D49BC00569948 /* desabilitarTudo.png */,
 				73F7C962143D49BC00569948 /* desabilitarTudo@2x.png */,
 				73F7C963143D49BC00569948 /* habilitarrTudo.png */,
@@ -947,6 +958,8 @@
 				2835470F1411D4EC007D1E61 /* SoundHelper.m */,
 				7376943A142527C900742620 /* CardsAnimationHelper.h */,
 				7376943B142527C900742620 /* CardsAnimationHelper.m */,
+				73C792F41445F10800B5C5F1 /* HUDHelper.h */,
+				73C792F51445F10800B5C5F1 /* HUDHelper.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -1103,6 +1116,8 @@
 		73E33B8713CF96FA004E86C4 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				73C792F91446135D00B5C5F1 /* MenuShortViewController.h */,
+				73C792FA1446135D00B5C5F1 /* MenuShortViewController.m */,
 				73E33B5D13CF96DF004E86C4 /* MimicmizeViewController.h */,
 				73E33B5F13CF96DF004E86C4 /* MimicmizeViewController.m */,
 				73F9C5F913E49B760057FC44 /* MainMenuViewController.h */,
@@ -1128,6 +1143,7 @@
 		73E33B8813CF9710004E86C4 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				73C792F71446123E00B5C5F1 /* MenuShortView.xib */,
 				73E33B6113CF96DF004E86C4 /* MimicmizeViewController_iPhone.xib */,
 				735C6D6714280A7800577B95 /* MainMenuView.xib */,
 				735C6D6B14280AAB00577B95 /* GameSetupView.xib */,
@@ -1288,6 +1304,8 @@
 				73F7C966143D49BC00569948 /* desabilitarTudo@2x.png in Resources */,
 				73F7C967143D49BC00569948 /* habilitarrTudo.png in Resources */,
 				73F7C968143D49BC00569948 /* habilitarrTudo@2x.png in Resources */,
+				73C792F21445EFAF00B5C5F1 /* btn_pause.png in Resources */,
+				73C792F81446123E00B5C5F1 /* MenuShortView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1425,6 +1443,8 @@
 				736AE3AC1421819000D8E964 /* BoardMoveView.m in Sources */,
 				7376943C142527C900742620 /* CardsAnimationHelper.m in Sources */,
 				28C14C871421986500C07261 /* Grupo.m in Sources */,
+				73C792F61445F10800B5C5F1 /* HUDHelper.m in Sources */,
+				73C792FB1446135D00B5C5F1 /* MenuShortViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

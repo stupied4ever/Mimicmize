@@ -30,4 +30,19 @@
   [self performSelector:@selector(dismiss) withObject:nil afterDelay:4];
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+  
+  [HUDHelper set_delegate:self];
+}
+
+#pragma mark - Pausable Protocol
+
+-(void) pause {
+  
+}
+
+-(void) resume {
+  
+}
+
 @end

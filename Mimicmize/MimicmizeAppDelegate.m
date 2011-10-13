@@ -13,33 +13,40 @@
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize btn_pause = _btn_pause;
+
+
+-(void) configure_ipad_ui {
+  
+}
+
+-(void) configure_iphone_ui {
+  
+  self.viewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuView" bundle:nil];
+}
+
+-(void) configure_main_ui {
+  
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    
+    [self configure_iphone_ui];
+  } else {
+    
+    [self configure_ipad_ui];
+  }
+  self.window.rootViewController = self.viewController;
+  [self.window makeKeyAndVisible];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-  //Start activerecord
   [SoundHelper sharedInstance];
   [ActiveRecordHelpers setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Mimicmize.sqlite"];
-  SeedManager *seed_manager = [[SeedManager alloc] init];
-  [seed_manager load_all_fixtures];
-  
-    // Override point for customization after application launch.
-  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-    
-    self.viewController = [[MainMenuViewController alloc] initWithNibName:@"MainMenuView" bundle:nil];
-      ///self.viewController = [[MimicmizeViewController alloc] initWithNibName:@"MimicmizeViewController_iPhone" bundle:nil]; 
-  } else {
-     //self.viewController = [[MimicmizeViewController alloc] initWithNibName:@"MimicmizeViewController_iPad" bundle:nil]; 
-  }
-  self.window.rootViewController = self.viewController;
-  [self.window makeKeyAndVisible];
-  
-  NSArray *fonts = [UIFont familyNames];
-  for (NSString *font in fonts) {
-    NSLog(@"%@",font);
-  }
-  
+  [[[SeedManager alloc] init] load_all_fixtures];
+  [self configure_main_ui];
+  [HUDHelper set_up_in_window:self.window];
   return YES;
 }
 

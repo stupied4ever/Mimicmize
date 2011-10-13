@@ -26,4 +26,6 @@
 - (void) load_bundles;
 - (void) load_cartas;
 
++ (void) print_all_fonts;
+
 @end

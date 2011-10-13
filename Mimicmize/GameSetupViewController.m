@@ -34,31 +34,15 @@
   [UIView animateWithDuration:.3 animations:^{
     
     if (self.total_groups == 2) {
-      /*CGRect frame = self.btn_add_group.frame;
-      frame.origin.x  = 20;
-      frame.size.width = 165;
-      self.btn_add_group.frame = frame;*/
+      
       self.btn_remove_group.alpha =0;
     }
     else if (self.total_groups == 4) {
-      /*CGRect frame = self.btn_remove_group.frame;
-      frame.origin.x  = 20;
-      frame.size.width = 165;
-      self.btn_remove_group.frame = frame;*/
+      
       self.btn_add_group.alpha =0;
     }
-    
     else {
       
-      /*CGRect frame_add = self.btn_add_group.frame;
-      frame_add.origin.x  = 20;
-      frame_add.size.width = 79;
-      self.btn_add_group.frame = frame_add;
-      
-      CGRect frame_remove = self.btn_remove_group.frame;
-      frame_remove.origin.x  = 106;
-      frame_remove.size.width = 79;
-      self.btn_remove_group.frame = frame_remove;*/
       self.btn_remove_group.alpha = 1;
       self.btn_add_group.alpha = 1;
     }
@@ -77,6 +61,11 @@
   else if ( [self.array_categorias_selecionadas count] == 0 ) {
     self.btn_select_all.selected = NO;
   }
+}
+
+-(IBAction)cancel:(id)sender {
+  
+  [self dismissModalViewControllerAnimated:NO];
 }
 
 -(IBAction)select_unselect_all:(id)sender {
@@ -120,10 +109,19 @@
   [self calculate_show_buttons];
 }
 
+-(void) change_views {
+  
+  if ( [HUDHelper shared_instance].main_game_controller != nil ) {
+    [[HUDHelper shared_instance].main_game_controller dismiss_controllers];
+    [[HUDHelper shared_instance].main_game_controller next_group];
+  }
+}
+
 -(IBAction)done:(id)sender {
   
   [self save_settings_to_coredata];
   [self dismissModalViewControllerAnimated:YES];
+  [self performSelector:@selector(change_views) withObject:nil afterDelay:.5];
 }
 
 -(IBAction)next:(id)sender {
@@ -164,11 +162,6 @@
     cell.accessoryType = UITableViewCellAccessoryNone;
   }
   return cell;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-  //cell.backgroundColor = ((ApplicationCell *)cell).useDarkBackground ? DARK_BACKGROUND : LIGHT_BACKGROUND;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -269,6 +262,8 @@
   txt_group.tag = 1000 + self.total_groups;
   txt_group.delegate = self;
   txt_group.returnKeyType = UIReturnKeyNext;
+  txt_group.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+  txt_group.textColor = [UIColor colorWithRed:50.0/255.0 green:60.0/255.0 blue:50.0/255.0 alpha:1];
   
   return txt_group;
 }
@@ -292,11 +287,9 @@
     return self;
 }
 
-- (void)didReceiveMemoryWarning
-{    // Releases the view if it doesn't have a superview.
+- (void)didReceiveMemoryWarning {
+  
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewDidLoad

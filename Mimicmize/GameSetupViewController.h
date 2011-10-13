@@ -13,6 +13,8 @@
 #import "JogoModel.h"
 #import "GrupoModel.h"
 #import "Baralho.h"
+#import "HUDHelper.h"
+#import "BoardPlaceViewController.h"
 
 @interface GameSetupViewController : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -45,6 +47,7 @@
 -(IBAction)next:(id)sender;
 -(IBAction)change_turn_timeout:(id)sender;
 -(IBAction)select_unselect_all:(id)sender;
+-(IBAction)cancel:(id)sender;
 
 -(void) create_new_txt_group;
 -(void) remove_last_txt_field;

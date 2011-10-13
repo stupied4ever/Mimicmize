@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SeedManager.h"
 #import "SoundHelper.h"
+#import "HUDHelper.h"
 
 @class MainMenuViewController;
 
@@ -17,5 +18,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) MainMenuViewController *viewController;
+@property (strong, nonatomic) UIButton *btn_pause;
 
 @end

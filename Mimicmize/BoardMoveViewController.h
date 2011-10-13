@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BoardMoveView.h"
+#import "HUDHelper.h"
 
 @class BoardPlaceViewController;
-@interface BoardMoveViewController : UIViewController {
+@interface BoardMoveViewController : UIViewController<PausableUI> {
   
   BoardPlaceViewController *delegate;
 }
