@@ -125,6 +125,8 @@
 		736AE3A9142180E300D8E964 /* BoardMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736AE3A8142180E300D8E964 /* BoardMoveViewController.m */; };
 		736AE3AC1421819000D8E964 /* BoardMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 736AE3AB1421819000D8E964 /* BoardMoveView.m */; };
 		7375CCF91447DD0E00FC4AC5 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7375CCF81447DD0E00FC4AC5 /* Configuration.m */; };
+		7375CCFD1447E32900FC4AC5 /* boneco_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 7375CCFB1447E32900FC4AC5 /* boneco_01.png */; };
+		7375CCFE1447E32900FC4AC5 /* boneco_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7375CCFC1447E32900FC4AC5 /* boneco_01@2x.png */; };
 		7376943C142527C900742620 /* CardsAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7376943B142527C900742620 /* CardsAnimationHelper.m */; };
 		737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */; };
 		737F569F140F1BE800D5DB80 /* CardsCategoryCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */; };
@@ -412,6 +414,8 @@
 		736AE3AB1421819000D8E964 /* BoardMoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardMoveView.m; sourceTree = "<group>"; };
 		7375CCF71447DD0E00FC4AC5 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
 		7375CCF81447DD0E00FC4AC5 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
+		7375CCFB1447E32900FC4AC5 /* boneco_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boneco_01.png; sourceTree = "<group>"; };
+		7375CCFC1447E32900FC4AC5 /* boneco_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "boneco_01@2x.png"; sourceTree = "<group>"; };
 		7376943A142527C900742620 /* CardsAnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsAnimationHelper.h; sourceTree = "<group>"; };
 		7376943B142527C900742620 /* CardsAnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsAnimationHelper.m; sourceTree = "<group>"; };
 		737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsCategoryCell.xib; sourceTree = "<group>"; };
@@ -896,6 +900,8 @@
 		28C14C8A1421A49200C07261 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7375CCFB1447E32900FC4AC5 /* boneco_01.png */,
+				7375CCFC1447E32900FC4AC5 /* boneco_01@2x.png */,
 				73C792F11445EFAF00B5C5F1 /* btn_pause.png */,
 				73F7C961143D49BC00569948 /* desabilitarTudo.png */,
 				73F7C962143D49BC00569948 /* desabilitarTudo@2x.png */,
@@ -1311,6 +1317,8 @@
 				73F7C968143D49BC00569948 /* habilitarrTudo@2x.png in Resources */,
 				73C792F21445EFAF00B5C5F1 /* btn_pause.png in Resources */,
 				73C792F81446123E00B5C5F1 /* MenuShortView.xib in Resources */,
+				7375CCFD1447E32900FC4AC5 /* boneco_01.png in Resources */,
+				7375CCFE1447E32900FC4AC5 /* boneco_01@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
