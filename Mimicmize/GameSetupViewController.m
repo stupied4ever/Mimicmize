@@ -325,6 +325,8 @@
 
 -(void) viewWillAppear:(BOOL)animated {
   
+  [HUDHelper hide];
+  [HUDHelper set_delegate:nil];
   [self performSelector:@selector(create_new_txt_group) withObject:nil afterDelay:.3];
   [self performSelector:@selector(create_new_txt_group) withObject:nil afterDelay:.5];
   [self performSelector:@selector(set_focus_on_first_txt) withObject:nil afterDelay:.65];

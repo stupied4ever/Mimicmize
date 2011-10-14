@@ -34,6 +34,7 @@
   [self load_categorias];
   [self load_bundles];
   [self load_cartas];
+  [Configuration shared_instance].is_sound_on = YES;
 }
 
 - (void) load_categorias {

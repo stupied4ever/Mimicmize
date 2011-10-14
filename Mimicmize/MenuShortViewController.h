@@ -10,8 +10,11 @@
 #import "HUDHelper.h"
 #import "GameSetupViewController.h"
 #import "BoardPlaceViewController.h"
+#import "Configuration.h"
 
 @interface MenuShortViewController : UIViewController
+
+@property (nonatomic, strong) IBOutlet UIButton *btn_sound;
 
 -(void) show;
 -(void) hide;

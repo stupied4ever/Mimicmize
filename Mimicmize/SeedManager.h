@@ -12,6 +12,7 @@
 #import "BundleModel.h"
 #import "Carta_Localize.h"
 #import "LocalizeHelper.h"
+#import "Configuration.h"
 
 @interface SeedManager : NSObject {
   

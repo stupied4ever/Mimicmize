@@ -65,6 +65,11 @@ static SoundHelper *_shared_instance;
 }
 
 -(void)playSoundWithName:(NSString *)audio_file{
+  
+  if ( [Configuration shared_instance].is_sound_on == NO) {
+    return;
+  }
+  
   AVAudioPlayer *sound_player = [self retrievePlayer:audio_file];
   NSError* err;
   if (!sound_player)

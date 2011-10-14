@@ -10,10 +10,24 @@
 
 @implementation MenuShortViewController
 
+@synthesize btn_sound = _btn_sound;
+
 #pragma mark - Events
+
+-(void) fix_sound_label_text {
+  
+  self.btn_sound.selected = [Configuration shared_instance].is_sound_on;
+  /*if ([Configuration shared_instance].is_sound_on) {
+    self.btn_sound.titleLabel.text = @"Turn sound OFF";
+  }
+  else {
+    self.btn_sound.titleLabel.text = @"Turn sound ON";
+  }*/
+}
 
 -(void) show {
   
+  [self fix_sound_label_text];
   CGRect frame = self.view.frame;
   frame.origin.y = 20;
   
@@ -64,6 +78,8 @@
 
 -(void) toogle_sound_on_off{
   
+  [Configuration shared_instance].is_sound_on = ![Configuration shared_instance].is_sound_on;
+  [self fix_sound_label_text];
 }
 
 #pragma mark - Lifecycle
@@ -76,6 +92,7 @@
 - (void)viewDidUnload
 {
   [super viewDidUnload];
+  self.btn_sound = nil;
 }
 
 @end

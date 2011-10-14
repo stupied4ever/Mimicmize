@@ -124,6 +124,7 @@
 		736AE3A5142180A200D8E964 /* BoardMoveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 736AE3A4142180A200D8E964 /* BoardMoveView.xib */; };
 		736AE3A9142180E300D8E964 /* BoardMoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 736AE3A8142180E300D8E964 /* BoardMoveViewController.m */; };
 		736AE3AC1421819000D8E964 /* BoardMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 736AE3AB1421819000D8E964 /* BoardMoveView.m */; };
+		7375CCF91447DD0E00FC4AC5 /* Configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7375CCF81447DD0E00FC4AC5 /* Configuration.m */; };
 		7376943C142527C900742620 /* CardsAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7376943B142527C900742620 /* CardsAnimationHelper.m */; };
 		737F569B140F1AF000D5DB80 /* CardsCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */; };
 		737F569F140F1BE800D5DB80 /* CardsCategoryCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */; };
@@ -409,6 +410,8 @@
 		736AE3A8142180E300D8E964 /* BoardMoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardMoveViewController.m; sourceTree = "<group>"; };
 		736AE3AA1421819000D8E964 /* BoardMoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardMoveView.h; sourceTree = "<group>"; };
 		736AE3AB1421819000D8E964 /* BoardMoveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardMoveView.m; sourceTree = "<group>"; };
+		7375CCF71447DD0E00FC4AC5 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configuration.h; sourceTree = "<group>"; };
+		7375CCF81447DD0E00FC4AC5 /* Configuration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Configuration.m; sourceTree = "<group>"; };
 		7376943A142527C900742620 /* CardsAnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsAnimationHelper.h; sourceTree = "<group>"; };
 		7376943B142527C900742620 /* CardsAnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsAnimationHelper.m; sourceTree = "<group>"; };
 		737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardsCategoryCell.xib; sourceTree = "<group>"; };
@@ -1109,6 +1112,8 @@
 				7316BF8D13D8DEFF00AF485B /* JogoModel.m */,
 				73405B051413B40700072664 /* Baralho.h */,
 				73405B061413B40700072664 /* Baralho.m */,
+				7375CCF71447DD0E00FC4AC5 /* Configuration.h */,
+				7375CCF81447DD0E00FC4AC5 /* Configuration.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -1445,6 +1450,7 @@
 				28C14C871421986500C07261 /* Grupo.m in Sources */,
 				73C792F61445F10800B5C5F1 /* HUDHelper.m in Sources */,
 				73C792FB1446135D00B5C5F1 /* MenuShortViewController.m in Sources */,
+				7375CCF91447DD0E00FC4AC5 /* Configuration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

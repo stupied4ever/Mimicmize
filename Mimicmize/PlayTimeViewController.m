@@ -39,7 +39,7 @@
 
 -(void) resume {
   
-  play_time_seconds++;
+  //play_time_seconds++;
   [self performSelector:@selector(decrease_player_time) 
              withObject:nil 
              afterDelay:1];
