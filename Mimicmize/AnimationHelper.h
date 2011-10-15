@@ -16,4 +16,5 @@
 +(void) make_bounce_effect_with_view :(UIView *) view bouncing_away:(UIView *) away_view offset:(NSInteger)offset;
 +(void) make_inverted_bounce_effect_with_view :(UIView *) view bouncing_away:(UIView *) away_view offset:(NSInteger)offset;
 
++(void) animate_bobos : (UIImageView *) img_bobo;
 @end

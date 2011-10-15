@@ -14,8 +14,12 @@
 #import "SoundHelper.h"
 #import "FinishGameViewController.h"
 #import "HUDHelper.h"
+#import "GroupsPresentationViewController.h"
 
-@interface BoardPlaceViewController : UIViewController<CardsChoiceDelegate, PausableUI>
+@interface BoardPlaceViewController : UIViewController<CardsChoiceDelegate, PausableUI> {
+  
+  float img_rotation;
+}
 
 @property (nonatomic, strong) IBOutlet UIButton *carta_01;
 @property (nonatomic, strong) IBOutlet UIButton *carta_02;
@@ -29,7 +33,9 @@
 @property (nonatomic, strong) IBOutlet UIImageView *img_1;
 @property (nonatomic, strong) IBOutlet UIImageView *img_go;
 
-@property (nonatomic, strong) IBOutlet UIViewController *pushed_controller;
+@property (nonatomic, strong) IBOutlet UIImageView *img_boneco;
+
+@property (nonatomic, strong) UIViewController *pushed_controller;
 
 @property (nonatomic, strong) Carta* carta_selecionada;
 
@@ -39,5 +45,6 @@
 -(void) next_group;
 
 -(void) dismiss_controllers;
+-(void) present_groups;
 
 @end

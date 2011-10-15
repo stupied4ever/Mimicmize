@@ -59,7 +59,7 @@
   
   if (comecar_partida) {
     [self presentModalViewController:self.board_place_controller animated:NO];
-    [self.board_place_controller next_group];
+    [self.board_place_controller present_groups];
   }
   
 }

@@ -105,6 +105,8 @@
 		7316BFAD13D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */; };
 		731C9DB91449F13000122E0F /* bobo_grupo_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 731C9DB71449F13000122E0F /* bobo_grupo_01.png */; };
 		731C9DBA1449F13000122E0F /* bobo_grupo_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 731C9DB81449F13000122E0F /* bobo_grupo_01@2x.png */; };
+		731C9DBD144A10D100122E0F /* GroupsPresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731C9DBC144A10D100122E0F /* GroupsPresentationViewController.m */; };
+		731C9DBF144A10EE00122E0F /* GroupsPresentationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 731C9DBE144A10EE00122E0F /* GroupsPresentationView.xib */; };
 		731EAD9C1411B5510042810D /* BoardPlaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 731EAD9B1411B5510042810D /* BoardPlaceView.xib */; };
 		731EAD9F1411B5720042810D /* BoardPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731EAD9E1411B5720042810D /* BoardPlaceViewController.m */; };
 		734016F81438126E00430D20 /* caixaTxt.png in Resources */ = {isa = PBXBuildFile; fileRef = 734016EE1438126E00430D20 /* caixaTxt.png */; };
@@ -384,6 +386,9 @@
 		7316BFA713D8E05400AF485B /* NSPersistentStoreCoordinator+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+ActiveRecord.m"; sourceTree = "<group>"; };
 		731C9DB71449F13000122E0F /* bobo_grupo_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bobo_grupo_01.png; sourceTree = "<group>"; };
 		731C9DB81449F13000122E0F /* bobo_grupo_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bobo_grupo_01@2x.png"; sourceTree = "<group>"; };
+		731C9DBB144A10D100122E0F /* GroupsPresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupsPresentationViewController.h; sourceTree = "<group>"; };
+		731C9DBC144A10D100122E0F /* GroupsPresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupsPresentationViewController.m; sourceTree = "<group>"; };
+		731C9DBE144A10EE00122E0F /* GroupsPresentationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupsPresentationView.xib; sourceTree = "<group>"; };
 		731EAD9B1411B5510042810D /* BoardPlaceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoardPlaceView.xib; sourceTree = "<group>"; };
 		731EAD9D1411B5720042810D /* BoardPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoardPlaceViewController.h; sourceTree = "<group>"; };
 		731EAD9E1411B5720042810D /* BoardPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoardPlaceViewController.m; sourceTree = "<group>"; };
@@ -1139,6 +1144,8 @@
 				737F569E140F1BE800D5DB80 /* CardsCategoryCellController.m */,
 				731EAD9D1411B5720042810D /* BoardPlaceViewController.h */,
 				731EAD9E1411B5720042810D /* BoardPlaceViewController.m */,
+				731C9DBB144A10D100122E0F /* GroupsPresentationViewController.h */,
+				731C9DBC144A10D100122E0F /* GroupsPresentationViewController.m */,
 				73405B021413B0A300072664 /* CardsChoiceViewController.h */,
 				73405B031413B0A300072664 /* CardsChoiceViewController.m */,
 				2835470B1411BE9E007D1E61 /* PlayTimeViewController.h */,
@@ -1160,6 +1167,7 @@
 				735C6D6B14280AAB00577B95 /* GameSetupView.xib */,
 				737F569A140F1AF000D5DB80 /* CardsCategoryCell.xib */,
 				731EAD9B1411B5510042810D /* BoardPlaceView.xib */,
+				731C9DBE144A10EE00122E0F /* GroupsPresentationView.xib */,
 				735C6D62142808FE00577B95 /* CardChoiceView.xib */,
 				735C6D6F14280B6E00577B95 /* PlayTimeView.xib */,
 				736AE3A4142180A200D8E964 /* BoardMoveView.xib */,
@@ -1319,6 +1327,7 @@
 				73C792F81446123E00B5C5F1 /* MenuShortView.xib in Resources */,
 				731C9DB91449F13000122E0F /* bobo_grupo_01.png in Resources */,
 				731C9DBA1449F13000122E0F /* bobo_grupo_01@2x.png in Resources */,
+				731C9DBF144A10EE00122E0F /* GroupsPresentationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1459,6 +1468,7 @@
 				73C792F61445F10800B5C5F1 /* HUDHelper.m in Sources */,
 				73C792FB1446135D00B5C5F1 /* MenuShortViewController.m in Sources */,
 				7375CCF91447DD0E00FC4AC5 /* Configuration.m in Sources */,
+				731C9DBD144A10D100122E0F /* GroupsPresentationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

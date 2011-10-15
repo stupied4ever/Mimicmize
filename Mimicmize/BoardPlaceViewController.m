@@ -22,6 +22,8 @@
 @synthesize img_3 = _img_3;
 @synthesize img_go = _img_go;
 
+@synthesize img_boneco = _img_boneco;
+
 @synthesize carta_selecionada = _carta_selecionada;
 @synthesize pushed_controller = _pushed_controller;
 
@@ -112,6 +114,15 @@
   [self.pushed_controller dismissModalViewControllerAnimated:NO];
 }
 
+- (void) present_groups {
+  
+  GroupsPresentationViewController *present_controller = 
+    [[GroupsPresentationViewController alloc] initWithNibName:@"GroupsPresentationView" bundle:nil];
+  self.pushed_controller = present_controller; 
+  present_controller.delegate = self;
+  [self presentModalViewController:present_controller animated:NO];
+}
+
 #pragma mark - Pause Delegate
 
 -(void) pause {
@@ -136,6 +147,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
   
   self.animation = [[CardsAnimationHelper alloc] init];
   self.animation.card01 = self.carta_01;
@@ -164,8 +176,12 @@
   self.img_3 = nil;
   self.img_go = nil;
   
+  self.img_boneco = nil;
+  
   self.carta_selecionada = nil;
 }
+
+#pragma mark - Orientations
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

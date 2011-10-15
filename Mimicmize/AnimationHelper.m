@@ -10,6 +10,22 @@
 
 @implementation AnimationHelper
 
++(void) animate_bobos : (UIImageView *) img_bobo {
+  
+  /*img_bobo.layer.anchorPoint = CGPointMake(.5, .85);
+  [UIView animateWithDuration:2 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+    
+    img_bobo.transform = CGAffineTransformMakeRotation(M_PI/2.8 );
+  } completion:^(BOOL finished) {
+    
+    [UIView animateWithDuration:2 animations:^{
+      img_bobo.transform = CGAffineTransformMakeRotation(-M_PI/2.8);
+    }];
+    
+  }];*/
+  
+}
+
 +(void) make_bounce_effect_with_view : ( UIView *) view offset:(NSInteger)offset {
   
   [UIView animateWithDuration:.3 delay:0 options:UIViewAnimationCurveEaseIn

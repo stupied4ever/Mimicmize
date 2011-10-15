@@ -113,17 +113,20 @@
 
 -(void) change_views {
   
-  if ( [HUDHelper shared_instance].main_game_controller != nil ) {
-    [[HUDHelper shared_instance].main_game_controller dismiss_controllers];
-    [[HUDHelper shared_instance].main_game_controller next_group];
-  }
+
+  [[HUDHelper shared_instance].main_game_controller dismiss_controllers];
+  [[HUDHelper shared_instance].main_game_controller present_groups];
+
 }
 
 -(IBAction)done:(id)sender {
   
   [self save_settings_to_coredata];
   [self dismissModalViewControllerAnimated:YES];
-  [self performSelector:@selector(change_views) withObject:nil afterDelay:.5];
+  
+  if ( [HUDHelper shared_instance].main_game_controller != nil ) {
+    [self performSelector:@selector(change_views) withObject:nil afterDelay:.5];
+  }
 }
 
 -(IBAction)next:(id)sender {
@@ -365,7 +368,7 @@
     }
     
     Grupo *new_group = [Grupo createEntity];
-    new_group.nome = txt_field.text;
+    new_group.nome = [txt_field.text isEqualToString:@""] ? [NSString stringWithFormat:@"Grupo%d",index_txt-1000] : txt_field.text;
     new_group.casa_tabuleiro = [NSNumber numberWithInt:0];
   }
   
