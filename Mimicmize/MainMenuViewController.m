@@ -13,6 +13,7 @@
 @synthesize btn_new_game = _btn_new_game;
 @synthesize btn_options = _btn_options;
 @synthesize img_mimicmize = _img_mimicmize;
+@synthesize img_bonecos = _img_bonecos;
 
 @synthesize board_place_controller = _board_place_controller;
 
@@ -24,9 +25,10 @@
   
   [UIView animateWithDuration:.3 animations:^{
     self.btn_new_game.alpha = 0;
+    self.img_bonecos.alpha = 0.0;
   }];
   
-  [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationCurveEaseIn animations:^{
+  [UIView animateWithDuration:.4 delay:0 options:UIViewAnimationCurveEaseIn animations:^{
     CGRect frame = self.img_mimicmize.frame;
     frame.origin.x+=320;
     self.img_mimicmize.frame = frame;
@@ -68,6 +70,7 @@
   self.btn_new_game = nil;
   self.btn_options = nil;
   self.img_mimicmize = nil;
+  self.img_bonecos = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -40,8 +40,8 @@
 - (void) load_categorias {
   
   dificil = [Categoria createEntity];
-  [dificil add_locale_with_nome:@"Dificil" andLocale:pt_BR];
-  [dificil add_locale_with_nome:@"Hard" andLocale:en_US];
+  [dificil add_locale_with_nome:@"Mímicas difíceis" andLocale:pt_BR];
+  [dificil add_locale_with_nome:@"Hard mimics" andLocale:en_US];
   
   lugares = [Categoria createEntity];
   [lugares add_locale_with_nome:@"Lugares" andLocale:pt_BR];

@@ -15,5 +15,6 @@
 +(NSString *) get_local_language;
 +(NSString *) get_seconds_string;
 +(NSString *) convert_value_to_minutes : (float)value;
++(NSString *) get_text_to_group_box_with_index : (NSInteger) index;
 
 @end

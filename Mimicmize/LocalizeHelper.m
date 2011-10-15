@@ -22,6 +22,33 @@
   return en_US;
 }
 
++(NSString *) get_text_to_group_box_with_index : (NSInteger) index {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  BOOL is_pt_br = [locale isEqualToString:pt_BR];
+  
+  if (index == 1) {
+    if (is_pt_br) {
+      return @"Nome do seu grupo";
+    }
+    else {
+      return @"Name of your group";
+    }
+    
+  }
+  else {
+    
+    if (is_pt_br) {
+      return @"Nome do grupo adversário";
+    }
+    else {
+      return @"Oppnent`s group name";
+    }
+  }
+  
+  return @"";
+}
+
 +(NSString *) get_seconds_string {
   
   NSString *local_language = [LocalizeHelper get_local_language];
@@ -36,8 +63,13 @@
 +(NSString *) convert_value_to_minutes : (float)value {
   
   int valor = value;
+  
+  valor /=5;
+  valor *= 5;
+  
   int mins = valor / 60;
   int segs = valor % 60;
+  
   
   NSString *string_segs = @"";
   NSString *string_valor = @"";

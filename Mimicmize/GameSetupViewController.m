@@ -13,6 +13,8 @@
 @synthesize btn_done = _btn_done;
 @synthesize btn_add_group = _btn_add_group;
 @synthesize btn_remove_group = _btn_remove_group;
+@synthesize lbl_group_explanation = _lbl_group_explanation;
+
 @synthesize scroll_groups = _scroll_groups;
 @synthesize timer_slider = _timer_slider;
 @synthesize lbl_turn_timeout = _lbl_turn_timeout;
@@ -161,6 +163,7 @@
   else {
     cell.accessoryType = UITableViewCellAccessoryNone;
   }
+  
   return cell;
 }
 
@@ -264,6 +267,7 @@
   txt_group.returnKeyType = UIReturnKeyNext;
   txt_group.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
   txt_group.textColor = [UIColor colorWithRed:50.0/255.0 green:60.0/255.0 blue:50.0/255.0 alpha:1];
+  txt_group.placeholder = [LocalizeHelper get_text_to_group_box_with_index:self.total_groups];
   
   return txt_group;
 }
@@ -365,8 +369,12 @@
     new_group.casa_tabuleiro = [NSNumber numberWithInt:0];
   }
   
+  NSInteger valor_slider = self.timer_slider.value;
+  valor_slider /= 5;
+  valor_slider *= 5;
+  
   Jogo *new_game = [Jogo createEntity];
-  new_game.segundos_rodada = [NSNumber numberWithFloat:self.timer_slider.value];
+  new_game.segundos_rodada = [NSNumber numberWithInteger:valor_slider];
   new_game.categorias_escolhidas = [NSSet setWithArray:self.array_categorias_selecionadas];
   new_game.indice_grupo = [NSNumber numberWithInt:-1];
   [self set_order_to_all_groups];

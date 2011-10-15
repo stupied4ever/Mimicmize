@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *btn_new_game;
 @property (nonatomic, strong) IBOutlet UIButton *btn_options;
 @property (nonatomic, strong) IBOutlet UIImageView *img_mimicmize;
+@property (nonatomic, strong) IBOutlet UIImageView *img_bonecos;
 
 @property (nonatomic, strong) BoardPlaceViewController *board_place_controller;
 

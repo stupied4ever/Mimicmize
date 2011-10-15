@@ -40,7 +40,7 @@
   [HUDHelper hide];
   [self.animation show_3_2_1_go:^ {
     PlayTimeViewController *play_controller = [[PlayTimeViewController alloc] initWithNibName:@"PlayTimeView" bundle:nil];
-    [play_controller set_delegate:self];
+    play_controller.delegate = self;
     self.pushed_controller = play_controller;
     [HUDHelper show];
     [self presentModalViewController:play_controller animated:NO];

@@ -22,6 +22,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *btn_remove_group;
 @property (nonatomic, strong) IBOutlet UIButton *btn_done;
 @property (nonatomic, strong) IBOutlet UIScrollView *scroll_groups;
+@property (nonatomic, strong) IBOutlet UILabel *lbl_group_explanation;
 
 //view config
 @property (nonatomic, strong) IBOutlet UIView *view_groups;

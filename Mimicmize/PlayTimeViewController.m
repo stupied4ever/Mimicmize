@@ -11,16 +11,12 @@
 #import "BoardPlaceViewController.h"
 
 @implementation PlayTimeViewController
-@synthesize lbl_group;
-@synthesize lbl_seconds;
-@synthesize btn_correct;
-@synthesize current_game=_current_game;
-@synthesize next_viewcontroller=_next_viewcontroller;
-
--(void) set_delegate : (BoardPlaceViewController *)p_delegate {
-  
-  delegate = p_delegate;
-}
+@synthesize lbl_group = _lbl_group;
+@synthesize lbl_seconds = _lbl_seconds;
+@synthesize btn_correct = _btn_correct;;
+@synthesize current_game= _current_game;
+@synthesize next_viewcontroller= _next_viewcontroller;
+@synthesize delegate = _delegate;
 
 -(void)show_player_time_in_minutes:(NSInteger)seconds{
   NSInteger minutes = (seconds/60)%60;
@@ -50,13 +46,13 @@
   
   self.current_game.grupo_atual.acertou = [NSNumber numberWithBool:YES];
   [self dismissModalViewControllerAnimated:NO];
-  [delegate correct_mimic];
+  [self.delegate correct_mimic];
 }
 
 -(void)time_out{
   //[[SoundHelper sharedInstance]playWrongBuzz];
   [self dismissModalViewControllerAnimated:NO];
-  [delegate next_group];
+  [self.delegate next_group];
 }
 
 -(void)decrease_player_time{
@@ -112,10 +108,11 @@
 
 - (void)viewDidUnload
 {
-    [self setLbl_group:nil];
-    [self setLbl_seconds:nil];
-    [self setBtn_correct:nil];
-    [super viewDidUnload];
+  
+  [super viewDidUnload];
+  self.lbl_group = nil;
+  self.lbl_seconds = nil;
+  self.btn_correct = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

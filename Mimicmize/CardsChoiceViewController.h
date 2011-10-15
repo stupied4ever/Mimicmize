@@ -26,7 +26,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *btn_carta_02;
 @property (nonatomic, strong) IBOutlet UIButton *btn_carta_03;
 
-@property (nonatomic, strong) id<CardsChoiceDelegate> delegate;
+@property (nonatomic, assign) id<CardsChoiceDelegate> delegate;
 
 -(void) set_carta : (Carta *) carta na_posicao: (NSInteger) posicao;
 -(IBAction)select_carta:(id)sender;
