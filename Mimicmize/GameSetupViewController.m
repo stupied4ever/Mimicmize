@@ -113,10 +113,8 @@
 
 -(void) change_views {
   
-
   [[HUDHelper shared_instance].main_game_controller dismiss_controllers];
   [[HUDHelper shared_instance].main_game_controller present_groups];
-
 }
 
 -(IBAction)done:(id)sender {
@@ -271,6 +269,7 @@
   txt_group.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
   txt_group.textColor = [UIColor colorWithRed:50.0/255.0 green:60.0/255.0 blue:50.0/255.0 alpha:1];
   txt_group.placeholder = [LocalizeHelper get_text_to_group_box_with_index:self.total_groups];
+  txt_group.text = @"";
   
   return txt_group;
 }

@@ -29,7 +29,8 @@
 - (void) set_animation_xy_for_imgview : (UIImageView *)img_view {
   
   CGRect frame = img_view.frame;
-  frame.origin.x = -200;
+  frame.origin.x = -142;
+  frame.origin.y = 52;
   img_view.frame = frame;
 }
 
@@ -41,8 +42,8 @@
   
   self.img_boneco01.hidden = NO;
   self.img_boneco02.hidden = NO;
-  self.img_boneco03.hidden = self.total_grupos > 2;
-  self.img_boneco04.hidden = self.total_grupos > 3;
+  self.img_boneco03.hidden = !self.total_grupos > 2;
+  self.img_boneco04.hidden = !self.total_grupos > 3;
   
   [self set_animation_xy_for_imgview:self.img_boneco01];
   [self set_animation_xy_for_imgview:self.img_boneco02];
@@ -52,12 +53,69 @@
   self.lbl_group_name.font = [UIFont fontWithName:@"Helsinki" size:24];
 }
 
+-(UIImageView *) get_img_view_grupo_atual {
+  
+  if (self.index_group_show == 1) {
+    return self.img_boneco02;
+  }
+  else {
+    return self.img_boneco01;
+  }
+  
+}
+
 -(void) change_text_lbl {
   
   self.lbl_group_name.text = [(Grupo *)[self.array_grupos objectAtIndex: self.index_group_show++] nome];
 }
 
--(void) hide_lbl {
+-(void) step_animation {
+  
+  [UIView animateWithDuration:.5 animations:^{
+    
+    if (self.index_group_show == 1) {
+      self.img_boneco01.frame = CGRectMake(89, 91, 142, 286);
+      self.img_boneco01.alpha = 1;
+    }
+    else if (self.index_group_show == 2) {
+      self.img_boneco01.frame = CGRectMake(158, 44, 142, 286);
+      self.img_boneco02.frame = CGRectMake(89, 85, 142, 286);
+      self.img_boneco01.alpha = 0.6;
+      self.img_boneco02.alpha = 1.0;
+      [self.view bringSubviewToFront:self.img_boneco01];
+      [self.view bringSubviewToFront:self.img_boneco02];
+    }
+    else if (self.index_group_show == 3) {
+      self.img_boneco01.frame = CGRectMake(89, 20, 142, 286);
+      self.img_boneco02.frame = CGRectMake(158, 44, 142, 286);
+      self.img_boneco03.frame = CGRectMake(89, 85, 142, 286);
+      self.img_boneco01.alpha = 0.6;
+      self.img_boneco02.alpha = 0.6;
+      self.img_boneco03.alpha = 1.0;
+      [self.view bringSubviewToFront:self.img_boneco01];
+      [self.view bringSubviewToFront:self.img_boneco02];
+      [self.view bringSubviewToFront:self.img_boneco03];
+    }
+    else if (self.index_group_show == 4) {
+      self.img_boneco01.frame = CGRectMake(20, 52, 142, 286);
+      self.img_boneco02.frame = CGRectMake(89, 20, 142, 286);
+      self.img_boneco03.frame = CGRectMake(158, 44, 142, 286);
+      self.img_boneco04.frame = CGRectMake(89, 85, 142, 286);
+      self.img_boneco01.alpha = 0.6;
+      self.img_boneco02.alpha = 0.6;
+      self.img_boneco03.alpha = 0.6;
+      self.img_boneco04.alpha = 1.0;
+      [self.view bringSubviewToFront:self.img_boneco02];
+      [self.view bringSubviewToFront:self.img_boneco01];
+      [self.view bringSubviewToFront:self.img_boneco03];
+      [self.view bringSubviewToFront:self.img_boneco04];
+    }
+    
+  }];
+
+}
+
+-(void) hide_group {
   
   self.index_animation+=3;
   [UIView animateWithDuration:1 delay:0 options: UIViewAnimationOptionAllowUserInteraction animations:^{
@@ -65,46 +123,100 @@
   } completion:^(BOOL finished) {}];
 }
 
--(void) show_lbl {
+-(void) show_next_group {
   
   self.index_animation+=1;
   [self change_text_lbl];
+  [self step_animation];
+  
+  UIImageView *img_grupo = [self get_img_view_grupo_atual];
   [UIView animateWithDuration:1 delay:0 options: UIViewAnimationOptionAllowUserInteraction animations:^{
     self.lbl_group_name.alpha = 1;
+    
+    CGRect frame = img_grupo.frame;
+    frame.origin.x = 10;
+    frame.origin.y = 10;
+    
   } completion:^(BOOL finished) {}];
 }
 
 - (void) start_animation {
   
-  [self show_lbl];
+  if (self.index_animation < 1) {
+    [self show_next_group];
+  }
   
-  //if (self.index_animation < 4) {
-    [self performSelector:@selector(hide_lbl) withObject:nil afterDelay:4];
-  //}
+  if (self.index_animation < 4) {
+    [self performSelector:@selector(hide_group) withObject:nil afterDelay:4-self.index_animation];
+  }
   
-  //if (self.index_animation < 5) {
-    [self performSelector:@selector(show_lbl) withObject:nil afterDelay:5];
-  //}
+  if (self.index_animation < 5) {
+    [self performSelector:@selector(show_next_group) withObject:nil afterDelay:5-self.index_animation];
+  }
   
-  //if (self.index_animation < 8) {
-    [self performSelector:@selector(hide_lbl) withObject:nil afterDelay:8];
-  //}
+  if (self.index_animation < 8) {
+    [self performSelector:@selector(hide_group) withObject:nil afterDelay:8-self.index_animation];
+  }
+  
+  if (self.total_grupos < 3) {
+    if (self.index_animation < 9) {
+      [self performSelector:@selector(present_board) withObject:nil afterDelay:9-self.index_animation];
+    }
+    return;
+  }
   
   
-  [self performSelector:@selector(present_board) withObject:nil afterDelay:9];
+  if (self.index_animation < 9) {
+    [self performSelector:@selector(show_next_group) withObject:nil afterDelay:9-self.index_animation];
+  }
+  if (self.index_animation < 12) {
+    [self performSelector:@selector(hide_group) withObject:nil afterDelay:12-self.index_animation];
+  }
+  
+  if (self.total_grupos < 4) {
+    if (self.index_animation < 13) {
+      [self performSelector:@selector(present_board) withObject:nil afterDelay:13-self.index_animation];
+    }
+    return;
+  }
+  
+  if (self.index_animation < 13) {
+    [self performSelector:@selector(show_next_group) withObject:nil afterDelay:13-self.index_animation];
+  }
+  if (self.index_animation < 16) {
+    [self performSelector:@selector(hide_group) withObject:nil afterDelay:16-self.index_animation];
+  }
+  if (self.index_animation < 17) {
+    [self performSelector:@selector(present_board) withObject:nil afterDelay:17-self.index_animation];
+  }
+  
+  
 }
 
 -(void) present_board {
   
-  [self.delegate dismiss_controllers];
-  [self.delegate next_group];
+  [UIView animateWithDuration:.5 animations:^{
+    
+    self.img_boneco01.alpha = 0;
+    if (self.total_grupos > 2) {
+      self.img_boneco02.alpha = 0;
+    }
+    if (self.total_grupos > 3) {
+      self.img_boneco03.alpha = 0;
+    }
+  } completion:^(BOOL finished) {
+    [self.delegate dismiss_controllers];
+    [self.delegate next_group];
+  }];
+  
+  
 }
 
 #pragma mark - Data
 
 -(void) get_data_from_coredata {
   
-  self.array_grupos = [Grupo findAllSortedBy:@"ordem" ascending:YES];
+  self.array_grupos = [Grupo findAllSortedBy:@"ordem" ascending:NO];
   self.total_grupos = [self.array_grupos count];
 }
 
@@ -122,14 +234,13 @@
 
 -(void) resume {
   
-  //[self start_animation];
+  [self start_animation];
 }
 
 #pragma mark - View lifecycle
 
 - (void) viewDidAppear:(BOOL)animated {
   
-  [self start_animation];
   [HUDHelper set_delegate:self];
   [HUDHelper show];
 }

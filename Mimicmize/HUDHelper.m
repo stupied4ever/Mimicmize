@@ -77,7 +77,7 @@ static HUDHelper *_shared = nil;
   
   HUDHelper *instance = [HUDHelper shared_instance];
   
-  if (instance.delegate == nil) {
+  if ( [delegate isKindOfClass: [BoardPlaceViewController class]] ) {
     instance.main_game_controller = (BoardPlaceViewController *)delegate;
   }
   instance.delegate = delegate;

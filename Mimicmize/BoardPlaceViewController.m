@@ -121,6 +121,7 @@
   self.pushed_controller = present_controller; 
   present_controller.delegate = self;
   [self presentModalViewController:present_controller animated:NO];
+  [present_controller start_animation];
 }
 
 #pragma mark - Pause Delegate

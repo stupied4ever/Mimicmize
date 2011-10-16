@@ -51,13 +51,13 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIImageView" id="1068599173">
+					<object class="IBUIImageView" id="157400611">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">256</int>
-						<string key="NSFrame">{{87, 27}, {142, 286}}</string>
+						<string key="NSFrame">{{89, 85}, {142, 286}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="558854479"/>
+						<reference key="NSNextKeyView" ref="837559013"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -109,7 +109,7 @@
 						<string key="NSFrame">{{79, 330}, {100, 120}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="837559013"/>
+						<reference key="NSNextKeyView" ref="157400611"/>
 						<string key="NSReuseIdentifierKey">_NS:209</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -211,7 +211,7 @@
 						<string key="NSFrame">{{40, 166}, {240, 128}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="1068599173"/>
+						<reference key="NSNextKeyView" ref="558854479"/>
 						<string key="NSReuseIdentifierKey">_NS:551</string>
 						<float key="IBUIAlpha">0.0</float>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -312,7 +312,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">img_boneco</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1068599173"/>
+						<reference key="destination" ref="157400611"/>
 					</object>
 					<int key="connectionID">33</int>
 				</object>
@@ -378,7 +378,7 @@
 							<reference ref="32483493"/>
 							<reference ref="633871954"/>
 							<reference ref="770171667"/>
-							<reference ref="1068599173"/>
+							<reference ref="157400611"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -444,7 +444,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">32</int>
-						<reference key="object" ref="1068599173"/>
+						<reference key="object" ref="157400611"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>
