@@ -170,7 +170,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
- 
   [tableView deselectRowAtIndexPath:indexPath animated:YES];
   CardsCategoryCellController *cell = (CardsCategoryCellController*)[tableView cellForRowAtIndexPath:indexPath];
   if ([self.array_categorias_selecionadas containsObject:cell.categoria]) {

@@ -143,6 +143,13 @@
 		7392174313DBF86E00CCC78C /* Bundle_Localize.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174213DBF86E00CCC78C /* Bundle_Localize.m */; };
 		7392174713DBFC0A00CCC78C /* Bundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7392174613DBFC0A00CCC78C /* Bundle.m */; };
 		73B8DDF214016FFD00F86DEA /* LocalizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */; };
+		73BDE075144CE9B3007ACE3B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BDE074144CE9B3007ACE3B /* QuartzCore.framework */; };
+		73BDE07B144CEEAD007ACE3B /* bobo_grupo_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BDE077144CEEAD007ACE3B /* bobo_grupo_02.png */; };
+		73BDE07C144CEEAD007ACE3B /* bobo_grupo_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BDE078144CEEAD007ACE3B /* bobo_grupo_02@2x.png */; };
+		73BDE07D144CEEAD007ACE3B /* bobo_grupo_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BDE079144CEEAD007ACE3B /* bobo_grupo_03.png */; };
+		73BDE07E144CEEAD007ACE3B /* bobo_grupo_03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BDE07A144CEEAD007ACE3B /* bobo_grupo_03@2x.png */; };
+		73BDE081144CEFCE007ACE3B /* bobo_grupo_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BDE07F144CEFCE007ACE3B /* bobo_grupo_04.png */; };
+		73BDE082144CEFCE007ACE3B /* bobo_grupo_04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BDE080144CEFCE007ACE3B /* bobo_grupo_04@2x.png */; };
 		73C792F21445EFAF00B5C5F1 /* btn_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 73C792F11445EFAF00B5C5F1 /* btn_pause.png */; };
 		73C792F61445F10800B5C5F1 /* HUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C792F51445F10800B5C5F1 /* HUDHelper.m */; };
 		73C792F81446123E00B5C5F1 /* MenuShortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C792F71446123E00B5C5F1 /* MenuShortView.xib */; };
@@ -440,6 +447,13 @@
 		7392174613DBFC0A00CCC78C /* Bundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bundle.m; sourceTree = "<group>"; };
 		73B8DDF014016FFD00F86DEA /* LocalizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizeHelper.h; sourceTree = "<group>"; };
 		73B8DDF114016FFD00F86DEA /* LocalizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizeHelper.m; sourceTree = "<group>"; };
+		73BDE074144CE9B3007ACE3B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		73BDE077144CEEAD007ACE3B /* bobo_grupo_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bobo_grupo_02.png; sourceTree = "<group>"; };
+		73BDE078144CEEAD007ACE3B /* bobo_grupo_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bobo_grupo_02@2x.png"; sourceTree = "<group>"; };
+		73BDE079144CEEAD007ACE3B /* bobo_grupo_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bobo_grupo_03.png; sourceTree = "<group>"; };
+		73BDE07A144CEEAD007ACE3B /* bobo_grupo_03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bobo_grupo_03@2x.png"; sourceTree = "<group>"; };
+		73BDE07F144CEFCE007ACE3B /* bobo_grupo_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bobo_grupo_04.png; sourceTree = "<group>"; };
+		73BDE080144CEFCE007ACE3B /* bobo_grupo_04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bobo_grupo_04@2x.png"; sourceTree = "<group>"; };
 		73C792F11445EFAF00B5C5F1 /* btn_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_pause.png; sourceTree = "<group>"; };
 		73C792F41445F10800B5C5F1 /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		73C792F51445F10800B5C5F1 /* HUDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDHelper.m; sourceTree = "<group>"; };
@@ -504,6 +518,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73BDE075144CE9B3007ACE3B /* QuartzCore.framework in Frameworks */,
 				28ABFA7C1420598A00C0E71D /* MessageUI.framework in Frameworks */,
 				28ABFA7A1420597800C0E71D /* Security.framework in Frameworks */,
 				28ABFA781420596C00C0E71D /* SystemConfiguration.framework in Frameworks */,
@@ -905,6 +920,12 @@
 		28C14C8A1421A49200C07261 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				73BDE07F144CEFCE007ACE3B /* bobo_grupo_04.png */,
+				73BDE080144CEFCE007ACE3B /* bobo_grupo_04@2x.png */,
+				73BDE077144CEEAD007ACE3B /* bobo_grupo_02.png */,
+				73BDE078144CEEAD007ACE3B /* bobo_grupo_02@2x.png */,
+				73BDE079144CEEAD007ACE3B /* bobo_grupo_03.png */,
+				73BDE07A144CEEAD007ACE3B /* bobo_grupo_03@2x.png */,
 				731C9DB71449F13000122E0F /* bobo_grupo_01.png */,
 				731C9DB81449F13000122E0F /* bobo_grupo_01@2x.png */,
 				73C792F11445EFAF00B5C5F1 /* btn_pause.png */,
@@ -1045,6 +1066,7 @@
 		73E33B4A13CF96DF004E86C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73BDE074144CE9B3007ACE3B /* QuartzCore.framework */,
 				28ABFA7B1420598A00C0E71D /* MessageUI.framework */,
 				28ABFA791420597700C0E71D /* Security.framework */,
 				28ABFA771420596C00C0E71D /* SystemConfiguration.framework */,
@@ -1328,6 +1350,12 @@
 				731C9DB91449F13000122E0F /* bobo_grupo_01.png in Resources */,
 				731C9DBA1449F13000122E0F /* bobo_grupo_01@2x.png in Resources */,
 				731C9DBF144A10EE00122E0F /* GroupsPresentationView.xib in Resources */,
+				73BDE07B144CEEAD007ACE3B /* bobo_grupo_02.png in Resources */,
+				73BDE07C144CEEAD007ACE3B /* bobo_grupo_02@2x.png in Resources */,
+				73BDE07D144CEEAD007ACE3B /* bobo_grupo_03.png in Resources */,
+				73BDE07E144CEEAD007ACE3B /* bobo_grupo_03@2x.png in Resources */,
+				73BDE081144CEFCE007ACE3B /* bobo_grupo_04.png in Resources */,
+				73BDE082144CEFCE007ACE3B /* bobo_grupo_04@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

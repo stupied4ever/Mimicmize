@@ -21,10 +21,18 @@
   self.lbl_category_name.font = [UIFont fontWithName:@"Helsinki" size:24];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+  
+  UIView *selected_view = [[UIView alloc] initWithFrame:self.frame];
+  selected_view.backgroundColor = [UIColor colorWithRed:194.0/255.0 green:174.0/255.0 blue:153.0/255.0 alpha:1];
+  selected_view.layer.cornerRadius = 8;
+  self.selectedBackgroundView = selected_view;
+  
   [super setSelected:selected animated:animated];
   // Configure the view for the selected state
+  
+  
+  
 }
 
 @end
