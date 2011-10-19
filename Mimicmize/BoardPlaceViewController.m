@@ -97,7 +97,8 @@
   [self rearrange_view];
   [self.animation show_cards];
   [[SoundHelper sharedInstance]playSoundWithName:@"shufflecards1"];
-  [jogo_atual next_grupo];
+  Grupo *grupo_atual = [jogo_atual next_grupo];
+  self.img_boneco.image = [UIImage imageNamed:grupo_atual.imagem];
 }
 
 -(void) walk_group {

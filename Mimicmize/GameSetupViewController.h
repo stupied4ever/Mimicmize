@@ -15,6 +15,7 @@
 #import "Baralho.h"
 #import "HUDHelper.h"
 #import "BoardPlaceViewController.h"
+#import "NSMutableArray+Helper.h"
 
 @interface GameSetupViewController : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 

@@ -358,6 +358,12 @@
   [Jogo truncateAll];
   [Categoria remover_categorias_do_jogo];
   
+  NSMutableArray *array_imgs = [NSMutableArray arrayWithObjects:@"bobo_grupo_01.png",
+                                @"bobo_grupo_02.png",
+                                @"bobo_grupo_03.png",
+                                @"bobo_grupo_04.png",nil];
+  [array_imgs shuffle];
+  
   NSInteger index_txt = 1001;
   for (; ; index_txt++) {
     UITextField *txt_field = (UITextField *)[self.view_groups viewWithTag:index_txt];
@@ -367,7 +373,10 @@
     
     Grupo *new_group = [Grupo createEntity];
     new_group.nome = [txt_field.text isEqualToString:@""] ? [NSString stringWithFormat:@"Grupo%d",index_txt-1000] : txt_field.text;
+    new_group.imagem = [array_imgs objectAtIndex:0];
     new_group.casa_tabuleiro = [NSNumber numberWithInt:0];
+    
+    [array_imgs removeObjectAtIndex:0];
   }
   
   NSInteger valor_slider = self.timer_slider.value;

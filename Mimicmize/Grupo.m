@@ -16,5 +16,6 @@
 @dynamic ordem;
 @dynamic acertou;
 @dynamic jogo;
+@dynamic imagem;
 
 @end

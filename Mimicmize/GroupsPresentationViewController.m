@@ -66,7 +66,9 @@
 
 -(void) change_text_lbl {
   
-  self.lbl_group_name.text = [(Grupo *)[self.array_grupos objectAtIndex: self.index_group_show++] nome];
+  Grupo * grupo_atual = (Grupo *)[self.array_grupos objectAtIndex: self.index_group_show];
+  self.lbl_group_name.text = grupo_atual.nome;
+  self.index_group_show++;
 }
 
 -(void) step_animation {
@@ -146,48 +148,48 @@
     [self show_next_group];
   }
   
+  if (self.index_animation < 3) {
+    [self performSelector:@selector(hide_group) withObject:nil afterDelay:3-self.index_animation];
+  }
+  
   if (self.index_animation < 4) {
-    [self performSelector:@selector(hide_group) withObject:nil afterDelay:4-self.index_animation];
+    [self performSelector:@selector(show_next_group) withObject:nil afterDelay:4-self.index_animation];
   }
   
-  if (self.index_animation < 5) {
-    [self performSelector:@selector(show_next_group) withObject:nil afterDelay:5-self.index_animation];
-  }
-  
-  if (self.index_animation < 8) {
-    [self performSelector:@selector(hide_group) withObject:nil afterDelay:8-self.index_animation];
+  if (self.index_animation < 6) {
+    [self performSelector:@selector(hide_group) withObject:nil afterDelay:6-self.index_animation];
   }
   
   if (self.total_grupos < 3) {
-    if (self.index_animation < 9) {
-      [self performSelector:@selector(present_board) withObject:nil afterDelay:9-self.index_animation];
+    if (self.index_animation < 7) {
+      [self performSelector:@selector(present_board) withObject:nil afterDelay:7-self.index_animation];
     }
     return;
   }
   
   
+  if (self.index_animation < 7) {
+    [self performSelector:@selector(show_next_group) withObject:nil afterDelay:7-self.index_animation];
+  }
   if (self.index_animation < 9) {
-    [self performSelector:@selector(show_next_group) withObject:nil afterDelay:9-self.index_animation];
+    [self performSelector:@selector(hide_group) withObject:nil afterDelay:9-self.index_animation];
+  }
+  
+  if (self.total_grupos < 4) {
+    if (self.index_animation < 10) {
+      [self performSelector:@selector(present_board) withObject:nil afterDelay:10-self.index_animation];
+    }
+    return;
+  }
+  
+  if (self.index_animation < 10) {
+    [self performSelector:@selector(show_next_group) withObject:nil afterDelay:10-self.index_animation];
   }
   if (self.index_animation < 12) {
     [self performSelector:@selector(hide_group) withObject:nil afterDelay:12-self.index_animation];
   }
-  
-  if (self.total_grupos < 4) {
-    if (self.index_animation < 13) {
-      [self performSelector:@selector(present_board) withObject:nil afterDelay:13-self.index_animation];
-    }
-    return;
-  }
-  
   if (self.index_animation < 13) {
-    [self performSelector:@selector(show_next_group) withObject:nil afterDelay:13-self.index_animation];
-  }
-  if (self.index_animation < 16) {
-    [self performSelector:@selector(hide_group) withObject:nil afterDelay:16-self.index_animation];
-  }
-  if (self.index_animation < 17) {
-    [self performSelector:@selector(present_board) withObject:nil afterDelay:17-self.index_animation];
+    [self performSelector:@selector(present_board) withObject:nil afterDelay:13-self.index_animation];
   }
   
   
@@ -217,6 +219,19 @@
 -(void) get_data_from_coredata {
   
   self.array_grupos = [Grupo findAllSortedBy:@"ordem" ascending:NO];
+  
+  NSArray *array_img_view = [NSArray arrayWithObjects:self.img_boneco01,
+                             self.img_boneco02,
+                             self.img_boneco03,
+                             self.img_boneco04,nil];
+  NSInteger index=0;
+  for (Grupo *grupo in self.array_grupos) {
+    
+    UIImageView *img_view = [array_img_view objectAtIndex:index];
+    img_view.image = [UIImage imageNamed:grupo.imagem];
+    index++;
+  }
+  
   self.total_grupos = [self.array_grupos count];
 }
 

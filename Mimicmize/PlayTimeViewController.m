@@ -23,7 +23,7 @@
   if(minutes > 0)    
     [self.lbl_seconds setText:[NSString stringWithFormat:@"%imins:%02d%@", minutes, seconds%60,[LocalizeHelper get_seconds_string]]];
   else
-    [self.lbl_seconds setText:[NSString stringWithFormat:@"%02d%@", seconds%60,[LocalizeHelper get_seconds_string]]];
+    [self.lbl_seconds setText:[NSString stringWithFormat:@"%02d %@", seconds%60,[LocalizeHelper get_seconds_string]]];
 }
 
 #pragma mark - Pause Delegate
