@@ -33,8 +33,10 @@
   else {
     selected_card = self.carta_03;
   }
+  btn.selected = YES;
   
-  [self.delegate card_selected:selected_card];
+  UIViewController *controller = (UIViewController *)self.delegate;
+  [controller performSelector:@selector(card_selected:) withObject:selected_card afterDelay:1];
 }
 
 -(void) set_carta : (Carta *) carta na_posicao: (NSInteger) posicao {
@@ -57,7 +59,11 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
+  
+  self.btn_carta_01.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
+  self.btn_carta_02.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
+  self.btn_carta_03.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
   
   [self set_carta:[Baralho pick_card] na_posicao:1];
   [self set_carta:[Baralho pick_card] na_posicao:2];

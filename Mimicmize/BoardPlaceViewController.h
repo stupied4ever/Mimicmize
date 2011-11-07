@@ -15,6 +15,7 @@
 #import "FinishGameViewController.h"
 #import "HUDHelper.h"
 #import "GroupsPresentationViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface BoardPlaceViewController : UIViewController<CardsChoiceDelegate, PausableUI> {
   

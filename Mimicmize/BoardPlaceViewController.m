@@ -152,6 +152,7 @@
   
   
   self.animation = [[CardsAnimationHelper alloc] init];
+  
   self.animation.card01 = self.carta_01;
   self.animation.card02 = self.carta_02;
   self.animation.card03 = self.carta_03;
