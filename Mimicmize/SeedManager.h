@@ -27,6 +27,7 @@
 - (void) load_bundles;
 - (void) load_cartas;
 
++(void) addNewCardWithPoints:(NSInteger)points andMimic:(NSArray *)mimics forCategory:(Categoria *)category;
 + (void) print_all_fonts;
 
 @end
