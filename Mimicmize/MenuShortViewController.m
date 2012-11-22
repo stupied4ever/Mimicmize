@@ -57,7 +57,8 @@
   
   [self hide];
   GameSetupViewController *setup_controller = [[GameSetupViewController alloc] initWithNibName:@"GameSetupView" bundle:nil];
-  [[HUDHelper shared_instance].delegate presentModalViewController:setup_controller animated: YES];
+  //[[HUDHelper shared_instance].delegate presentModalViewController:setup_controller animated: YES];
+  [[HUDHelper shared_instance].delegate presentViewController:setup_controller animated:YES completion:nil];
 }
 
 -(void) restart_game{

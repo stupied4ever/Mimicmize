@@ -22,6 +22,28 @@
 
 -(IBAction)select_carta:(id)sender {
   
+  UIButton *btn = (UIButton *)sender;
+  btn.selected = YES;
+  
+  CGRect frame_btn = btn.frame;
+  frame_btn.origin.y = 54;
+  
+  [UIView animateWithDuration:0.3 animations:^{
+    
+    self.btn_carta_01.alpha = 0;
+    self.btn_carta_02.alpha = 0;
+    self.btn_carta_03.alpha = 0;
+    btn.alpha = 1;
+    btn.frame = frame_btn;
+    btn.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
+    self.btn_start.alpha = 1;
+  }];
+  
+  self.btn_start.tag = btn.tag;
+}
+
+-(IBAction)start:(id)sender {
+  
   Carta *selected_card;
   UIButton *btn = (UIButton *)sender;
   if (btn.tag == 1) {
@@ -33,10 +55,9 @@
   else {
     selected_card = self.carta_03;
   }
-  btn.selected = YES;
   
   UIViewController *controller = (UIViewController *)self.delegate;
-  [controller performSelector:@selector(card_selected:) withObject:selected_card afterDelay:1];
+  [controller performSelector:@selector(card_selected:) withObject:selected_card afterDelay:0.2];
 }
 
 -(void) set_carta : (Carta *) carta na_posicao: (NSInteger) posicao {
@@ -55,11 +76,21 @@
   }
 }
 
+-(void) set_title_for_label {
+  
+  Jogo *jogo_atual = [Jogo findFirst];
+  self.lbl_titulo.text = [NSString stringWithFormat:@"%@ %@",self.lbl_titulo.text, jogo_atual.grupo_atual.nome];
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  self.btn_start.alpha = 0;
+  self.lbl_titulo.font = [UIFont fontWithName:@"Helsinki" size:12];
+  [self set_title_for_label];
   
   self.btn_carta_01.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
   self.btn_carta_02.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
@@ -72,11 +103,12 @@
   self.btn_carta_01.tag = 1;
   self.btn_carta_02.tag = 2;
   self.btn_carta_03.tag = 3;
-  
 }
 
 - (void)viewDidUnload
 {
+    [self setLbl_titulo:nil];
+  [self setBtn_start:nil];
     [super viewDidUnload];
   self.carta_01 = nil;
   self.carta_02 = nil;

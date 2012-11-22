@@ -45,7 +45,8 @@
     play_controller.delegate = self;
     self.pushed_controller = play_controller;
     [HUDHelper show];
-    [self presentModalViewController:play_controller animated:NO];
+    [self presentViewController:play_controller animated:NO completion:nil];
+    //[self presentModalViewController:play_controller animated:NO];
   }];
 }
 
@@ -70,7 +71,8 @@
   BoardMoveViewController *board_move_controller = [[BoardMoveViewController alloc] initWithNibName:@"BoardMoveView" bundle:nil];
   [board_move_controller set_delegate:self];
   self.pushed_controller = board_move_controller;
-  [self presentModalViewController:board_move_controller animated:NO];
+  //[self presentModalViewController:board_move_controller animated:NO];
+  [self presentViewController:board_move_controller animated:NO completion:nil];
 }
 
 - (void)rearrange_view {
@@ -90,7 +92,8 @@
   if ([jogo_atual.grupo_atual.casa_tabuleiro intValue] > 3) {
     FinishGameViewController *finish_controller = [[FinishGameViewController alloc] initWithNibName:@"FinishGameView" bundle:nil];
     self.pushed_controller = finish_controller;
-    [self presentModalViewController:finish_controller animated:NO];
+    //[self presentModalViewController:finish_controller animated:NO];
+    [self presentViewController:finish_controller animated:NO completion:nil];
     return;
   }
   
@@ -105,7 +108,7 @@
   
   Jogo *jogo_atual = [Jogo findFirst];
   
-  NSInteger total_casas_andar = [self.carta_selecionada.pontos_andar intValue];
+  NSInteger total_casas_andar = 1;// Agora serao pontos e nao casas do tabuleiro//[self.carta_selecionada.pontos_andar intValue];
   NSInteger casa_atual = [jogo_atual.grupo_atual.casa_tabuleiro intValue];
   jogo_atual.grupo_atual.casa_tabuleiro = [NSNumber numberWithInt: total_casas_andar + casa_atual];
 }
@@ -121,7 +124,8 @@
     [[GroupsPresentationViewController alloc] initWithNibName:@"GroupsPresentationView" bundle:nil];
   self.pushed_controller = present_controller; 
   present_controller.delegate = self;
-  [self presentModalViewController:present_controller animated:NO];
+  //[self presentModalViewController:present_controller animated:NO];
+  [self presentViewController:present_controller animated:NO completion:nil];
   [present_controller start_animation];
 }
 

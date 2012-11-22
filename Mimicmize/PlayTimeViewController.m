@@ -85,7 +85,7 @@
   self.current_game = [Jogo findFirst];
 
   self.current_game.grupo_atual.acertou = [NSNumber numberWithBool:NO];
-  play_time_seconds = 5.0;//[self.current_game.segundos_rodada floatValue];
+  play_time_seconds = [self.current_game.segundos_rodada floatValue];
   self.lbl_seconds.text = [LocalizeHelper convert_value_to_minutes:play_time_seconds];
   self.lbl_group.text = self.current_game.grupo_atual.nome;
 }

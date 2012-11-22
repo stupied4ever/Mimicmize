@@ -33,7 +33,9 @@
     frame.origin.x+=320;
     self.img_mimicmize.frame = frame;
   } completion:^(BOOL finished) {
-    [self presentModalViewController:setup_controller animated: NO];
+    
+    //[self presentModalViewController:setup_controller animated: NO];
+    [self presentViewController:setup_controller animated:NO completion:nil];
   }];
   
   //BoardMoveViewController *next_viewcontroller = [[BoardMoveViewController alloc] initWithNibName:@"BoardMoveView" bundle:nil];
@@ -58,7 +60,8 @@
   }
   
   if (comecar_partida) {
-    [self presentModalViewController:self.board_place_controller animated:NO];
+    //[self presentModalViewController:self.board_place_controller animated:NO];
+    [self presentViewController:self.board_place_controller animated:NO completion:nil];
     [self.board_place_controller present_groups];
   }
   
