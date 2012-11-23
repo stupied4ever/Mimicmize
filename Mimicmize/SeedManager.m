@@ -94,49 +94,49 @@
     [nova_carta add_locale_with_mimica: [NSString stringWithFormat:@"mimic_%@_%d",[categoria get_localized_attributes].nome,index] andLocale:en_US];
   }*/
   
-  [SeedManager addNewCardWithPoints:3 andMimic:[NSArray arrayWithObjects:@"adega",@"cellar", nil] forCategory:lugares];
-  [SeedManager addNewCardWithPoints:6 andMimic:[NSArray arrayWithObjects:@"mina",@"mine", nil] forCategory:lugares];
-  [SeedManager addNewCardWithPoints:5 andMimic:[NSArray arrayWithObjects:@"oficina",@"workshop", nil] forCategory:lugares];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"perto",@"close", nil] forCategory:lugares];
-  [SeedManager addNewCardWithPoints:1 andMimic:[NSArray arrayWithObjects:@"África do Sul",@"South Africa", nil] forCategory:lugares];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"iceberg",@"iceberg", nil] forCategory:lugares];
-  [SeedManager addNewCardWithPoints:1 andMimic:[NSArray arrayWithObjects:@"mercado",@"market", nil] forCategory:lugares];
-  [SeedManager addNewCardWithPoints:5 andMimic:[NSArray arrayWithObjects:@"inferno",@"hell", nil] forCategory:lugares];
-  [SeedManager addNewCardWithPoints:6 andMimic:[NSArray arrayWithObjects:@"Chile",@"Chile", nil] forCategory:lugares];
-  [SeedManager addNewCardWithPoints:3 andMimic:[NSArray arrayWithObjects:@"Himalaia",@"Himalaia", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"adega",@"cellar", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"mina",@"mine", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"oficina",@"workshop", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"perto",@"close", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"África do Sul",@"South Africa", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"iceberg",@"iceberg", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"mercado",@"market", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"inferno",@"hell", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"Chile",@"Chile", nil] forCategory:lugares];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"Himalaia",@"Himalaia", nil] forCategory:lugares];
   
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"fivela",@"buckle", nil] forCategory:objetos];
-  [SeedManager addNewCardWithPoints:1 andMimic:[NSArray arrayWithObjects:@"sirene",@"buzzer", nil] forCategory:objetos];
-  [SeedManager addNewCardWithPoints:3 andMimic:[NSArray arrayWithObjects:@"bomba de gasolina",@"fuel pump", nil] forCategory:objetos];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"condicionador de ar",@"air conditioner", nil] forCategory:objetos];
-  [SeedManager addNewCardWithPoints:6 andMimic:[NSArray arrayWithObjects:@"botão de rosa",@"rosebud", nil] forCategory:objetos];
-  [SeedManager addNewCardWithPoints:5 andMimic:[NSArray arrayWithObjects:@"bobina",@"coil", nil] forCategory:objetos];
-  [SeedManager addNewCardWithPoints:1 andMimic:[NSArray arrayWithObjects:@"cortador de unha",@"nail clipper", nil] forCategory:objetos];
-  [SeedManager addNewCardWithPoints:4 andMimic:[NSArray arrayWithObjects:@"porta-jóias",@"jewelery", nil] forCategory:objetos];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"sarcófago",@"sarcophagus", nil] forCategory:objetos];
-  [SeedManager addNewCardWithPoints:4 andMimic:[NSArray arrayWithObjects:@"volante",@"steering wheel", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"fivela",@"buckle", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"sirene",@"buzzer", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"bomba de gasolina",@"fuel pump", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"condicionador de ar",@"air conditioner", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"botão de rosa",@"rosebud", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"bobina",@"coil", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"cortador de unha",@"nail clipper", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"porta-jóias",@"jewelery", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"sarcófago",@"sarcophagus", nil] forCategory:objetos];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"volante",@"steering wheel", nil] forCategory:objetos];
   
-  [SeedManager addNewCardWithPoints:4 andMimic:[NSArray arrayWithObjects:@"Sigmund Freud",@"Sigmund Freud", nil] forCategory:pessoas];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"Ray Charles",@"Ray Charles", nil] forCategory:pessoas];
-  [SeedManager addNewCardWithPoints:5 andMimic:[NSArray arrayWithObjects:@"miserável",@"miserable", nil] forCategory:pessoas];
-  [SeedManager addNewCardWithPoints:5 andMimic:[NSArray arrayWithObjects:@"testemunha",@"witness", nil] forCategory:pessoas];
-  [SeedManager addNewCardWithPoints:6 andMimic:[NSArray arrayWithObjects:@"cigana",@"gypsy", nil] forCategory:pessoas];
-  [SeedManager addNewCardWithPoints:3 andMimic:[NSArray arrayWithObjects:@"mulher",@"woman", nil] forCategory:pessoas];
-  [SeedManager addNewCardWithPoints:1 andMimic:[NSArray arrayWithObjects:@"coitado",@"poor", nil] forCategory:pessoas];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"samurai",@"samurai", nil] forCategory:pessoas];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"mão",@"hand", nil] forCategory:pessoas];
-  [SeedManager addNewCardWithPoints:5 andMimic:[NSArray arrayWithObjects:@"cérebro",@"brain", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"Sigmund Freud",@"Sigmund Freud", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"Ray Charles",@"Ray Charles", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"miserável",@"miserable", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"testemunha",@"witness", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"cigana",@"gypsy", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"mulher",@"woman", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"coitado",@"poor", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"samurai",@"samurai", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"mão",@"hand", nil] forCategory:pessoas];
+  [SeedManager addNewCardWithPoints: 1 andMimic:[NSArray arrayWithObjects:@"cérebro",@"brain", nil] forCategory:pessoas];
   
-  [SeedManager addNewCardWithPoints:4 andMimic:[NSArray arrayWithObjects:@"civilização",@"civilization", nil] forCategory:dificil];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"insígnia",@"badge", nil] forCategory:dificil];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"atmosfera",@"atmosphere", nil] forCategory:dificil];
-  [SeedManager addNewCardWithPoints:3 andMimic:[NSArray arrayWithObjects:@"genocídio",@"genocide", nil] forCategory:dificil];
-  [SeedManager addNewCardWithPoints:6 andMimic:[NSArray arrayWithObjects:@"hipocondríaco",@"hypochondriac", nil] forCategory:dificil];
-  [SeedManager addNewCardWithPoints:5 andMimic:[NSArray arrayWithObjects:@"tribuna",@"tribune", nil] forCategory:dificil];
-  [SeedManager addNewCardWithPoints:2 andMimic:[NSArray arrayWithObjects:@"debutante",@"debut", nil] forCategory:dificil];
-  [SeedManager addNewCardWithPoints:1 andMimic:[NSArray arrayWithObjects:@"lampião",@"gas lamp", nil] forCategory:dificil];
-  [SeedManager addNewCardWithPoints:3 andMimic:[NSArray arrayWithObjects:@"jornada",@"journey", nil] forCategory:dificil];
-  [SeedManager addNewCardWithPoints:3 andMimic:[NSArray arrayWithObjects:@"cambalhota",@"somersault (roll)", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"civilização",@"civilization", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"insígnia",@"badge", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"atmosfera",@"atmosphere", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"genocídio",@"genocide", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"hipocondríaco",@"hypochondriac", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"tribuna",@"tribune", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"debutante",@"debut", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"lampião",@"gas lamp", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"jornada",@"journey", nil] forCategory:dificil];
+  [SeedManager addNewCardWithPoints: 2 andMimic:[NSArray arrayWithObjects:@"cambalhota",@"somersault (roll)", nil] forCategory:dificil];
 }
 
 +(void) addNewCardWithPoints:(NSInteger)points andMimic:(NSArray *)mimics forCategory:(Categoria *)category{

@@ -67,7 +67,7 @@
 
 -(IBAction)cancel:(id)sender {
   
-  [self dismissModalViewControllerAnimated:NO];
+  [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 -(IBAction)select_unselect_all:(id)sender {
@@ -120,7 +120,7 @@
 -(IBAction)done:(id)sender {
   
   [self save_settings_to_coredata];
-  [self dismissModalViewControllerAnimated:YES];
+  [self dismissViewControllerAnimated:YES completion:nil];
   
   if ( [HUDHelper shared_instance].main_game_controller != nil ) {
     [self performSelector:@selector(change_views) withObject:nil afterDelay:.5];

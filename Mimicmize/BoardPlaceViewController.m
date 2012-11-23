@@ -41,12 +41,19 @@
   [self prepare_layout_for_animation];
   [HUDHelper hide];
   [self.animation show_3_2_1_go:^ {
-    PlayTimeViewController *play_controller = [[PlayTimeViewController alloc] initWithNibName:@"PlayTimeView" bundle:nil];
-    play_controller.delegate = self;
-    self.pushed_controller = play_controller;
-    [HUDHelper show];
-    [self presentViewController:play_controller animated:NO completion:nil];
-    //[self presentModalViewController:play_controller animated:NO];
+    
+    [UIView animateWithDuration:0.2 animations:^{
+      
+      self.img_boneco.alpha = 0;
+    } completion:^(BOOL finished) {
+      
+      PlayTimeViewController *play_controller = [[PlayTimeViewController alloc] initWithNibName:@"PlayTimeView" bundle:nil];
+      play_controller.delegate = self;
+      self.pushed_controller = play_controller;
+      [HUDHelper show];
+      [self presentViewController:play_controller animated:NO completion:nil];
+    }];
+    
   }];
 }
 
@@ -68,10 +75,22 @@
 
 -(void) correct_mimic {
   
+  self.img_boneco.alpha = 1;
+  [self walk_group];
   BoardMoveViewController *board_move_controller = [[BoardMoveViewController alloc] initWithNibName:@"BoardMoveView" bundle:nil];
   [board_move_controller set_delegate:self];
+  board_move_controller.qtd_casas_andar = [self.carta_selecionada.pontos_andar integerValue];
   self.pushed_controller = board_move_controller;
-  //[self presentModalViewController:board_move_controller animated:NO];
+  [self presentViewController:board_move_controller animated:NO completion:nil];
+}
+
+-(void) wrong_mimic {
+  
+  self.img_boneco.alpha = 1;
+  BoardMoveViewController *board_move_controller = [[BoardMoveViewController alloc] initWithNibName:@"BoardMoveView" bundle:nil];
+  [board_move_controller set_delegate:self];
+  board_move_controller.qtd_casas_andar = 0;
+  self.pushed_controller = board_move_controller;
   [self presentViewController:board_move_controller animated:NO completion:nil];
 }
 
@@ -108,14 +127,14 @@
   
   Jogo *jogo_atual = [Jogo findFirst];
   
-  NSInteger total_casas_andar = 1;// Agora serao pontos e nao casas do tabuleiro//[self.carta_selecionada.pontos_andar intValue];
+  NSInteger total_casas_andar = [self.carta_selecionada.pontos_andar intValue];
   NSInteger casa_atual = [jogo_atual.grupo_atual.casa_tabuleiro intValue];
   jogo_atual.grupo_atual.casa_tabuleiro = [NSNumber numberWithInt: total_casas_andar + casa_atual];
 }
 
 -(void) dismiss_controllers {
   
-  [self.pushed_controller dismissModalViewControllerAnimated:NO];
+  [self.pushed_controller dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void) present_groups {
@@ -166,10 +185,12 @@
   self.animation.img_2 = self.img_2;
   self.animation.img_3 = self.img_3;
   self.animation.img_go = self.img_go;
+  self.animation.lbl_vai = self.lbl_vai;
 }
 
 - (void)viewDidUnload
 {
+  [self setLbl_vai:nil];
   [super viewDidUnload];
   self.carta_01 = nil;
   self.carta_02 = nil;

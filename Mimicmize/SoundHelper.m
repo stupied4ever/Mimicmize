@@ -45,6 +45,12 @@ static SoundHelper *_shared_instance;
 
 -(AVAudioPlayer *)createPlayerWithAudio:(NSString *)audio_file andError:(NSError *)err{
   NSString *resourcePath = [[NSBundle mainBundle] pathForResource:audio_file ofType:@"mp3"];
+  
+  if ([[NSFileManager defaultManager] fileExistsAtPath:resourcePath] == NO ) {
+    resourcePath = [[NSBundle mainBundle] pathForResource:audio_file ofType:@"m4a"];
+  }
+  
+  NSLog(@"Resource path %@",resourcePath);
   return [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:resourcePath] error:&err];
 }
 
@@ -86,7 +92,21 @@ static SoundHelper *_shared_instance;
 }
 
 -(void)playWrongBuzz{
-  [self playSoundWithName:@"beep5"];
+  
+  NSArray *array_sounds = [NSArray arrayWithObjects:
+                           @"alarm_clock_bell",
+                           @"buzina_maritima",
+                           @"children_aah",
+                           @"galo",
+                           @"iphone_alarm",
+                           @"palmas_fracas",
+                           @"sino_escola",
+                           nil];
+  NSInteger random_index = (arc4random() * 143) % [array_sounds count];
+  NSString *random_string = [array_sounds objectAtIndex:random_index];
+  
+  NSLog(@"Random sound: %@",random_string);
+  [self playSoundWithName:random_string];
 }
 
 -(void)stopSoundWithName:(NSString *)audio_file{  

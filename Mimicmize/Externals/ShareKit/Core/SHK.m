@@ -127,7 +127,7 @@ BOOL SHKinit;
 	if (currentView != nil)
 	{
 		self.pendingView = vc;
-		[[currentView parentViewController] dismissModalViewControllerAnimated:YES];
+		[[currentView parentViewController] dismissViewControllerAnimated:YES completion:nil];
 		return;
 	}
 		

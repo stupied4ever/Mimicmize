@@ -378,7 +378,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<float key="IBUIValue">100</float>
-						<float key="IBUIMinValue">20</float>
+						<float key="IBUIMinValue">5</float>
 						<float key="IBUIMaxValue">180</float>
 					</object>
 					<object class="IBUIImageView" id="530448776">

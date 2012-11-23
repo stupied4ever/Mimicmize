@@ -52,6 +52,11 @@
 
 - (void) viewDidAppear:(BOOL)animated {
   
+  [UIView animateWithDuration:0.4 animations:^{
+    self.btn_new_game.alpha = 1;
+  }];
+  
+  
   NSArray *array_grupos = [Grupo findAll];
   bool comecar_partida = [array_grupos count] >= 2;
   for (Grupo *grupo in array_grupos) {

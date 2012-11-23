@@ -39,9 +39,11 @@
 @property (nonatomic, strong) UIViewController *pushed_controller;
 
 @property (nonatomic, strong) Carta* carta_selecionada;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_vai;
 
 -(IBAction)select_card:(id)sender;
 -(void) correct_mimic;
+-(void) wrong_mimic;
 -(void) walk_group;
 -(void) next_group;
 

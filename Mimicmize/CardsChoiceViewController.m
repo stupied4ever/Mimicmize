@@ -95,6 +95,7 @@
   self.btn_carta_01.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
   self.btn_carta_02.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
   self.btn_carta_03.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
+  self.btn_start.titleLabel.font = [UIFont fontWithName:@"FontleroyBrown" size:42];
   
   [self set_carta:[Baralho pick_card] na_posicao:1];
   [self set_carta:[Baralho pick_card] na_posicao:2];

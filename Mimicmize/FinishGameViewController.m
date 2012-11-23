@@ -34,13 +34,13 @@
 - (IBAction)onPlayAgainTouched:(id)sender {
   [self resetGame];
   //BoardPlaceViewController *board = [[BoardPlaceViewController alloc]initWithNibName:@"BoardPlaceView" bundle:nil];
-  [self dismissModalViewControllerAnimated:YES];  //leva para a tela inicial de jogo BoardPlaceView
+  [self dismissViewControllerAnimated:YES completion:nil];  //leva para a tela inicial de jogo BoardPlaceView
 }
 
 - (IBAction)onMenuTouched:(id)sender {
   //MainMenuViewController *menu = [[MainMenuViewController alloc]initWithNibName:@"MainMenuView" bundle:nil];
   //[self presentModalViewController:menu animated:YES];
-  [self dismissModalViewControllerAnimated:YES];
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocalizeHelper.h"
 
 @interface CardsAnimationHelper : NSObject
 
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) IBOutlet UIImageView *img_2;
 @property (nonatomic, strong) IBOutlet UIImageView *img_1;
 @property (nonatomic, strong) IBOutlet UIImageView *img_go;
+@property (nonatomic, weak) UILabel *lbl_vai;
 
 @property (nonatomic, strong) UIButton *btn_selected;
 
