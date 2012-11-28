@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LocalizeHelper.h"
+#import "BundleModel.h"
+#import "SVProgressHUD.h"
+#import <StoreKit/StoreKit.h>
 
-@interface StoreViewController : UIViewController
+@interface StoreViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate,SKPaymentTransactionObserver,SKProductsRequestDelegate>
 
 @end
