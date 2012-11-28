@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSNumber * segundos_rodada;
 @property (nonatomic, retain) NSNumber * indice_grupo;
+@property (nonatomic, retain) NSNumber * total_pontos;
 @property (nonatomic, retain) Grupo *grupo_atual;
 @property (nonatomic, retain) NSSet *categorias_escolhidas;
 @end

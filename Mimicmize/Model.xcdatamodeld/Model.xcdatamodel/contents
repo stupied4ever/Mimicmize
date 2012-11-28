@@ -1,58 +1,124 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Bundle" representedClassName="Bundle">
-        <attribute name="comprado" optional="YES" attributeType="Boolean"/>
-        <relationship name="cartas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta" inverseName="bundle" inverseEntity="Carta"/>
-        <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bundle_Localize" inverseName="bundle" inverseEntity="Bundle_Localize"/>
+        <attribute name="comprado" optional="YES" attributeType="Boolean">
+            <userInfo/>
+        </attribute>
+        <attribute name="inapp_id" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cartas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta" inverseName="bundle" inverseEntity="Carta">
+            <userInfo/>
+        </relationship>
+        <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bundle_Localize" inverseName="bundle" inverseEntity="Bundle_Localize">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
     </entity>
     <entity name="Bundle_Localize">
-        <attribute name="locale" optional="YES" attributeType="String"/>
-        <attribute name="nome" optional="YES" attributeType="String"/>
-        <relationship name="bundle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bundle" inverseName="localized_attributes" inverseEntity="Bundle"/>
+        <attribute name="locale" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="nome" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="bundle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bundle" inverseName="localized_attributes" inverseEntity="Bundle">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
     </entity>
     <entity name="Carta" representedClassName="Carta">
-        <attribute name="pontos_andar" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
-        <relationship name="bundle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bundle" inverseName="cartas" inverseEntity="Bundle"/>
-        <relationship name="categorias" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria" inverseName="cartas" inverseEntity="Categoria"/>
-        <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta_Localize" inverseName="carta" inverseEntity="Carta_Localize"/>
+        <attribute name="pontos_andar" optional="YES" attributeType="Integer 32" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <relationship name="bundle" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Bundle" inverseName="cartas" inverseEntity="Bundle">
+            <userInfo/>
+        </relationship>
+        <relationship name="categorias" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria" inverseName="cartas" inverseEntity="Categoria">
+            <userInfo/>
+        </relationship>
+        <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta_Localize" inverseName="carta" inverseEntity="Carta_Localize">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
     </entity>
     <entity name="Carta_Localize" representedClassName="Carta_Localize">
-        <attribute name="locale" optional="YES" attributeType="String"/>
-        <attribute name="mimica" optional="YES" attributeType="String"/>
-        <relationship name="carta" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Carta" inverseName="localized_attributes" inverseEntity="Carta"/>
+        <attribute name="locale" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="mimica" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="carta" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Carta" inverseName="localized_attributes" inverseEntity="Carta">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
     </entity>
     <entity name="Categoria" representedClassName="Categoria">
-        <relationship name="cartas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta" inverseName="categorias" inverseEntity="Carta"/>
-        <relationship name="jogo_atual" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Jogo" inverseName="categorias_escolhidas" inverseEntity="Jogo"/>
-        <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria_Localize" inverseName="categoria" inverseEntity="Categoria_Localize"/>
+        <relationship name="cartas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Carta" inverseName="categorias" inverseEntity="Carta">
+            <userInfo/>
+        </relationship>
+        <relationship name="jogo_atual" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Jogo" inverseName="categorias_escolhidas" inverseEntity="Jogo">
+            <userInfo/>
+        </relationship>
+        <relationship name="localized_attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria_Localize" inverseName="categoria" inverseEntity="Categoria_Localize">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
     </entity>
     <entity name="Categoria_Localize">
-        <attribute name="locale" optional="YES" attributeType="String"/>
-        <attribute name="nome" optional="YES" attributeType="String"/>
-        <relationship name="categoria" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria" inverseName="localized_attributes" inverseEntity="Categoria"/>
+        <attribute name="locale" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="nome" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <relationship name="categoria" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Categoria" inverseName="localized_attributes" inverseEntity="Categoria">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
     </entity>
     <entity name="Grupo" representedClassName="Grupo">
-        <attribute name="acertou" optional="YES" attributeType="Boolean"/>
-        <attribute name="casa_tabuleiro" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
+        <attribute name="acertou" optional="YES" attributeType="Boolean">
+            <userInfo/>
+        </attribute>
+        <attribute name="casa_tabuleiro" optional="YES" attributeType="Integer 32" defaultValueString="0">
+            <userInfo/>
+        </attribute>
         <attribute name="imagem" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nome" optional="YES" attributeType="String"/>
-        <attribute name="ordem" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
-        <relationship name="jogo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Jogo" inverseName="grupo_atual" inverseEntity="Jogo"/>
+        <attribute name="nome" optional="YES" attributeType="String">
+            <userInfo/>
+        </attribute>
+        <attribute name="ordem" optional="YES" attributeType="Integer 32" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <relationship name="jogo" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Jogo" inverseName="grupo_atual" inverseEntity="Jogo">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
     </entity>
     <entity name="Jogo" representedClassName="Jogo">
-        <attribute name="indice_grupo" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
-        <attribute name="segundos_rodada" optional="YES" attributeType="Integer 32" defaultValueString="0"/>
-        <relationship name="categorias_escolhidas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria" inverseName="jogo_atual" inverseEntity="Categoria"/>
-        <relationship name="grupo_atual" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Grupo" inverseName="jogo" inverseEntity="Grupo"/>
+        <attribute name="indice_grupo" optional="YES" attributeType="Integer 32" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="segundos_rodada" optional="YES" attributeType="Integer 32" defaultValueString="0">
+            <userInfo/>
+        </attribute>
+        <attribute name="total_pontos" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="categorias_escolhidas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categoria" inverseName="jogo_atual" inverseEntity="Categoria">
+            <userInfo/>
+        </relationship>
+        <relationship name="grupo_atual" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Grupo" inverseName="jogo" inverseEntity="Grupo">
+            <userInfo/>
+        </relationship>
+        <userInfo/>
     </entity>
     <elements>
-        <element name="Bundle" positionX="9" positionY="81" width="128" height="90"/>
+        <element name="Bundle" positionX="9" positionY="81" width="128" height="105"/>
         <element name="Bundle_Localize" positionX="-2" positionY="-54" width="128" height="75"/>
         <element name="Carta" positionX="7" positionY="252" width="128" height="105"/>
         <element name="Carta_Localize" positionX="9" positionY="396" width="128" height="90"/>
         <element name="Categoria" positionX="225" positionY="267" width="128" height="90"/>
         <element name="Categoria_Localize" positionX="232" positionY="387" width="128" height="90"/>
         <element name="Grupo" positionX="394" positionY="387" width="128" height="135"/>
-        <element name="Jogo" positionX="414" positionY="261" width="128" height="105"/>
+        <element name="Jogo" positionX="414" positionY="261" width="128" height="120"/>
     </elements>
 </model>

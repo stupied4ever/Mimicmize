@@ -10,6 +10,78 @@
 
 @implementation LocalizeHelper
 
++(BOOL) is_pt_br {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  return [locale isEqualToString:pt_BR];
+}
+
++(NSString *) get_cancel_button {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  BOOL is_pt_br = [locale isEqualToString:pt_BR];
+  if (is_pt_br) {
+    
+    return @"Cancelar";
+  }
+  else {
+    return @"Cancel";
+  }
+}
++(NSString *) get_buying_message {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  BOOL is_pt_br = [locale isEqualToString:pt_BR];
+  if (is_pt_br) {
+    
+    return @"Voce será cobrado por $0.99 (ou equivalente em seu país) por adiquirir as cartas";
+  }
+  else {
+    return @"You will be charged for $0.99 (or equivalent in your country) for getting cards of";
+  }
+}
+
++(NSString *) get_buying_title {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  BOOL is_pt_br = [locale isEqualToString:pt_BR];
+  if (is_pt_br) {
+    
+    return @"Deseja comprar?";
+  }
+  else {
+    return @"Would you like to buy?";
+  }
+}
+
++(NSString *) get_compradas_string {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  BOOL is_pt_br = [locale isEqualToString:pt_BR];
+  if (is_pt_br) {
+    
+    return @"Comprados";
+  }
+  else {
+    return @"Already have";
+  }
+  
+}
+
++(NSString *) get_nao_compradas_string {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  BOOL is_pt_br = [locale isEqualToString:pt_BR];
+  if (is_pt_br) {
+    
+    return @"Não comprados ainda";
+  }
+  else {
+    return @"Don't have yet";
+  }
+  
+}
+
 +(NSString *) get_local_language {
   
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

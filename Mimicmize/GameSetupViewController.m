@@ -53,6 +53,36 @@
 }
 
 #pragma mark - Events
+- (IBAction)open_store:(id)sender {
+  
+  StoreViewController *store_controller = [[StoreViewController alloc] initWithNibName:@"StoreViewController" bundle:nil];
+  store_controller.title = @"Loja";
+  UINavigationController *nav_controller = [[UINavigationController alloc] initWithRootViewController:store_controller];
+  [self presentViewController:nav_controller animated:YES completion:nil];
+  
+  self.will_return_from_store = YES;
+  
+  [UIView animateWithDuration:0.4 animations:^{
+    
+    CGRect frame_btn_comprar = self.view_comprar.frame;
+    frame_btn_comprar.origin.y = -55;
+    self.view_comprar.frame = frame_btn_comprar;
+  }];
+}
+
+- (IBAction)change_pontos:(id)sender {
+  
+  NSInteger total_pontos = (int) self.slider_pontos.value + 1;
+  total_pontos /= 5;
+  total_pontos *= 5;
+  
+  if ([LocalizeHelper is_pt_br]) {
+    self.lbl_pontos.text = [NSString stringWithFormat:@"até %.2d pontos", total_pontos ];
+  }
+  else {
+    self.lbl_pontos.text = [NSString stringWithFormat:@"%.2d points", total_pontos ];
+  }
+}
 
 -(void) change_button_name {
   
@@ -281,6 +311,12 @@
   [self calculate_show_buttons];
 }
 
+-(BOOL) should_get_buy_button_down {
+  
+  NSArray *array_bundles = [Bundle findByAttribute:@"comprado" withValue:[NSNumber numberWithBool:NO]];
+  return [array_bundles count] > 0;
+}
+
 #pragma mark - View lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -307,15 +343,27 @@
   self.btn_select_all.selected = YES;
   [self.view addSubview:self.view_groups];
   [self.view addSubview:self.view_settings];
+  [self.view bringSubviewToFront: self.view_comprar];
+  
+  CGRect frame_btn_comprar = self.view_comprar.frame;
+  frame_btn_comprar.origin.y = -frame_btn_comprar.size.height;
+  self.view_comprar.frame = frame_btn_comprar;
+  
   CGRect frame = self.view_settings.frame;
   frame.origin.x = 320;
   self.view_settings.frame = frame;
   self.table_cell_nib = [UINib nibWithNibName:@"CardsCategoryCell" bundle:nil];
   [self change_button_name];
   
+  [self.slider_pontos setMaximumTrackImage:[UIImage imageNamed:@"barraCheia.png"] forState:UIControlStateNormal];
+  [self.slider_pontos setMinimumTrackImage:[UIImage imageNamed:@"barraVazia.png"] forState:UIControlStateNormal];
+  self.lbl_pontos.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
+  
   [self.timer_slider setMaximumTrackImage:[UIImage imageNamed:@"barraCheia.png"] forState:UIControlStateNormal];
   [self.timer_slider setMinimumTrackImage:[UIImage imageNamed:@"barraVazia.png"] forState:UIControlStateNormal];
   self.lbl_turn_timeout.font = [UIFont fontWithName:@"FontleroyBrown" size:32];
+  
+  self.will_return_from_store = NO;
 }
 
 -(void) set_focus_on_first_txt {
@@ -332,6 +380,11 @@
   
   [HUDHelper hide];
   [HUDHelper set_delegate:nil];
+  
+  if (self.will_return_from_store) {
+    return;
+  }
+  
   [self performSelector:@selector(create_new_txt_group) withObject:nil afterDelay:.3];
   [self performSelector:@selector(create_new_txt_group) withObject:nil afterDelay:.5];
   [self performSelector:@selector(set_focus_on_first_txt) withObject:nil afterDelay:.65];
@@ -383,15 +436,142 @@
   valor_slider /= 5;
   valor_slider *= 5;
   
+  NSInteger total_pontos = (int) self.slider_pontos.value + 1;
+  total_pontos /= 5;
+  total_pontos *= 5;
+  
   Jogo *new_game = [Jogo createEntity];
   new_game.segundos_rodada = [NSNumber numberWithInteger:valor_slider];
   new_game.categorias_escolhidas = [NSSet setWithArray:self.array_categorias_selecionadas];
   new_game.indice_grupo = [NSNumber numberWithInt:-1];
+  new_game.total_pontos = [NSNumber numberWithInteger:total_pontos];
   [self set_order_to_all_groups];
+}
+
+-(NSString *) get_string_bundles {
+  
+  NSArray *array_bundles = [Bundle findByAttribute:@"comprado" withValue:[NSNumber numberWithBool:NO]];
+  
+  NSMutableString *string = [NSMutableString string];
+  for (NSInteger index = 0; index < [array_bundles count]; index++) {
+    
+    Bundle *bundle = [array_bundles objectAtIndex:index];
+    Bundle_Localize *localized = [bundle get_localized_attributes];
+    
+    if (index+1 == [array_bundles count]) {
+      
+      [string appendFormat:@"%@.",localized.nome];
+    }
+    else if (index + 2 == [array_bundles count]) {
+      
+      if ([LocalizeHelper is_pt_br]) {
+        
+        [string appendFormat:@"%@ e ",localized.nome];
+      }
+      else {
+        [string appendFormat:@"%@ and ",localized.nome];
+      }
+    
+    }
+    else {
+      
+      [string appendFormat:@"%@, ",localized.nome];
+    }
+  }
+  
+  return string;
+}
+
+-(void) animate_first_part {
+  
+  self.scroll_comprar.contentOffset = CGPointMake(-300, 0);
+  
+  [UIView animateWithDuration:3 delay:0 options:UIViewAnimationCurveLinear animations:^{
+    
+    self.scroll_comprar.contentOffset = CGPointMake(0, 0);
+  } completion:^(BOOL finished) {
+    
+    [self animate_second_part];
+  }];
+}
+
+-(void) animate_second_part {
+  
+  [UIView animateWithDuration:2.5 delay:3 options:UIViewAnimationCurveLinear animations:^{
+    
+    self.scroll_comprar.contentOffset = CGPointMake(285, 0);
+  } completion:^(BOOL finished) {
+    
+    [self animate_final_part];
+  }];
+  
+}
+
+-(void) animate_final_part {
+  
+  NSInteger largura = self.lbl_comprar.frame.size.width + 10;
+  NSInteger avancando = largura - self.scroll_comprar.contentOffset.x;
+  
+  [UIView animateWithDuration:0.02 * avancando delay:2 options:UIViewAnimationCurveLinear animations:^{
+    
+    self.scroll_comprar.contentOffset = CGPointMake(largura, 0);
+  } completion:^(BOOL finished) {
+    
+    [self animate_first_part];
+  }];
+}
+
+-(void) load_buy_itens {
+  
+  self.lbl_comprar.font = [UIFont fontWithName:@"Helsinki" size:12];
+  NSString *string_bundles = [self get_string_bundles];
+  
+  //Divirta-se mais com novas cartas!
+  NSString *texto_label =
+    [NSString stringWithFormat:@"Divirta-se mais com novas mimicas!                 Toque aqui e compre agora novas cartas de %@", string_bundles];
+  
+  self.lbl_comprar.text = texto_label;
+  
+  CGSize size = [texto_label sizeWithFont:self.lbl_comprar.font];
+  
+  CGRect frame = self.lbl_comprar.frame;
+  frame.size.width = size.width;
+  self.lbl_comprar.frame = frame;
+  
+  self.scroll_comprar.contentSize = CGSizeMake(size.width + 20, size.height);
+  
+  [self animate_first_part];
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+  
+  [self.view_comprar.layer removeAllAnimations];
+  [self.scroll_comprar.layer removeAllAnimations];
+  
+  if ([self should_get_buy_button_down]) {
+    
+    if ([self.lbl_comprar.text isEqualToString:@""]) {
+      [self load_buy_itens];
+      [UIView animateWithDuration:0.4 animations:^{
+        
+        CGRect frame_btn_comprar = self.view_comprar.frame;
+        frame_btn_comprar.origin.y = 0;
+        self.view_comprar.frame = frame_btn_comprar;
+      }];
+    }
+    
+  
+  }
+  
 }
 
 - (void)viewDidUnload
 {
+  [self setLbl_pontos:nil];
+  [self setSlider_pontos:nil];
+  [self setView_comprar:nil];
+  [self setScroll_comprar:nil];
+  [self setLbl_comprar:nil];
   [super viewDidUnload];
   
   self.view_groups = nil;

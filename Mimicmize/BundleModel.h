@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Bundle.h"
 #import "Bundle_Localize.h"
+#import "LocalizeHelper.h"
 
 @interface Bundle (BundleModel)
 
 -(void) add_locale_with_nome: (NSString *) nome andLocale : (NSString *) locale;
+-(Bundle_Localize *) get_localized_attributes;
++(Bundle *) findBundleByName : (NSString *) name;
 
 @end

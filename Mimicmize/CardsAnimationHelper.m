@@ -100,26 +100,31 @@
 
 -(void) show_and_hide_view_with_pan_effect : (UIView *) view on_complete: (void (^)(void))on_finish_animation {
   
+  view.layer.beginTime = 0;
   [UIView animateWithDuration:0.2 animations:^{
     
     view.transform = CGAffineTransformMakeScale(1.2, 1.2);
   } completion:^(BOOL finished) {
     
+    view.layer.beginTime = 0;
     [UIView animateWithDuration:0.08 animations:^{
       
       view.transform = CGAffineTransformMakeScale(1, 1);
     } completion:^(BOOL finished) {
       
+      view.layer.beginTime = 0;
       [UIView animateWithDuration:0.08 delay:0.3 options:UIViewAnimationOptionAllowAnimatedContent animations:^{
         
         view.transform = CGAffineTransformMakeScale(1.2, 1.2);
       } completion:^(BOOL finished) {
         
+        view.layer.beginTime = 0;
         [UIView animateWithDuration:0.2 animations:^{
           
           view.transform = CGAffineTransformMakeScale(0.001, 0.001);
         } completion:^(BOOL finished) {
           
+          view.layer.beginTime = 0;
           on_finish_animation();
         }];
         
@@ -136,6 +141,7 @@
   self.lbl_vai.font = [UIFont fontWithName:@"Helsinki" size:110];
   self.lbl_vai.alpha = 1;
   self.lbl_vai.text = @"3";
+  
   self.lbl_vai.transform = CGAffineTransformMakeScale(0.001, 0.001);
   
   [self show_and_hide_view_with_pan_effect:self.lbl_vai on_complete:^{
@@ -147,9 +153,11 @@
       [self show_and_hide_view_with_pan_effect:self.lbl_vai on_complete:^{
         
         if ([[LocalizeHelper get_local_language] isEqualToString:pt_BR]) {
+          
           self.lbl_vai.text = @"VAI!";
         }
         else {
+          
           self.lbl_vai.text = @"GO!";
         }
         

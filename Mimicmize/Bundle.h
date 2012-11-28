@@ -15,6 +15,7 @@
 @private
 }
 @property (nonatomic, retain) NSNumber * comprado;
+@property (nonatomic, retain) NSString * inapp_id;
 @property (nonatomic, retain) NSSet *cartas;
 @property (nonatomic, retain) NSSet *localized_attributes;
 @end

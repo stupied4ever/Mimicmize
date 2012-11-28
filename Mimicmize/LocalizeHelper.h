@@ -17,4 +17,13 @@
 +(NSString *) convert_value_to_minutes : (float)value;
 +(NSString *) get_text_to_group_box_with_index : (NSInteger) index;
 
++(NSString *) get_compradas_string;
++(NSString *) get_nao_compradas_string;
+
++(NSString *) get_cancel_button;
++(NSString *) get_buying_message;
++(NSString *) get_buying_title;
+
++(BOOL) is_pt_br;
+
 @end

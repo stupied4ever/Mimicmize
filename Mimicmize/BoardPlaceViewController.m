@@ -39,7 +39,7 @@
   
   self.carta_selecionada = card;
   [self prepare_layout_for_animation];
-  [HUDHelper hide];
+  //[HUDHelper hide];
   [self.animation show_3_2_1_go:^ {
     
     [UIView animateWithDuration:0.2 animations:^{
@@ -50,7 +50,7 @@
       PlayTimeViewController *play_controller = [[PlayTimeViewController alloc] initWithNibName:@"PlayTimeView" bundle:nil];
       play_controller.delegate = self;
       self.pushed_controller = play_controller;
-      [HUDHelper show];
+      //[HUDHelper show];
       [self presentViewController:play_controller animated:NO completion:nil];
     }];
     
@@ -108,7 +108,8 @@
 -(void) next_group {
   
   Jogo *jogo_atual = [Jogo findFirst];
-  if ([jogo_atual.grupo_atual.casa_tabuleiro intValue] > 3) {
+  
+  if ([jogo_atual.grupo_atual.casa_tabuleiro intValue] >= [jogo_atual.total_pontos integerValue]) {
     FinishGameViewController *finish_controller = [[FinishGameViewController alloc] initWithNibName:@"FinishGameView" bundle:nil];
     self.pushed_controller = finish_controller;
     //[self presentModalViewController:finish_controller animated:NO];
@@ -151,12 +152,20 @@
 #pragma mark - Pause Delegate
 
 -(void) pause {
-  
-  
+
+  CFTimeInterval pausedTime = [self.lbl_vai.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+  self.lbl_vai.layer.speed = 0.0;
+  self.lbl_vai.layer.timeOffset = pausedTime;
 }
 
 -(void) resume {
   
+  CFTimeInterval pausedTime = [self.lbl_vai.layer timeOffset];
+  self.lbl_vai.layer.speed = 1.0;
+  self.lbl_vai.layer.timeOffset = 0.0;
+  self.lbl_vai.layer.beginTime = 0.0;
+  CFTimeInterval timeSincePause = [self.lbl_vai.layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
+  self.lbl_vai.layer.beginTime = timeSincePause;
   
 }
 

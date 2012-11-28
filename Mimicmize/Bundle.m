@@ -14,5 +14,6 @@
 @dynamic comprado;
 @dynamic cartas;
 @dynamic localized_attributes;
+@dynamic inapp_id;
 
 @end

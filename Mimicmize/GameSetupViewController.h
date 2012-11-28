@@ -16,6 +16,7 @@
 #import "HUDHelper.h"
 #import "BoardPlaceViewController.h"
 #import "NSMutableArray+Helper.h"
+#import "StoreViewController.h"
 
 @interface GameSetupViewController : UIViewController<UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -24,6 +25,9 @@
 @property (nonatomic, strong) IBOutlet UIButton *btn_done;
 @property (nonatomic, strong) IBOutlet UIScrollView *scroll_groups;
 @property (nonatomic, strong) IBOutlet UILabel *lbl_group_explanation;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_pontos;
+@property (weak, nonatomic) IBOutlet UISlider *slider_pontos;
+
 
 //view config
 @property (nonatomic, strong) IBOutlet UIView *view_groups;
@@ -41,6 +45,11 @@
 @property (nonatomic, strong) IBOutlet UINib *table_cell_nib;
 @property (nonatomic, strong) IBOutlet CardsCategoryCellController *table_cell_temp;
 
+@property (nonatomic, assign) BOOL will_return_from_store;
+@property (weak, nonatomic) IBOutlet UIView *view_comprar;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroll_comprar;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_comprar;
+
 
 -(IBAction)back_to_groups:(id)sender;
 -(IBAction)add_other_group:(id)sender;
@@ -50,6 +59,7 @@
 -(IBAction)change_turn_timeout:(id)sender;
 -(IBAction)select_unselect_all:(id)sender;
 -(IBAction)cancel:(id)sender;
+-(IBAction)open_store:(id)sender;
 
 -(void) create_new_txt_group;
 -(void) remove_last_txt_field;

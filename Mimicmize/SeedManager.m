@@ -60,8 +60,21 @@
   
   Bundle *main_bundle = [Bundle createEntity];
   main_bundle.comprado = [NSNumber numberWithBool:YES];
+  main_bundle.inapp_id = @"main_bundle";
   [main_bundle add_locale_with_nome:@"Cartas principais" andLocale:pt_BR];
   [main_bundle add_locale_with_nome:@"Main cards" andLocale:en_US];
+  
+  Bundle *pessoas_bundle = [Bundle createEntity];
+  pessoas_bundle.comprado = [NSNumber numberWithBool:NO];
+  pessoas_bundle.inapp_id = @"ruppy_mimicmize_pessoas01";
+  [pessoas_bundle add_locale_with_nome:@"Pessoas Famosas" andLocale:pt_BR];
+  [pessoas_bundle add_locale_with_nome:@"Famous People" andLocale:en_US];
+  
+  Bundle *tv_bundle = [Bundle createEntity];
+  tv_bundle.comprado = [NSNumber numberWithBool:NO];
+  tv_bundle.inapp_id = @"ruppy_mimicmize_tv01";
+  [tv_bundle add_locale_with_nome:@"TV" andLocale:pt_BR];
+  [tv_bundle add_locale_with_nome:@"TV" andLocale:en_US];
 }
 
 - (void) load_cartas {
@@ -140,8 +153,14 @@
 }
 
 +(void) addNewCardWithPoints:(NSInteger)points andMimic:(NSArray *)mimics forCategory:(Categoria *)category{
+  
+  
+  [SeedManager addNewCardWithPoints:points andMimic:mimics forCategory:category andBundle:[Bundle findBundleByName:@"Cartas principais"]];
+}
+
++(void) addNewCardWithPoints:(NSInteger)points andMimic:(NSArray *)mimics forCategory:(Categoria *)category andBundle:(Bundle *) bundle{
   Carta *nova_carta = [Carta createEntity];
-  nova_carta.bundle = [Bundle findFirst];
+  nova_carta.bundle = bundle;
   nova_carta.pontos_andar = [NSNumber numberWithInt:points];
   [nova_carta add_locale_with_mimica:[mimics objectAtIndex:0]  andLocale:pt_BR];
   [nova_carta add_locale_with_mimica:[mimics objectAtIndex:1] andLocale:en_US];

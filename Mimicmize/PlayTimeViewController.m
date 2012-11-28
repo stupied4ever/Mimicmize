@@ -28,19 +28,24 @@
   [self.lbl_seconds setText:[NSString stringWithFormat:@"%02d:%02d", minutes, seconds%60]];
 }
 
+
+
 #pragma mark - Pause Delegate
 
 -(void) pause {
   
-  [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(decrease_player_time) object:nil];
+  self.is_paused = YES;
+  [NSObject cancelPreviousPerformRequestsWithTarget:self];
+  //[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(decrease_player_time) object:nil];
 }
 
 -(void) resume {
   
-  //play_time_seconds++;
   [self performSelector:@selector(decrease_player_time) 
              withObject:nil 
              afterDelay:1];
+  
+  self.is_paused = NO;
 }
 
 #pragma mark - Game logic
@@ -143,14 +148,10 @@
   self.btn_correct.titleLabel.font = [UIFont fontWithName:@"Helsinki" size:24];
   [self load_with_data];
   
-  [self performSelector:@selector(decrease_player_time) 
-             withObject:nil 
-             afterDelay:1];
+  [HUDHelper set_delegate:self];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-  
-  [HUDHelper set_delegate:self];
   
   [UIView animateWithDuration:0.3 animations:^{
     
@@ -159,6 +160,14 @@
     self.btn_correct.alpha = 1;
     
   }];
+  
+  if (self.is_paused) {
+    return;
+  }
+  
+  [self performSelector:@selector(decrease_player_time)
+             withObject:nil
+             afterDelay:1];
 }
 
 - (void)viewDidUnload

@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SHKTwitter.h"
-#import "SHKFacebook.h"
 #import "JogoModel.h"
 #import "MainMenuViewController.h"
 #import "BoardPlaceViewController.h"
 #import "HUDHelper.h"
+#import <Twitter/Twitter.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 @interface FinishGameViewController : UIViewController<PausableUI> {
   UIImageView *img_view_background;

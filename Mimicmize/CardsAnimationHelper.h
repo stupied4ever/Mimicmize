@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LocalizeHelper.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CardsAnimationHelper : NSObject
 

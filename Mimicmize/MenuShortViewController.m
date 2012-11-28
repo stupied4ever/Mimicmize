@@ -74,7 +74,6 @@
   [self hide];
   [[HUDHelper shared_instance].main_game_controller dismiss_controllers];
   [[HUDHelper shared_instance].main_game_controller present_groups];
-  
 }
 
 -(void) toogle_sound_on_off{

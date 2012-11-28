@@ -29,6 +29,8 @@
 
 @property (nonatomic, assign) BoardPlaceViewController *delegate;
 
+@property (nonatomic, assign) BOOL is_paused;
+
 - (void)decrease_player_time;
 - (IBAction)correct_mimic:(id)sender;
 

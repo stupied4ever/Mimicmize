@@ -18,4 +18,17 @@
   [self addLocalized_attributesObject:localized_attributes];
 }
 
+-(Bundle_Localize *) get_localized_attributes {
+  
+  NSString *locale = [LocalizeHelper get_local_language];
+  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"bundle = %@ && locale = %@",self, locale];
+  return [Bundle_Localize findFirstWithPredicate:predicate ];
+}
+
++(Bundle *) findBundleByName : (NSString *) name {
+  
+  Bundle_Localize *localized = [Bundle_Localize findFirstByAttribute:@"nome" withValue:name];
+  return localized.bundle;
+}
+
 @end

@@ -52,10 +52,10 @@
     UILabel *lbl_pontos = (UILabel *)[self.view viewWithTag:tag + 900];
     
     if (grupo_atual == grupo && self.qtd_casas_andar > 0) {
-      lbl_pontos.text  = [NSString stringWithFormat:@"%.2d",[grupo.casa_tabuleiro integerValue]-self.qtd_casas_andar];
+      lbl_pontos.text  = [NSString stringWithFormat:@"%.2d/%.2d",[grupo.casa_tabuleiro integerValue]-self.qtd_casas_andar, [jogo_atual.total_pontos integerValue]];
     }
     else {
-      lbl_pontos.text  = [NSString stringWithFormat:@"%.2d",[grupo.casa_tabuleiro integerValue]];
+      lbl_pontos.text  = [NSString stringWithFormat:@"%.2d/%.2d",[grupo.casa_tabuleiro integerValue], [jogo_atual.total_pontos integerValue]];
     }
     
     
@@ -70,7 +70,7 @@
     
     UILabel *lbl_pontos = (UILabel *)[self.view viewWithTag:1000 + [grupo_atual.ordem integerValue]];
     [lbl_pontos performSelector:@selector(setText:)
-                     withObject:[NSString stringWithFormat:@"%.2d",[grupo_atual.casa_tabuleiro integerValue]]
+                     withObject:[NSString stringWithFormat:@"%.2d/%.2d",[grupo_atual.casa_tabuleiro integerValue], [jogo_atual.total_pontos integerValue]]
                      afterDelay:delay + 1.2 ];
   }
   
